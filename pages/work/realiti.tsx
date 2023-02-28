@@ -10,7 +10,6 @@ import Image from "next/image";
 import Mockup from "../../assets/img/realiti-ipad-mockups.png";
 
 import Widgets from "../../components/case-studies/irealiti/widgets";
-import { TestimonialComponent } from "../../components/blocks/testimonial";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 import SearchAnim from "../../assets/animations/realiti-search.json";
@@ -19,7 +18,7 @@ const styleTint =
   ".bg-primary, .prose h1:before { background-color: #F09436 !important};";
 
 export default function HomePage() {
-  const searchRef = useRef<HTMLDivElement | undefined>(undefined);
+  const searchRef = useRef<HTMLDivElement | null>(null);
   const searchInViewport = useIsInViewport(searchRef);
 
   return (
