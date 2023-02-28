@@ -126,8 +126,8 @@ export default function HomePage() {
                 <p>
                   The research phase for always took us through infinity
                   circles. Exploring and conducting interviews with many
-                  dentists, nurses, and clinic managers helped us empathise and
-                  understand the difficutlies of keeping a clinic always
+                  dentists, nurses, and clinic managers helped us empathize and
+                  understand the difficulties of keeping a clinic always
                   on-track and ready for the next patient.
                 </p>
                 <p>
@@ -201,6 +201,7 @@ export default function HomePage() {
                 <Image
                   width={450}
                   height={390}
+                  alt="screenshot of the always onboarding"
                   src={require("../../assets/img/work/always-onboarding.png")}
                 />
               </div>
