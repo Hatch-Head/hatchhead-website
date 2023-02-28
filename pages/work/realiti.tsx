@@ -9,7 +9,7 @@ import BuildUI from "../../components/case-studies/irealiti/buildUI";
 import Image from "next/image";
 import Mockup from "../../assets/img/realiti-ipad-mockups.png";
 
-import Widgets from "../../components/case-studies/irealiti/widgets";
+// import Widgets from "../../components/case-studies/irealiti/widgets";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 import SearchAnim from "../../assets/animations/realiti-search.json";
