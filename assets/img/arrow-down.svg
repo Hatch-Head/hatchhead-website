@@ -1,0 +1,12 @@
+        <svg
+          width="15"
+          height="15"
+          viewBox="0 0 15 15"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15 7.5L13.4188 5.91882L8.61823 10.7194V0H6.38176V10.7194L1.58118 5.91882L0 7.5L7.5 15L15 7.5Z"
+            fill="currentColor"
+          />
+        </svg>

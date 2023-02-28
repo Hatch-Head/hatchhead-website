@@ -1,26 +1,133 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  @apply hover:text-primary-100 dark:hover:text-gold;
 }
 
-* {
-  box-sizing: border-box;
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.card {
+  @apply rounded-xl;
+  @apply shadow-2xl;
+}
+
+.card-zoom {
+  @apply relative flex items-center justify-center overflow-hidden;
+}
+
+.card-zoom--image {
+  @apply absolute w-full h-full transition-all duration-500 ease-in-out transform bg-center bg-cover;
+}
+
+.card-zoom:hover .card-zoom--image,
+.card-zoom-parent:hover .card-zoom--image {
+  @apply scale-110;
+}
+
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {  
+  font-family: 'General Grotesque Mono Demi'; 
+  font-weight: 400;
+   font-style: normal; 
+   font-display: swap; /* Read next point */  
+   unicode-range: U+000-5FF; /* Download only latin glyphs */  
+   src: local('General Grotesque Mono Demi'),
+   url('/fonts/GeneralGrotesqueMono-Demi.woff2') format('woff2'),       
+   url('/fonts/GeneralGrotesqueMono-Demi.woff') format('woff');
+}
+
+
+@font-face {  
+  font-family: 'Soehne Halbfett'; 
+  font-weight: 400;
+   font-style: normal; 
+   font-display: swap; /* Read next point */  
+   unicode-range: U+000-5FF; /* Download only latin glyphs */  
+   src: local('Söhne Halbfett'),
+   url('/fonts/soehne-halbfett-kursiv.woff2') format('woff2'),       
+   url('/fonts/soehne-halbfett.woff') format('woff');
+}
+
+@keyframes bounceHorizontal {
+  0%, to {
+      transform: translateX(-25%);
+      animation-timing-function:cubic-bezier(.8, 0, 1, 1)
   }
-  body {
-    color: white;
-    background: black;
+
+  50% {
+      transform: none;
+      animation-timing-function:cubic-bezier(0, 0, .2, 1)
   }
+}
+
+@media (min-width: 900px) {
+  .prose h1:before {
+    content: "";
+    display: block;
+    float: left;
+    width: 5rem;
+    height: 5rem;
+    @apply bg-primary dark:bg-gold;
+    border-radius: 99em;
+    margin: 0px 2rem 0 0;
+    //position: absolute;
+    //transform: translateX(-6rem);
+  }
+}
+
+.bg-noise{
+  background-attachment: fixed !important;
+  /*background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAElBMVEUAAADs6uTs7uzs5uTs7uTk5uTPWaPkAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAphJREFUOI0lVIuV4yAMVAtjiQLYZAtQwAUocgpg7eu/lRs5SZyHDUjzw4Id8cAHfrk6FDNgOAakuflTn+YX8NMcS5c54HJuGsuxuxkQUZtOnSME/Kgq+uKg43APVwwT9w26V317OZ7JJQjgkq5caB0YWPGEL9bK6VPCwtCQY2Kqr1CDD8cUDDbQnQ22Gb/QAKegLhYYH02O5+UE5IurdEGqLSnV1bgchMTmFwSE6Z+21CdrGrqfK9YyITO2CRD/bIE0G4sYk80nnF9sbDM2mO8HMW9CaM0wT+KxQyfWUC4zl/3lPYorklro9PPAJBfZczSuGcoO7svzxg4VnVak3E60Nc996ENbvHdpm+Fk3bDB+SgrDmNj+VBcbL4Xr06iffRcBZegDupJcvxwJ38NeEEIoJ90Wo3iUafzwdG7Q5JmHvkk0rDu2ux30efuonGyxr7jIJekJANeaRDicEdc6vriChqoY7kNyZygEXwevKi6lwfD6QceKL2DNfKAEcR6t+BE94PblbxuT2PWSk4EXub24HY+Yj/+8V4F4WlUBLNA5MFI3FRl6ja+2cSzLP9o+a6DDubIAqP3PcrOrFCD9AeqL6faZ9oEKyvj8yqsKBOHXlpaUzQ1xscrQINFcAbNKvtyTfJYlIjdcVmF1bmJDuPObrJLUnlCr/qb/mmXTb1ZHQoqqdpILutQ0ChVDiPTsFXSe0MlZnAi0VrykZE5w8j1pDTFziKNOq10hCbecfUmNOarA74RptUUw10SkcEDpXVC/EM5SJdohDE7iCVxkMKgWDx/oBpSp3TDP1vG01E5/B4qCHkNtMrxYco8tjbYNrro/Wrx0+ee5IdsDC4lFdQrooZ/hd6dofKqxQmv9Nj9ehnvsovDOf8DodqhviHy2r4AAAAASUVORK5CYII=);*/
+}
+
+.in-browser {
+  position: relative;
+  display: inline-block;
+  margin: 20px auto;
+  padding-top: 30px;
+  background: #cccccc;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.in-browser:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 12px;
+  background: green;
+  top: 10px;
+  left: 10px;
+}
+
+
+.list-style-arrow li {
+ list-style-image: url('/img/arrow-right-2xl.svg');
 }

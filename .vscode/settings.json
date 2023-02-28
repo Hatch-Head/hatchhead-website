@@ -1,0 +1,52 @@
+
+{
+  "git.ignoreLimitWarning": true,
+  "files.exclude": {
+    "**/node_modules": true,
+    ".next" : true
+  },
+  "editor.formatOnSave": false,
+  // Enable per-language
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "cSpell.words": [
+    "Audeara",
+    "Autosize",
+    "boxicon",
+    "Boxicons",
+    "casestudies",
+    "cloudinary",
+    "datetime",
+    "Demi",
+    "Dribbble",
+    "formify",
+    "halbfett",
+    "headlessui",
+    "heroicon",
+    "Heroicons",
+    "iconoir",
+    "irealiti",
+    "isimulate",
+    "Isometic",
+    "kursiv",
+    "lottiefiles",
+    "msapplication",
+    "Novoplan",
+    "quicktime",
+    "realiti",
+    "Realti",
+    "recaptcha",
+    "soehne",
+    "tinacms",
+    "tinafield",
+    "urlset",
+    "usehooks"
+  ]
+}
