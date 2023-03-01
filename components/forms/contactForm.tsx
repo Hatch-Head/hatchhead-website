@@ -37,7 +37,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         <input
           ref={ref}
           {...rest}
-          className="bg-transparent py-4 text-large border-0 border-b-2 text-lg focus:outline-0 focus:border-primary  transition-all placeholder:text-neutral-200 "
+          className="bg-transparent py-4 text-large border-0 border-b-2 text-lg focus:outline-0 focus:border-primary dark:focus:border-gold transition-all placeholder:text-neutral-200 "
         />
         {error && (
           <span className="text-error pt-3 font-bold font-mono">{error}</span>
@@ -56,7 +56,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         <TextareaAutosize
           minRows={1}
           ref={ref}
-          className="bg-transparent py-4 text-large border-0 border-b text-lg  focus:outline-0 focus:border-primary  transition-all placeholder:text-neutral-200 scrollbar-hide"
+          className="bg-transparent py-4 text-large border-0 border-b text-lg  focus:outline-0 focus:border-primary  dark:focus:border-gold transition-all placeholder:text-neutral-200 scrollbar-hide"
           {...rest}
         />
 
@@ -148,7 +148,7 @@ export default function ContactForm() {
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-primary flex justify-center space-x-3 items-center  dark:bg-gold button text-white border-full px-4 py-2 rounded-full hover:bg-primary-75"
+                className="bg-primary dark:bg-gold flex justify-center space-x-3 items-center  button text-white border-full px-4 py-2 rounded-full dark:hover:bg-gold-75 hover:bg-primary-75"
               >
                 <span>Send Message</span>
                 {loading && (
