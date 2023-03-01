@@ -126,6 +126,7 @@ export default function ContactForm() {
               name="name"
               placeholder="Your name"
               error={errors.name?.message}
+              autoComplete="name"
               containerClass="lg:w-1/2 xl:w-1/3"
             />
             <Input
@@ -133,6 +134,7 @@ export default function ContactForm() {
               name="email"
               placeholder="Your email address"
               error={errors.email?.message}
+              autoComplete="email"
               containerClass="lg:w-1/2 xl:w-1/3"
             />
             <TextArea
