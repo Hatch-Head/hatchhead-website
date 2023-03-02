@@ -17,8 +17,7 @@ function Clump({
   vec = new THREE.Vector3(),
   qty = 3 * 3 * 3,
 }) {
-  const containerRef = useRef();
-  const { scrollYProgress, scrollY } = useScroll();
+  const { scrollYProgress } = useScroll();
   const xPos = useTransform(
     scrollYProgress,
     [0, 0.25, 0.75, 1],
@@ -35,11 +34,6 @@ function Clump({
     emissive: new THREE.Color(color),
     transparent: true,
     reflectivity: 0,
-  });
-
-  const white = new THREE.MeshPhongMaterial({
-    color: new THREE.Color("#ffffff"),
-    transparent: true,
   });
 
   const [isClicked, setIsClicked] = useState(false);
@@ -104,7 +98,7 @@ function Clump({
         ref={ref}
         castShadow
         receiveShadow
-        args={[null, null, qty]}
+        args={[undefined, undefined, qty]}
         geometry={sphereGeometry}
         material={material}
       />
@@ -128,12 +122,8 @@ function Pointer() {
   );
 }
 
-type Props = {
-  anchor1: Ref<HTMLElement>;
-};
-
-const Scene = ({ anchor1 }: Props) => {
-  const [physicsEnabled, setPhysicsEnabled] = useState(true);
+const Scene = () => {
+  const [physicsEnabled] = useState(true);
 
   return (
     <Canvas
@@ -162,7 +152,7 @@ const Scene = ({ anchor1 }: Props) => {
       />
 
       <Physics gravity={[0, 0, 0]} iterations={10} isPaused={!physicsEnabled}>
-        <Clump anchor1={anchor1} />
+        <Clump />
         <Pointer />
         <Float floatIntensity={1} rotationIntensity={0.1} speed={2}></Float>
       </Physics>
@@ -172,8 +162,6 @@ const Scene = ({ anchor1 }: Props) => {
 };
 
 export default function Home() {
-  const anchor1 = useRef<HTMLElement>();
-
   return (
     <Layout>
       <div className="flex flex-col w-screen h-screen justify-center items-center text-neutral-50 dark:text-white p-12 ">
@@ -183,7 +171,7 @@ export default function Home() {
         <p className="text-lg text-center mix-blend-exclusion">
           The page you are looking for does not exist
         </p>
-        <Scene anchor1={anchor1} />
+        <Scene />
       </div>
     </Layout>
   );

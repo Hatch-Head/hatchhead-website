@@ -16,6 +16,7 @@ const securityHeaders = [
   },
   {
     key: "X-Frame-Options",
+    // cspell:disable-next-line
     value: "SAMEORIGIN",
   },
   // {

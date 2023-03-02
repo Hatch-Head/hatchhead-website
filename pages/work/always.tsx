@@ -140,7 +140,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="w-full dark:bg-gray-1000 relative py-48 bg-white lg:bg-[url('/img/always/always-brand-feel.svg')] bg-no-repeat bg-contain bg-center bg-[length:1500px_900px] bg-y-">
+          <div className="w-full dark:bg-gray-1000 relative py-48 bg-white lg:bg-[url('/img/always/always-brand-feel.svg')] bg-no-repeat bg-center bg-[length:1500px_900px] bg-y-">
             <div className="container px-6 mx-auto lg:grid md:grid-cols-2 gap-4 prose dark:prose-invert">
               <div className="col-start-1 md:col-span-1 justify-center">
                 <h1>The brand feels</h1>

@@ -1,56 +1,3 @@
-// import { motion, Variants } from "framer-motion";
-
-// type Props = {
-//   tag?: keyof JSX.IntrinsicElements;
-//   text: string;
-//   splitLetters?: boolean;
-//   className?: string;
-// };
-
-// const AnimatedText = ({
-//   tag = "p",
-//   splitLetters = false,
-//   className,
-//   text,
-// }: Props) => {
-//   const delimiter = splitLetters ? "" : " ";
-//   const parts = text.split(delimiter);
-//   const Tag = tag;
-
-//   const item: Variants = {
-//     hidden: {
-//       y: "200%",
-//       rotate: Math.random() * 100,
-//       //opacity: 0,
-//       transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 },
-//     },
-//     exit: {
-//       y: "200%",
-//       rotate: Math.random() * 100,
-//       opacity: 1,
-//       transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.05 },
-//     },
-//     visible: {
-//       y: 0,
-//       rotate: 0,
-//       opacity: 1,
-//       transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.45 },
-//     },
-//   };
-
-//   return (
-//     <Tag className={className}>
-//       {parts.map((part, i) => (
-//         <motion.span key={`${part}-${i}`} variants={item} layout>
-//           {part}
-//         </motion.span>
-//       ))}
-//     </Tag>
-//   );
-// };
-
-// export default AnimatedText;
-
 import React, { ReactNode } from "react";
 import { motion, Variants } from "framer-motion";
 
@@ -65,7 +12,7 @@ const Wrapper = (props: WrapperProps): JSX.Element => {
 
 export type AnimatedCharactersProps = {
   text: string;
-  tag?: keyof JSX.IntrinsicElements;
+  tag?: keyof Pick<JSX.IntrinsicElements, "p" | "h1" | "h2" | "h3">;
   className?: string;
   color?: string;
   startColor?: string;
@@ -77,7 +24,7 @@ export type AnimatedCharactersProps = {
 // individual character animations
 const AnimatedCharacters = ({
   text,
-  tag: Tag = "p",
+  tag: TagElement = "p",
   className = "",
   splitLetters = false,
 }: AnimatedCharactersProps) => {
@@ -119,8 +66,6 @@ const AnimatedCharacters = ({
   words.map((word) => {
     return word.push("\u00A0");
   });
-
-  const elements = splitLetters ? words : splitWords;
 
   const renderLetters = () =>
     words.map((word, index) => {
@@ -190,9 +135,9 @@ const AnimatedCharacters = ({
   // Get the tag name from tagMap
 
   return (
-    <Tag className={className}>
+    <TagElement className={className}>
       {splitLetters ? renderLetters() : renderWords()}
-    </Tag>
+    </TagElement>
   );
 };
 

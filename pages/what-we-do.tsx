@@ -180,13 +180,13 @@ const WhatWeDo = () => (
               </div>
               <p>
                 Each iteration, the 'solution' becomes clearer. The outcome more
-                defined. The bad ideas are disgarded and the good ideas are
+                defined. The bad ideas are discarded and the good ideas are
                 kept.
               </p>
               <h4>Some thing we do at this stage</h4>
               <Row>
                 <ul className="list-style-arrow md:w-1/2">
-                  <li>Wireframes</li>
+                  <li>Wire frames</li>
                   <li>Usability Testing</li>
                   <li>Prototyping</li>
                   <li>Service Blueprints</li>
