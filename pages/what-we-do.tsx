@@ -89,9 +89,9 @@ const WhatWeDo = () => (
             </Parallax>
           </div>
 
-          <div className="lg:w-5/12 mb-24 prose">
+          <div className="lg:w-5/12 mb-24 prose dark:prose-invert">
             <h1>Define</h1>
-            <div className="prose dark:prose-invert">
+            <div>
               <p>
                 Define is the process of taking what we know from our Discover
                 stage and sorting it into a clear identity of our users and the
