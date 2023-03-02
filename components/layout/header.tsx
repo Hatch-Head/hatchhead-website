@@ -86,8 +86,8 @@ export const Header = () => {
           </div>
 
           <div
-            className={`absolute z-0 md:-right-8 top-0  w-screen overflow-visible flex items-end justify-end ${
-              isOpen ? "h-screen" : "h-0"
+            className={`absolute z-0 md:-right-8 top-0  w-screen overflow-visible flex items-end justify-end h-screen ${
+              isOpen ? "pointer-events-auto" : "pointer-events-none"
             }`}
             onClick={() => {
               if (isOpen) {

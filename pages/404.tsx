@@ -1,44 +1,23 @@
 import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { Layout } from "../components/layout";
-import { useEffect, useRef, useState, type Ref } from "react";
+import { useRef, useState, type Ref } from "react";
 import { Physics, useSphere } from "@react-three/cannon";
-import {
-  useScroll,
-  useSpring,
-  useMotionValueEvent,
-  useTransform,
-  cubicBezier,
-} from "framer-motion";
+import { useScroll, useSpring, useTransform, cubicBezier } from "framer-motion";
 import { motion } from "framer-motion-3d";
-import { Text3D, Float } from "@react-three/drei";
+import { Float } from "@react-three/drei";
 
 const SIZE = 0.6;
 
 const sphereGeometry = new THREE.SphereGeometry(SIZE, 32, 32);
 const rfs = THREE.MathUtils.randFloatSpread;
-const mat = new THREE.MeshPhongMaterial({
-  color: new THREE.Color("#999999"),
-  transparent: true,
-});
-
-function getDocumentOffsetPosition(el: HTMLElement) {
-  let top = 0,
-    left = 0;
-  top += el.offsetTop;
-  left += el.offsetLeft;
-
-  return { top, left };
-}
 
 function Clump({
   mat = new THREE.Matrix4(),
   vec = new THREE.Vector3(),
   qty = 3 * 3 * 3,
-  ...props
 }) {
   const containerRef = useRef();
-  const viewport = useThree((state) => state.viewport);
   const { scrollYProgress, scrollY } = useScroll();
   const xPos = useTransform(
     scrollYProgress,
@@ -74,9 +53,6 @@ function Clump({
   }));
 
   useFrame((state) => {
-    if (!ref.current) return;
-    if (!containerRef.current) return;
-
     for (let i = 0; i < qty; i++) {
       // Get current whereabouts of the instanced sphere
       //ref.current?..getMatrixAt(i, mat);
@@ -119,7 +95,6 @@ function Clump({
 
   return (
     <motion.mesh
-      ref={containerRef}
       onClick={(e) => setIsClicked(true)}
       //position={[spring, 0, 0]}
       //animate={{ opacity: xPos }}
@@ -202,7 +177,7 @@ export default function Home() {
   return (
     <Layout>
       <div className="flex flex-col w-screen h-screen justify-center items-center text-neutral-50 dark:text-white p-12 ">
-        <h1 className="text-center font-bold text-4xl md:text-5xl z-10 mix-blend-exclusion">
+        <h1 className="text-center font-bold text-4xl md:text-5xl z-10 mix-blend-exclusion pointer-events-none">
           404
         </h1>
         <p className="text-lg text-center mix-blend-exclusion">
