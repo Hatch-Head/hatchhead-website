@@ -47,7 +47,7 @@ const nextConfig = {
   swcMinify: true,
 
   images: {
-    unoptimized: true,
+    unoptimized: (NODE_ENV = "development"),
   },
 
   async headers() {
