@@ -51,6 +51,18 @@ a {
   display: none;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
+
+input:focus, textarea:focus {
+    outline:none;
+}
+
 @font-face {  
   font-family: 'General Grotesque Mono Demi'; 
   font-weight: 400;
@@ -70,7 +82,7 @@ a {
    font-display: swap; /* Read next point */  
    unicode-range: U+000-5FF; /* Download only latin glyphs */  
    src: local('Söhne Halbfett'),
-   url('/fonts/soehne-halbfett-kursiv.woff2') format('woff2'),       
+   url('/fonts/soehne-halbfett.woff2') format('woff2'),       
    url('/fonts/soehne-halbfett.woff') format('woff');
 }
 

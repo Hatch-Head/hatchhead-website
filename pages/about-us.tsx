@@ -135,7 +135,7 @@ const AboutUs = () => (
 
           <StaffCard
             name="Brent Wallace"
-            role="Director, Researcher"
+            role="Director, Business analyst"
             src={Brent}
           />
 

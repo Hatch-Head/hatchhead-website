@@ -25,8 +25,8 @@ const WhatWeDo = () => (
 
     <HeroBanner
       size="small"
-      headline="Designing for better"
-      tagline="What we do"
+      headline="What we do"
+      //tagline="What we do"
       text="We design experiences that enhance and increase user retention and growth. "
     />
 

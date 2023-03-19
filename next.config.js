@@ -37,7 +37,6 @@ const securityHeaders = [
   //   value: ContentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
   // },
 ];
-
 const nextConfig = {
   // Configure pageExtensions to include md and mdx
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
@@ -47,7 +46,7 @@ const nextConfig = {
   swcMinify: true,
 
   images: {
-    unoptimized: (NODE_ENV = "development"),
+    unoptimized: process.env.NODE_ENV === "development",
   },
 
   async headers() {

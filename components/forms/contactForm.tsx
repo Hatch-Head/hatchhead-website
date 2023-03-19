@@ -57,7 +57,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         <TextareaAutosize
           minRows={1}
           ref={ref}
-          className="bg-transparent py-4 text-large border-0 border-b text-lg outline-0 focus:outline-0 focus:border-primary  dark:focus:border-gold transition-all placeholder:text-neutral-200 scrollbar-hide"
+          className="bg-transparent py-4 text-large border-0 border-b-2 text-lg outline-0 focus:outline-0 focus:border-primary  dark:focus:border-gold transition-all placeholder:text-neutral-200 scrollbar-hide"
           {...rest}
         />
 
@@ -83,8 +83,6 @@ export default function ContactForm() {
 
   const { submit, success, error, loading } = useFormSubmit();
 
-  const inputClass =
-    "bg-transparent py-4 mb-4 text-large border-0 border-b text-lg";
   return (
     <section className="pb-24">
       {success ? (
@@ -102,7 +100,7 @@ export default function ContactForm() {
         <Container>
           <header className="mb-12 md:w-2/3">
             <p className="text-lg mb-2">Have a project?</p>
-            <p className="text-xl mb-4 font-bold">
+            <p className="text-xl mb-4 font-bold max-w-xl">
               Let's talk about the possibilities of creating, building, and
               growing something great
             </p>

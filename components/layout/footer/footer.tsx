@@ -11,7 +11,7 @@ export const Footer = () => {
     <footer className="bg-gray-1000 z-0 text-gray-50 dark:bg-black">
       <Container className="relative" size="large">
         <div className="md:flex gap-6">
-          <div className="flex-none">
+          <div className="flex-none mb-8">
             <Link
               className="flex items-center"
               href="/"
@@ -22,16 +22,28 @@ export const Footer = () => {
           </div>
 
           <div className="sm:px-8 md:flex flex-full w-full text-left grow justify-end">
-            <div className="flex-1 flex flex-col gap-6 text-center lg:text-left max-w-xl mx-auto">
-              More
+            <div className="flex-1 flex flex-col gap-6 lg:text-left max-w-xl mx-auto  mb-8">
               <nav className="font-mono text-gray-400">
                 <ul>
+                  <li className="mb-4">
+                    <Link href="/work">Work</Link>
+                  </li>
                   <li className="mb-4">
                     <Link href="/about-us">About</Link>
                   </li>
                   <li className="mb-4">
+                    <Link href="/what-we-do">Services</Link>
+                  </li>
+                  <li className="mb-4">
                     <Link href="/contact-us">Contact</Link>
                   </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div className="flex-1 flex flex-col gap-6 lg:text-left max-w-xl mx-auto  mb-8">
+              <nav className="font-mono text-gray-400">
+                <ul>
                   <li className="mb-4">
                     <Link href="/terms-and-conditions">
                       Terms and conditions
@@ -41,26 +53,7 @@ export const Footer = () => {
               </nav>
             </div>
 
-            <div className="flex-1 flex flex-col gap-6 text-center lg:text-left max-w-xl mx-auto">
-              More
-              <nav className="font-mono text-gray-400">
-                <ul>
-                  <li className="mb-4">
-                    <Link href="/about-us">About</Link>
-                  </li>
-                  <li className="mb-4">
-                    <Link href="/contact-us">Contact</Link>
-                  </li>
-                  <li className="mb-4">
-                    <Link href="/terms-and-conditions">
-                      Terms and conditions
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-
-            <div className="flex-1 flex flex-col gap-6 text-center items-center lg:items-start lg:text-left max-w-xl mx-auto">
+            <div className="flex-1 flex flex-col gap-6 lg:items-start lg:text-left max-w-xl mx-auto">
               <h2>Social</h2>
               <SocialLinks />
             </div>
