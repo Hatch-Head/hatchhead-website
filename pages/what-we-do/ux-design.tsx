@@ -11,6 +11,7 @@ const Page = () => (
     </Head>
     <HeroBanner
       headline="UI Design"
+      tagline="Capabilities"
       text="Optimising your desktop or mobile app's UX is an exercise in refinement - of reducing friction in delivering what users want."
     />
     <Section>

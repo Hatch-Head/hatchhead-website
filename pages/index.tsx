@@ -30,15 +30,30 @@ export default function Home() {
 
       <Clients />
 
+      <hr />
+
       <Section>
         <Container>
-          <Title title="We help you with" className="mb-12" />
+          <Title title="We help you" className="mb-12" />
 
           <WhatWeDoCards className="mb-24" />
         </Container>
       </Section>
 
-      <div className="bg-black bg-no-repeat bg-cover bg-center bg-[url('/img/black-abstract-bg.png')] bg text-white py-24 mb-48">
+      <hr />
+
+      <div className="container relative py-12 w-full">
+        <h1 className="text-2xl md:text-3xl text-neutral dark:text-neutral-0 font-bold mb-4">
+          Projects
+        </h1>
+        <p className="text-base md:text-lg md:max-w-2xl">
+          Here are a few key projects
+        </p>
+      </div>
+
+      <Work />
+
+      <div className="bg-black bg-no-repeat bg-contain bg-center bg-[url('/img/black-abstract-bg.png')] bg-fixed text-white py-24 mb-48">
         <Container width="medium" className=" text-white text-center">
           <h1 className="text-lg md:text-2xl font-bold text-center mb-8">
             We provide the design behind our clients success
@@ -49,12 +64,6 @@ export default function Home() {
           </p>
         </Container>
       </div>
-
-      <div className="flex flex-col justify-center mb-12 lg:mb-24 container">
-        <Title title="Projects" offsetDot />
-      </div>
-
-      <Work />
 
       <Section>
         <ContactForm />

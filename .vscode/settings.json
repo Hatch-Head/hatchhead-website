@@ -23,6 +23,7 @@
     "Boxicons",
     "casestudies",
     "cloudinary",
+    "colours",
     "customises",
     "datetime",
     "Demi",
@@ -42,6 +43,7 @@
     "msapplication",
     "Novoplan",
     "Phong",
+    "postbuild",
     "quicktime",
     "realiti",
     "Realti",
@@ -50,7 +52,9 @@
     "THEALWAYS",
     "tinacms",
     "tinafield",
+    "unoptimized",
     "urlset",
-    "usehooks"
+    "usehooks",
+    "webm"
   ]
 }

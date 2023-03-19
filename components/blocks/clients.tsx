@@ -8,6 +8,8 @@ import Novoplan from "../../assets/img/client-logos/novoplan.svg";
 import Unilever from "../../assets/img/client-logos/unilever.svg";
 import UnionLane from "../../assets/img/client-logos/union-lane.svg";
 import ISim from "../../assets/img/client-logos/isimulate.svg";
+import Always from "../../assets/img/client-logos/always.svg";
+import ThreeB from "../../assets/img/client-logos/3b.svg";
 
 type ClientStruct = {
   logo: JSX.Element;
@@ -45,7 +47,11 @@ const clientData: ClientStruct[] = [
     name: "iSimulate",
   },
   {
-    logo: <Unilever {...imageProps} />,
+    logo: <ThreeB {...imageProps} />,
+    name: "3B",
+  },
+  {
+    logo: <Always {...imageProps} />,
     name: "Always",
   },
 ];
@@ -66,13 +72,16 @@ export const Clients = ({ title = "Clients we’ve partnered with" }: Props) => 
           <Title title={title} />
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 dark:text-white">
+        <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 gap-8 dark:text-white">
           {clientData.map((client) => (
-            <div key={client.name} className={`mb-12 justify-center `}>
-              <div className="hover:text-gold p-12 h-[200px] items-center justify-center fill-gray-1000 dark:fill-gray-50">
+            <div
+              key={client.name}
+              className={`mb-12 justify-center items-center flex flex-col `}
+            >
+              <div className="hover:text-gold items-center justify-center fill-gray-1000 dark:fill-gray-50 pt-12 pb-4">
                 {client.logo}
               </div>
-              <div className="text-center w-full mt-4 text-gray-500">
+              <div className="text-center w-full mt-4 text-gray-500 w-full">
                 {client.name}
               </div>
             </div>

@@ -59,7 +59,7 @@ export const HeroBanner = ({
           <>
             <div className="row-start-2 w-full lg:w-4/5 lg:row-start-1 lg:col-start-1 lg:col-end-4  z-5">
               {tagline && (
-                <h2 className="relative inline-block mb-8 text-md font-bold tracking-wide title-font z-20 dark:text-gray-50">
+                <h2 className="relative inline-block mb-0 text-md font-bold tracking-wide title-font z-20 dark:text-gray-50">
                   {tagline}
                 </h2>
               )}

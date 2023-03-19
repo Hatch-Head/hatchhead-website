@@ -9,7 +9,11 @@ const Page = () => (
     <Head>
       <title>Product Strategy Brisbane | Hatch Head</title>
     </Head>
-    <HeroBanner headline="Product strategy" text="todo" />
+    <HeroBanner
+      tagline="Capabilities"
+      headline="Product strategy"
+      text="todo"
+    />
     <Section>
       <Container width={"medium"}>
         <div className="prose dark:prose-invert">

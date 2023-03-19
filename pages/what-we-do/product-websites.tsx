@@ -10,6 +10,7 @@ const Page = () => (
       <title>Websites Brisbane | Hatch Head</title>
     </Head>
     <HeroBanner
+      tagline="Capabilities"
       headline="Product Websites"
       text="Product websites should explain how your product solves a user’s problem. Ideally, it should take the lead into an active user."
     />

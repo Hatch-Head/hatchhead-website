@@ -3,6 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 import Title from "../title";
 import { FiChevronRight } from "react-icons/fi";
+import FadeUp from "../transitions/FadeUp";
 type ProjectCardProp = {
   to: string;
   image: {
@@ -41,18 +42,20 @@ const CaseStudyCard = ({
   return (
     <motion.div
       layoutId={name}
-      className={`lg:flex w-full m-0 overflow-hidden lg:aspect-[3/1] border-0 border-b border-neutral-1000 dark:border-neutral-700 group ${className} ${
+      className={`lg:flex w-full m-0 overflow-hidden lg:aspect-[3/1]  mb-12 md:mb-48 group ${className} ${
         !reverse ? "" : "lg:flex-row-reverse"
       }`}
     >
       <div
-        className={`flex w-full items-center justify-end border-0 ${
-          reverse ? "lg:border-l" : "lg:border-r"
-        } border-neutral-1000  dark:border-neutral-700`}
+        className={`flex w-full items-center justify-end border-0  border-neutral-1000  dark:border-neutral-700`}
       >
-        <div className="p-x4 py-24 md:p-12 2xl:pl-0 w-full xl:max-w-[738px] lg:max-w-[500px] md:pr-32 p-12">
+        <div
+          className={`lg:p-x4 py-12 md:py-24 lg:p-12  w-full xl:max-w-[738px] lg:max-w-[500px]   ${
+            reverse ? "2xl:pr-0" : "2xl:pl-0"
+          }`}
+        >
           <Title title={name} offsetDot className="mb-8" />
-          <div className="xl:text-lg text-base mb-12 dark:text-neutral-300">
+          <div className="xl:text-base text-base mb-12 dark:text-neutral-300">
             {children}
           </div>
 
@@ -66,44 +69,46 @@ const CaseStudyCard = ({
         </div>
       </div>
 
-      <Link
-        aria-label={`Read more about the ${name} project`}
-        href={to}
-        className="w-full relative  "
-      >
-        {backdrop && (
-          <Image
-            src={backdrop.src}
-            fill
-            className="w-full z-0  pointer-events-none l-0"
-            alt={`${name} project thumbnail`}
-          />
-        )}
-        <div className="z-10 grow h-full relative transform-gpu group-hover:scale-105  xl:group-hover:scale-105 transition duration-300 ease-in-out pointer-events-none flex items-center justify-center">
-          <Image
-            src={image.src}
-            width={900}
-            height={900}
-            alt={`${name} project thumbnail`}
-            className="xl:max-w-[900px] w-full"
-          />
-        </div>
-
-        <div className="w-full h-full flex absolute top-0 left-0 p-6 md:opacity-0 group-hover:opacity-100 transition duration-300 delay-100 overflow-hidden">
-          <div className="absolute bottom-6 right-6 flex space-x-2">
-            {tags.map((tag, i) => (
-              <span
-                key={`${name}-tag-${i}`}
-                className={`text-white bg-black rounded-full px-3 py-2 font-mono text-xs min-width-[60px] md:translate-y-12 group-hover:translate-y-0 transition duration-300 delay-${
-                  i * 300 + 300
-                }`}
-              >
-                {tag}
-              </span>
-            ))}
+      <FadeUp className="w-full relative overflow-visible">
+        <Link
+          aria-label={`Read more about the ${name} project`}
+          href={to}
+          className="overflow-visible"
+        >
+          {backdrop && (
+            <Image
+              src={backdrop.src}
+              fill
+              className="w-full z-0  pointer-events-none l-0"
+              alt={`${name} project thumbnail`}
+            />
+          )}
+          <div className="z-10 grow h-full relative transform-gpu group-hover:scale-105  xl:group-hover:scale-105 transition duration-300 ease-in-out pointer-events-none flex items-center justify-center">
+            <Image
+              src={image.src}
+              width={900}
+              height={900}
+              alt={`${name} project thumbnail`}
+              className="xl:max-w-[900px] w-full"
+            />
           </div>
-        </div>
-      </Link>
+
+          <div className="w-full h-full flex absolute top-0 left-0 p-6 md:opacity-0 group-hover:opacity-100 transition duration-300 delay-100 overflow-hidden">
+            <div className="absolute bottom-6 right-6 flex space-x-2">
+              {tags.map((tag, i) => (
+                <span
+                  key={`${name}-tag-${i}`}
+                  className={`text-white bg-black rounded-full px-3 py-2 font-mono text-xs min-width-[60px] md:translate-y-12 group-hover:translate-y-0 transition duration-300 delay-${
+                    i * 300 + 300
+                  }`}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </Link>
+      </FadeUp>
     </motion.div>
   );
 };

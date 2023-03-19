@@ -31,7 +31,7 @@ const Wrap = ({ children }: { children: JSX.Element }) => (
 
 const IsometicHero = () => {
   return (
-    <div className="mx-auto md:h-180 md:pt-96 md:pb-40 bg-gray-50">
+    <div className="mx-auto md:h-180 md:pt-96 md:pb-40 bg-gray-50 dark:bg-gray-1000">
       <ParallaxBanner style={{ height: 900, overflow: "visible" }}>
         <ParallaxBannerLayer translateY={[0, 0]}>
           <Wrap>

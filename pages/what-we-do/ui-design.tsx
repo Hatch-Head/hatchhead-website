@@ -9,7 +9,11 @@ const Page = () => (
     <Head>
       <title>UI Design Brisbane | Hatch Head</title>
     </Head>
-    <HeroBanner headline="UI Design" text="Designing for the user" />
+    <HeroBanner
+      headline="UI Design"
+      text="Designing for the user"
+      tagline="Capabilities"
+    />
     <Section>
       <Container width={"medium"}>
         <div className="prose dark:prose-invert">
@@ -23,7 +27,9 @@ const Page = () => (
             </li>
             <li>Create initial interest and desire in potential users</li>
           </ul>
+
           <h3>Description</h3>
+
           <p>
             User Interface (UI) and interaction design is the aesthetic choices
             that define what the user sees. It encompass colours, fonts,
@@ -37,6 +43,7 @@ const Page = () => (
           </p>
 
           <h3>What deliverables can you expect from UI &amp; Interaction?</h3>
+
           <ul>
             <li>Design Systems</li>
             <li>Style guides</li>

@@ -7,6 +7,8 @@ import Head from "next/head";
 import Image, { StaticImageData } from "next/image";
 
 import SectionHeading from "../components/blocks/sectionHeading";
+import TeamHero from "../assets/img/hatch-head-team-together.jpg";
+import Logo from "../assets/img/logo.svg";
 
 import Andrew from "../assets/img/profile-andrew-morton.png";
 import Brent from "../assets/img/profile-brent-wallace.png";
@@ -53,7 +55,9 @@ const ValueCard = ({ title, content, alt, src }: ValuesProps) => (
     <h3 className="font-bold text-base text-neutral mb-2 dark:text-white">
       {title}
     </h3>
-    <p className="text-neutral-600 mb-8 dark:text-neutral-300">{content}</p>
+    <p className="text-neutral-600 mb-8 dark:text-neutral-300 whitespace-pre-line">
+      {content}
+    </p>
     <Image
       src={src}
       width={180}
@@ -73,13 +77,13 @@ const AboutUs = () => (
     <HeroBanner
       headline="Who are we?"
       tagline="About us"
-      text="Allow me to introduce ourselves"
+      text="Allow me to introduce... ourselves"
     />
 
     <Section>
       <Container>
-        <div>
-          <div className="prose dark:prose-invert">
+        <Row>
+          <div className="md:w-1/2 justify-center prose dark:prose-invert  flex flex-col">
             <p>
               Hatch Head started as an idea. What if there was a product design
               agency that was design-led but had three decades of engineering
@@ -101,16 +105,24 @@ const AboutUs = () => (
             <p>
               The heart of a designer combined with the head of an engineer.
             </p>
-            <p>Hatch Head.</p>
+            <Logo width={120} />
           </div>
-        </div>
+          <div className="md:w-1/2">
+            <Image
+              src={TeamHero}
+              width={500}
+              height={500}
+              alt="The Hatch Head team working around a table"
+            />
+          </div>
+        </Row>
       </Container>
     </Section>
 
     <Section>
       <SectionHeading
         title="The Team"
-        content="Allow me to introduce ourselves"
+        content="The people behind your success"
       />
 
       <Container>
@@ -122,14 +134,14 @@ const AboutUs = () => (
           />
 
           <StaffCard
-            name="Andrew Morton"
-            role="Director, Design director"
+            name="Brent Wallace"
+            role="Director, Researcher"
             src={Brent}
           />
 
           <StaffCard
-            name="Andrew Morton"
-            role="Director, Design director"
+            name="Natalia Chamon Kovalenko"
+            role="Product designer"
             src={Natalia}
           />
         </Row>
@@ -146,13 +158,13 @@ const AboutUs = () => (
         <div className="md:flex md:space-x-12 items-stretch">
           <ValueCard
             title="There are no heroes"
-            content="We collaborate with each other and our clients. We welcome healthy debate."
+            content={`We collaborate with each other and our clients. \nWe welcome healthy debate`}
             alt="Abstract 3D render representing a group of people"
             src={NoHeros}
           />
           <ValueCard
             title="Understand the WHY?"
-            content="We are deliberate in what we do, we have conviction in our decisions while open to being persuaded. If we don’t know the why, we find it."
+            content={`We are deliberate in what we do, we have conviction in\nour decisions while open to being persuaded. \nIf we don’t know the why, we find it.`}
             alt="Abstract 3D render representing understanding"
             src={Why}
           />
@@ -160,13 +172,13 @@ const AboutUs = () => (
         <div className="md:flex md:space-x-12 items-stretch">
           <ValueCard
             title="It’s all in the work"
-            content="There is a difference between doing the work and doing good work. We don’t become complacent, and we deliver high quality always."
+            content={`There is a difference between doing the work and doing good work. \nWe don’t become complacent, and we deliver high quality always.`}
             alt="Abstract 3D render representing a caring about the work"
             src={AllWork}
           />
           <ValueCard
             title="Go beyond the brief"
-            content="We are the ones that go the extra mile to be great, not just good. We know a B is not the same as an A."
+            content={`We are the ones that go the extra mile to be great, not just good. \nWe know a B is not the same as an A.`}
             alt="Abstract 3D render representing going above and beyond"
             src={BeyondBrief}
           />

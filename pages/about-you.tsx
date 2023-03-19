@@ -189,7 +189,7 @@ const AboutYou = () => {
         </Container>
       </Section>
 
-      <Section>
+      <Section className="mb-24">
         <ContactForm />
       </Section>
     </Layout>

@@ -54,7 +54,7 @@ const WhatWeDo = () => (
               href: "/what-we-do/ui-design",
             },
             {
-              label: "Ux Design",
+              label: "UX Design",
               href: "/what-we-do/ux-design",
             },
             {
@@ -72,9 +72,9 @@ const WhatWeDo = () => (
 
     <Section>
       <Container size="large">
-        <Row>
-          <h1 className="text-3xl font-bold text-neutral mb-48">Our process</h1>
-        </Row>
+        <h1 className="text-3xl font-bold text-neutral dark:text-white mb-48">
+          Our process
+        </h1>
 
         <Row>
           <div className="lg:w-7/12 mb-24 prose dark:prose-invert">
@@ -123,7 +123,7 @@ const WhatWeDo = () => (
       </Container>
     </Section>
 
-    <Section>
+    <Section className="overflow-x-hidden">
       <Container size="large">
         <Row>
           <div className="lg:w-1/2 mb-24 prose dark:prose-invert">

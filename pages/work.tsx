@@ -11,7 +11,8 @@ const Work = () => (
     </Head>
 
     <HeroBanner
-      headline="A track of creations"
+      tagline="Our work"
+      headline="Previous projects"
       text="Some of out selected favorites"
       size="small"
     />

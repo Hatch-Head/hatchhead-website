@@ -15,8 +15,9 @@ const useFormSubmit = () => {
 
   const handleErrors = (response: Response) => {
     setLoading(false);
+    console.log(response);
+
     if (!response.ok) {
-      console.log(response);
       setError(response.statusText);
     } else {
       setError(null);

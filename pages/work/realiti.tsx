@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
+import { motion, AnimatePresence, useScroll } from "framer-motion";
 import { Layout } from "../../components/layout";
 import Head from "next/head";
 import Tags from "../../components/Tags";
@@ -8,18 +8,10 @@ import IsometicHero from "../../components/case-studies/irealiti/isometric";
 import BuildUI from "../../components/case-studies/irealiti/buildUI";
 import Image from "next/image";
 import Mockup from "../../assets/img/realiti-ipad-mockups.png";
-
-// import Widgets from "../../components/case-studies/irealiti/widgets";
-import { Player } from "@lottiefiles/react-lottie-player";
-
-import SearchAnim from "../../assets/animations/realiti-search.json";
-import useIsInViewport from "../../hooks/isInViewport";
-const styleTint =
-  ".bg-primary, .prose h1:before { background-color: #F09436 !important};";
+import WidgetLayout from "../../assets/img/work/realiti-widget-layout.svg";
 
 export default function HomePage() {
-  const searchRef = useRef<HTMLDivElement | null>(null);
-  const searchInViewport = useIsInViewport(searchRef);
+  const { scrollY } = useScroll();
 
   return (
     <AnimatePresence>
@@ -36,153 +28,160 @@ export default function HomePage() {
               //video="/vid/realiti360.mp4"
             />
           </motion.div>
-          <style type="text/css">{styleTint}</style>
 
           <div className="w-full relative pt-40">
-            <div className="container px-6 mx-auto lg:flex align-center flex-row prose dark:prose-dark">
-              <div className="md:basis-1/2 mb-24">
-                <table>
-                  <tbody>
-                    <tr>
-                      <th>Client:</th>
-                      <td>iSimulate</td>
-                    </tr>
-                    <tr>
-                      <th>Year:</th>
-                      <td>2021</td>
-                    </tr>
-                    <tr>
-                      <th>Website:</th>
-                      <td>
-                        <a href="ISIMULATE.COM">ISIMULATE.COM</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>What we did:</th>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <th>Recognition:</th>
-                      <td>
-                        <Tags
-                          center={false}
-                          tags={["UI Design", "UX Design"]}
-                        />
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+            <div className="container px-6 space-x-8 mx-auto lg:flex align-center flex-row prose dark:prose-dark">
+              <div className="md:basis-1/3 mb-24">
+                <div className="block mb-4">
+                  <h5 className="text-xs font-bold uppercase text-neutral-300">
+                    Client
+                  </h5>
+                  <a
+                    href="https://www.isimulate.com/"
+                    target="_blank"
+                    rel="no-follow"
+                  >
+                    iSimulate
+                  </a>
+                </div>
+
+                <div className="block mb-6">
+                  <h5 className="text-xs font-bold uppercase text-neutral-300">
+                    Year
+                  </h5>
+                  2021
+                </div>
+
+                <div className="block mb-6">
+                  <h5 className="text-xs font-bold uppercase text-neutral-300">
+                    Services
+                  </h5>
+                  <Tags center={false} tags={["UI Design", "UX Design"]} />
+                </div>
+
+                <div className="block mb-6">
+                  <h5 className="text-xs font-bold uppercase text-neutral-300">
+                    Awards
+                  </h5>
+                  TODO: Get GDA logo and link to site
+                </div>
               </div>
 
-              <div className="md:basis-1/2 mb-24">
+              <div className="md:basis-2/3 mb-24">
                 <h2>
                   Redesign an iPad app for mobile and desktop environments
                 </h2>
                 <p>
                   Realti360 is a modular simulation ecosystem incorporating a
                   patient simulator, CPR feedback and video in a single system.
+                  The iPad app is deployed within hospitals across shared
+                  devices to facilitate staff training during adhoc periods of
+                  downtime.
                 </p>
                 <p>
-                  We were asked to help extend the app to desktop and mobile
-                  devices to cater for new and growing features, environments
-                  and clinician needs.
+                  After much success in the market, the original layout and
+                  information architecture had become a bottleneck for new
+                  features.
+                </p>
+                <p>
+                  Hatch Head was ask to rethink the architecture of the app to
+                  give the product team the space to develop new features.
                 </p>
               </div>
             </div>
           </div>
-
-          <IsometicHero />
 
           <div className="w-full bg-gray-1000 relative py-40">
-            <div className="container mx-auto px-6 sm:px-8 flex align-center flex-row prose-invert dark:prose-invert">
-              <div className="md:basis-1/2">
-                <h1>Small big bigger</h1>
-                <h2>Rethinking the layout.</h2>
-                <p className="text-white">
-                  We rethought how a single-screen device could work across
-                  different devices, from mobile to big desktop monitors.
+            <div className="container px-6 mx-auto md:grid md:grid-cols-12 gap-4 prose prose-invert items-center">
+              <div className="col-start-1 md:col-span-6 justify-center">
+                <h1>Rethinking the layout</h1>
+                <h2>Back to square one</h2>
+                <p>
+                  Deployed on shared devices meant that the UI needed to feel
+                  familiar and consistent while allowing the clinicians to
+                  customize for different training scenarios.
                 </p>
                 <p>
-                  Our result: The Grid - an extensible, module approach for each
-                  widget to provide complete control - from handheld devices to
-                  big desktops.
+                  The solution was to create a widget system where controls
+                  could be repositioned and resized to suit the user's needs.
                 </p>
               </div>
+              <div className="col-start-1 md:col-span-6 justify-center">
+                <WidgetLayout alt="Abstract graphic showing how the widget layout was considered" />
+              </div>
             </div>
-            <div className="md:basis-1/2"></div>
           </div>
-
           {/* <TestimonialComponent
         author="Andrew Morton"
         role="Design Lead"
         quote="We had to incorporate into our thinking that the learning environment for clinicians is one where they have a small window of time to teach, in-between patients and rounds."
       /> */}
-
           <BuildUI />
-
-          <div className="w-full bg-gray-50 dark:bg-gray-1000 relative py-40">
-            <div className="container px-6 mx-auto md:grid md:grid-cols-12 gap-4 prose dark:prose-invert">
-              <div className="col-start-1 md:col-span-7 justify-center">
-                <h1>Widget Stats</h1>
-                <h2>Rethinking the layout.</h2>
+          <div className="w-full bg-gray-50 dark:bg-gray-1000 relative pt-20 pb-24">
+            <div className="container px-6 mx-auto md:grid md:grid-cols-12 gap-24 prose dark:prose-invert">
+              <div className="col-start-1 md:col-span-6 justify-center">
+                <h1>The widget</h1>
+                <h2>A new pattern to future proof the interface</h2>
                 <p>
-                  We rethought how a single-screen device could work across
-                  different devices, from mobile to big desktop monitors.
-                </p>
-                <p>
-                  Our result: The Grid - an extensible, module approach for each
-                  widget to provide complete control - from handheld devices to
-                  big desktops.
+                  Each parameter control was re-imagined into widget. While each
+                  control is unique, resizing and configuring is consistent
+                  across all widgets allowing for a familiar user experience
+                  across a complex ecosystem of controls.
                 </p>
               </div>
-              <div className="md:col-span-4">IMAGE GOES HERE</div>
+              <div className="md:col-span-6">
+                IMAGE of the different states of the widget, editing etc
+              </div>
             </div>
           </div>
+
+          <motion.div
+            style={{ transform: scrollY }}
+            className="bg-[url('/img/realiti-widget-gallery.svg')] bg-contain repeat-x h-[700px]"
+          />
+
+          <IsometicHero />
 
           {/* <div className="hidden sm:block">sm</div>
       <div className="hidden md:block">md</div>
       <div className="hidden lg:block">lg</div>
       <div className="hidden xl:block">xl</div>
       <div className="hidden 2xl:block">2xl</div> */}
-
-          <div className="w-full bg-gray-50 dark:bg-gray-1000 relative py-40">
-            <div className="container px-6 mx-auto lg:grid md:grid-cols-12 gap-4 prose dark:prose-invert">
-              <div className="col-start-1 lg:col-span-5 justify-center mb-24">
+          <div className="w-full bg-gray-50 dark:bg-gray-1000 relative pt-60 pb-40">
+            <div className="container mx-auto lg:grid md:grid-cols-12 gap-24 prose dark:prose-invert">
+              <div className="col-start-1 lg:col-span-6 justify-center mb-24">
                 <h1>It's me you're looking for</h1>
                 <h2>
                   Getting the clinicians the widgets they need, instantly.
                 </h2>
                 <p>
-                  There’s plenty of different ways to replicate a cardiac
-                  scenario - but one great way
+                  What good are all these widgets if you can't find what you're
+                  looking for. The widget library with re-organized with search
+                  features added, allowing clinicians to quickly find and
+                  configure the widgets they need.
                 </p>
               </div>
               <div className="lg:col-span-6 h-[570px]">
-                <div ref={searchRef}>
-                  {searchInViewport && (
-                    <Player
-                      autoplay
-                      loop
-                      src={require("../../assets/animations/realiti-search.json")}
-                      style={{ maxWidth: "580px" }}
-                    ></Player>
-                  )}
-                </div>
+                <video autoPlay muted playsInline loop className="w-full">
+                  <source
+                    src="/vid/irealiti-search.mov"
+                    type="video/quicktime"
+                  />
+                  <source src="/vid/irealiti-search.webm" type="video/webm" />
+                </video>
               </div>
             </div>
           </div>
-
-          <div className="w-full bg-gray-50 dark:bg-gray-1000 relative py-40">
+          <div className="w-full bg-gray-50 dark:bg-gray-1000 relative pt-20 py-40">
             <div className="container mx-auto px-6 sm:px-8 align-center prose dark:prose-invert">
               <div className="flex flex-row">
                 <div className="md:basis-1/2">
                   <h1>Face lift off</h1>
                   <h2>Nipping and tucking the user interface</h2>
                   <p>
-                    With new devices meant a new way of thinking about layout.
-                    Our goal was to make it easier than ever to pickup and
-                    quickly test a student or rehearse a difficult scenario
-                    quickly.
+                    A re-look at typography, colors and spacing gave the user
+                    interface a more modern look and feel, making this software
+                    stand out from other medical training software.
                   </p>
                 </div>
               </div>

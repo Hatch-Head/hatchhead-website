@@ -88,7 +88,6 @@ a {
 
 @media (min-width: 900px) {
   .prose h1:before {
-    content: "";
     display: block;
     float: left;
     width: 5rem;
@@ -130,4 +129,9 @@ a {
 
 .list-style-arrow li {
  list-style-image: url('/img/arrow-right-2xl.svg');
+}
+
+
+hr {
+@apply lg:my-12 my-0;
 }

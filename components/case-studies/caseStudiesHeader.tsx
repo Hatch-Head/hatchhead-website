@@ -17,7 +17,7 @@ const CaseStudiesHeader = ({
 }: Props) => (
   <motion.div
     layout
-    className={`h-full relative bg-cover bg-center bg-no-repeat flex items-center`}
+    className={`h-full relative bg-cover bg-center bg-no-repeat flex items-center overflow-hidden`}
     style={{
       height: 520,
       //backgroundImage: `url(${heroImg})`,
@@ -25,7 +25,7 @@ const CaseStudiesHeader = ({
     }}
   >
     {video && (
-      <div className="animate-fadeIn fixed l-0 t-0">
+      <div className="animate-fadeIn l-0 t-0 absolute">
         <video
           playsInline
           autoPlay
@@ -33,7 +33,7 @@ const CaseStudiesHeader = ({
           loop
           src={video}
           style={{ top: 0 }}
-          className="fixed opacity-30 z-0 w-auto min-w-full min-h-full max-w-none l-0 t-0"
+          className=" opacity-30 z-0 w-auto min-w-full min-h-full max-w-none l-0 t-0"
         />
       </div>
     )}
@@ -43,14 +43,14 @@ const CaseStudiesHeader = ({
         <AnimatedCharacters
           text={heading}
           tag="h1"
-          className="font-display md:text-3xl text-2xl mb-6"
+          className="font-display md:text-3xl text-2xl mb-6 dark:text-white"
         />
       )}
       {subHeading && (
         <AnimatedCharacters
           text={subHeading}
           tag="h2"
-          className="font-display text-xl"
+          className="font-display text-xl dark:text-white"
         />
       )}
     </div>

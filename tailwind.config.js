@@ -148,7 +148,7 @@ module.exports = {
       mono: ["General Grotesque Mono Demi", "sans-serif"],
     },
     fontSize: {
-      xs: [".875rem", "1rem"], // 14px
+      xs: [".775rem", "1rem"], // 14px
       sm: ["1.2rem", "1.2rem"], // 14px
       base: ["1.5rem", "1.5rem"], // 24px
       lg: ["2.25rem", "2.7rem"], // 36px

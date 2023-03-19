@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import TextareaAutosize from "react-textarea-autosize";
 import { Container } from "../../components/util/container";
+import { Section } from "../util/section";
 import useFormSubmit from "../../hooks/useFormSubmit";
 type FormData = {
   name: string;
@@ -85,7 +86,7 @@ export default function ContactForm() {
   const inputClass =
     "bg-transparent py-4 mb-4 text-large border-0 border-b text-lg";
   return (
-    <section>
+    <section className="pb-24">
       {success ? (
         <>
           <Container>

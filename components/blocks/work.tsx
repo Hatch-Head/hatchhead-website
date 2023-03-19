@@ -1,7 +1,7 @@
 import CaseStudyCard from "../case-studies/CaseStudyCard";
 
 const Work = () => (
-  <div className="border-0 border-t border-neutral-1000  dark:border-neutral-700">
+  <div className="container">
     <CaseStudyCard
       to="/work/realiti"
       name="Realiti 360"
