@@ -104,7 +104,7 @@ export default function ContactForm() {
               Let's talk about the possibilities of creating, building, and
               growing something great
             </p>
-            <p>Fill out the form below, or, if you want, send us an email </p>
+            <p>Please fill out the form below.</p>
           </header>
 
           {error && (

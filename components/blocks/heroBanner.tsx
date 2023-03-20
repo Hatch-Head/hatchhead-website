@@ -73,7 +73,7 @@ export const HeroBanner = ({
               )}
               {text && (
                 <div
-                  className={`prose text-base md:text-lg mx-auto lg:mx-0 mb-10 text-gray-1000 dark:text-gray-50`}
+                  className={`prose text-base md:text-lg mx-auto lg:mx-0 mb-10 text-gray-700 dark:text-gray-50`}
                 >
                   {text}
                 </div>

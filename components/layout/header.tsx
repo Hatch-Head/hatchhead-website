@@ -13,38 +13,10 @@ export const Header = () => {
 
   const { theme, setTheme } = useTheme();
 
-  const headerColor = {
-    default:
-      "text-black dark:text-white from-gray-50 to-white dark:from-gray-700 dark:to-gray-800",
-    primary: {
-      blue: "text-white from-blue-300 to-blue-500",
-      teal: "text-white from-teal-400 to-teal-500",
-      green: "text-white from-green-400 to-green-500",
-      red: "text-white from-red-400 to-red-500",
-      pink: "text-white from-pink-400 to-pink-500",
-      purple: "text-white from-purple-400 to-purple-500",
-      orange: "text-white from-orange-400 to-orange-500",
-      yellow: "text-white from-yellow-400 to-yellow-500",
-    },
-  };
-
-  // If we're on an admin path, other links should also link to their admin paths
-  const [prefix, setPrefix] = React.useState("");
-  const [windowUrl, setUrl] = React.useState("");
   const isBrowser = typeof window !== "undefined";
   const hasUrl = isBrowser ? window.location.href : "";
 
   const [isOpen, setIsOpen] = useState(false);
-
-  React.useEffect(() => {
-    setUrl(hasUrl);
-  }, [hasUrl]);
-
-  React.useEffect(() => {
-    if (window.location.pathname.startsWith("/admin")) {
-      setPrefix("/admin");
-    }
-  });
 
   const headerClass =
     scroll > 100
@@ -143,6 +115,17 @@ export const Header = () => {
                 <li
                   className="animate-fadeDown delay-[1200ms]"
                   key={`${isOpen}-5`}
+                >
+                  <NavLink
+                    href="/insights"
+                    aria-label="Find out if you are a good fit for us"
+                  >
+                    Insights
+                  </NavLink>
+                </li>
+                <li
+                  className="animate-fadeDown delay-[1500ms]"
+                  key={`${isOpen}-6`}
                 >
                   <NavLink
                     href="/contact-us"

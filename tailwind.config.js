@@ -148,8 +148,8 @@ module.exports = {
       mono: ["General Grotesque Mono Demi", "sans-serif"],
     },
     fontSize: {
-      xs: [".775rem", "1rem"], // 14px
-      sm: ["1.2rem", "1.2rem"], // 14px
+      xs: [".775rem", "2rem"], // 14px
+      sm: ["1.2rem", "1.9rem"], // 14px
       base: ["1.5rem", "1.5rem"], // 24px
       lg: ["2.25rem", "2.7rem"], // 36px
       xl: ["2.25rem", "2.9rem"], // 36px
@@ -176,9 +176,15 @@ module.exports = {
         fadeIn: "fadeIn 0.3s ease-in-out",
         fadeDown: "fadeDown 0.6s ease-in-out",
         bounceHorizontal: "bounceHorizontal 1s infinite",
+        float: "float 3s ease-in-out infinite",
       },
       // that is actual animation
       keyframes: (theme) => ({
+        float: {
+          "0%": { transform: "translateY(-7px)" },
+          "50%": { transform: "translateY(7px)" },
+          "100%": { transform: "translateY(-7px)" },
+        },
         fadeIn: {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
@@ -276,6 +282,7 @@ module.exports = {
             },
             p: {
               fontSize: theme("fontSize.base"),
+              lineHeight: "2rem",
               marginTop: 0,
               marginBottom: theme("spacing.4"),
             },

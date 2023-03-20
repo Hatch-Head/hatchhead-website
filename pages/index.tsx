@@ -53,7 +53,7 @@ export default function Home() {
 
       <Work />
 
-      <div className="bg-black bg-no-repeat bg-contain bg-center bg-[url('/img/black-abstract-bg.png')] text-white py-24 mb-48">
+      <div className="bg-black bg-no-repeat bg-center bg-[url('/img/black-abstract-bg.png')] bg-cover text-white py-24 mb-48">
         <Container width="medium" className=" text-white text-center">
           <h1 className="text-lg md:text-2xl font-bold text-center mb-8">
             We provide the design behind our clients success

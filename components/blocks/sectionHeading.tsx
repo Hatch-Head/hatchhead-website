@@ -12,7 +12,9 @@ const SectionHeading = ({ title, content, className = "" }: Props) => (
       <h1 className="text-2xl md:text-3xl text-neutral dark:text-neutral-0 font-bold mb-4">
         {title}
       </h1>
-      <p className="text-base md:text-lg md:max-w-2xl">{content}</p>
+      <p className="text-base md:text-lg md:max-w-2xl text-neutral-550">
+        {content}
+      </p>
     </Container>
   </header>
 );

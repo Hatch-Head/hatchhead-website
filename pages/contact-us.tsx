@@ -11,7 +11,7 @@ const ContactUs = () => (
       <meta name="description" content="Get in touch with Hatch Head" />
     </Head>
 
-    <HeroBanner headline="Contact us" size="small" />
+    <HeroBanner headline="Contact us" size="small" tagline="Get in touch" />
 
     <Section>
       <ContactUsForm />

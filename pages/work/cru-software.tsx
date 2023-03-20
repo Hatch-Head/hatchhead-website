@@ -13,6 +13,10 @@ import Pills from "../../assets/img/work/cru-pills.svg";
 import Buttons from "../../assets/img/work/cru-buttons.svg";
 import Pickers from "../../assets/img/work/cru-pickers.svg";
 
+import Audit from "../../assets/img/work/cru-audit.png";
+import ButtonsChange from "../../assets/img/work/cru-buttons.png";
+import ColorDefinitions from "../../assets/img/work/cru-colors.png";
+
 const Cru = () => (
   <Layout>
     <HeroBanner
@@ -71,8 +75,72 @@ const Cru = () => (
       </div>
     </section>
 
+    <section className="w-full pt-40 pb-[200px]">
+      <div className="container px-6 lg:space-x-24 mx-auto lg:flex flex-row prose dark:prose-dark">
+        <div className="md:sticky top-[25vh] md:h-[50vh]  md:w-1/2 justify-center items-center">
+          <Image
+            width={400}
+            height={400}
+            src={Audit}
+            alt="A collection of the original elements that were audited"
+            className="w-full"
+          />
+        </div>
+        <div className=" grow-0 md:h-[100vh] flex flex-col lg:w-1/2 pt-40">
+          <h1>Where do we start?</h1>
+          <h2>We find out where we are</h2>
+          <p>
+            When creating a design system, we first took an audit of all the
+            colors, elements and typography currently used within the the
+            platform.
+          </p>
+          <p>
+            This helps us find redundant or repeated elements, inconsistent
+            color and typography styles and existing ui patterns that can be
+            repurposed into the new design system.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section className="w-full pb-80">
+      <div className="container px-6 lg:space-x-24 mx-auto lg:flex flex-row prose dark:prose-dark">
+        <div className="md:sticky top-[5vh] md:h-[100vh] md:w-1/2 items-center">
+          <Image
+            width={400}
+            height={400}
+            src={ColorDefinitions}
+            alt="A collection of the original elements that were audited "
+            className="w-full"
+          />
+        </div>
+        <div className=" grow-0 md:h-[200vh] justify-center flex flex-col lg:w-1/2">
+          <h1>2. Define the naming conventions</h1>
+          <h2>A shared language between all element and team members</h2>
+          <p>From there we start to find the repeatable</p>
+        </div>
+      </div>
+    </section>
+    <section className="w-full pb-[300px]">
+      <div className="container px-6 lg:space-x-24 mx-auto lg:flex flex-row prose dark:prose-dark">
+        <div className="md:sticky top-[200px] md:h-[800px] md:w-1/2 ">
+          <Image
+            width={530}
+            height={530}
+            src={ButtonsChange}
+            alt="A collection of the original elements that were audited "
+            className="w-full"
+          />
+        </div>
+        <div className=" grow-0 md:h-[150vh] pt-50 flex flex-col lg:w-1/2 justify-center">
+          <h1>3. Consolidate</h1>
+          <h2>Find out where we are</h2>
+          <p>From there we start to find the </p>
+        </div>
+      </div>
+    </section>
+
     <div
-      className="relative h-[75vh] w-full"
+      className="relative h-[75vh] w-full bg-white dark:bg-neutral-1000"
       style={{ clipPath: "inset(0 0 0 0)" }}
     >
       <div className="fixed h-screen w-screen left-0 top-0">
@@ -80,37 +148,6 @@ const Cru = () => (
           <Colors />
         </Container>
       </div>
-    </div>
-
-    <div className="bg-[#5B6AC3] dark:bg-[#21274b] py-24">
-      <Container width={"medium"}>
-        <div className="flex md:justify-end">
-          <Pills className="w-full max-w-3xl" />
-        </div>
-      </Container>
-      <Container width={"medium"}>
-        <Row>
-          <div className="prose dark:prose-invert text-white">
-            <h1 className="text-white">Something better</h1>
-            <h2 className="text-white">Rethinking the system.</h2>
-            <p>
-              We rethought how a single-screen device could work across
-              different devices, from mobile to big desktop monitors.
-            </p>
-            <p>
-              Our result: The Grid - an extensible, module approach for each
-              widget to provide complete control - from handheld devices to big
-              desktops.
-            </p>
-          </div>
-          <Pickers className="w-full" />
-        </Row>
-      </Container>
-      <Container width={"medium"}>
-        <div className="flex md:justify-end">
-          <Buttons className="w-full max-w-3xl" />
-        </div>
-      </Container>
     </div>
 
     <Section>

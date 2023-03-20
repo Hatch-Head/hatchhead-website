@@ -20,15 +20,13 @@ export default function HomePage() {
           <Head>
             <meta name="description" content="iSimulate Realiti360 design" />
           </Head>
-
           <motion.div layoutId="Realiti">
             <CaseStudiesHeader
               heading="Realiti"
               subHeading="Clinical education made easy on any screen"
-              //video="/vid/realiti360.mp4"
+              video="/vid/realiti360.mp4"
             />
           </motion.div>
-
           <div className="w-full relative pt-40">
             <div className="container px-6 space-x-8 mx-auto lg:flex align-center flex-row prose dark:prose-dark">
               <div className="md:basis-1/3 mb-24">
@@ -90,7 +88,6 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-
           <div className="w-full bg-gray-1000 relative py-40">
             <div className="container px-6 mx-auto md:grid md:grid-cols-12 gap-4 prose prose-invert items-center">
               <div className="col-start-1 md:col-span-6 justify-center">
@@ -116,6 +113,7 @@ export default function HomePage() {
         role="Design Lead"
         quote="We had to incorporate into our thinking that the learning environment for clinicians is one where they have a small window of time to teach, in-between patients and rounds."
       /> */}
+
           <BuildUI />
           <div className="w-full bg-gray-50 dark:bg-gray-1000 relative pt-20 pb-24">
             <div className="container px-6 mx-auto md:grid md:grid-cols-12 gap-24 prose dark:prose-invert">
@@ -134,14 +132,11 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-
           <motion.div
             style={{ transform: scrollY }}
             className="bg-[url('/img/realiti-widget-gallery.svg')] bg-contain repeat-x h-[700px]"
           />
-
           <IsometicHero />
-
           {/* <div className="hidden sm:block">sm</div>
       <div className="hidden md:block">md</div>
       <div className="hidden lg:block">lg</div>

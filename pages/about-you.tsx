@@ -149,13 +149,13 @@ const AboutYou = () => {
                 issues, and unknowns then you know what do with. You need some
                 assistance to unclog the uncertainty and keep the development
                 team moving. Hiring someone in-house full time for this seems
-                like overkill. No, this is a probelm that's only going to get
+                like overkill. No, this is a problem that's only going to get
                 worse the longer you leave it.
               </p>
               <p>
                 Fortunately, we're here to help to unclog the the feedback and
                 get things back on track. Hatch Head is available for
-                short-sprints, suitable for tight timeframes and agile
+                short-sprints, suitable for tight time frames and agile
                 environments.
               </p>
             </ContentBlock>

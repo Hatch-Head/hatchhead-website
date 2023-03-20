@@ -39,6 +39,9 @@ const CaseStudiesHeader = ({
     )}
 
     <div className="content z-10  align-center flex flex-col justify-center mx-auto container px-12">
+      <h4 className="font-bold  text-neutral-400 dark:text-neutral-300">
+        Case study
+      </h4>
       {heading && (
         <AnimatedCharacters
           text={heading}

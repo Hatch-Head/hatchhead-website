@@ -90,19 +90,19 @@ const AboutUs = () => (
               experience behind it?
             </p>
 
-            <p>
+            <p className="text-sm">
               The thinking being that design and engineering, when working
               together, can change how people experience the world.
             </p>
 
-            <p>
+            <p className="text-sm">
               This idea in 2021 become a reality when Hatch Head opened its
               doors. In just 18 months, Hatch Head have been recognised
               internationally and at home for their design work. They’ve worked
               with brands both big and small, local to international.
             </p>
 
-            <p>
+            <p className="text-sm">
               The heart of a designer combined with the head of an engineer.
             </p>
             <Logo width={120} />
@@ -113,6 +113,7 @@ const AboutUs = () => (
               width={500}
               height={500}
               alt="The Hatch Head team working around a table"
+              className="w-full"
             />
           </div>
         </Row>

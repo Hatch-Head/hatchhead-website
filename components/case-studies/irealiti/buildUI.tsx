@@ -57,7 +57,7 @@ const BuildUI = () => {
   };
 
   return (
-    <div className="">
+    <div>
       <div
         className="h-[2700px] pt-40 container lg:px-80 mx-auto"
         ref={parallax.ref}
