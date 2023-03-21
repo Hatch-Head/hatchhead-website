@@ -98,7 +98,7 @@ const AboutUs = () => (
 
             <p className="text-sm">
               This idea in 2021 become a reality when Hatch Head opened its
-              doors. In just 18 months, Hatch Head have been recognised
+              doors. In just 18 months, Hatch Head have been recognized
               internationally and at home for their design work. They’ve worked
               with brands both big and small, local to international.
             </p>

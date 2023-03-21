@@ -1,5 +1,4 @@
 import { type Author } from "../lib/service";
-import Image from "next/image";
 import DateFormatter from "./Date";
 import Avatar from "./Avatar";
 type Props = {
