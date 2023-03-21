@@ -38,7 +38,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         <input
           ref={ref}
           {...rest}
-          className="bg-transparent py-4 text-large border-0 border-b-2 text-lg outline-0 focus:outline-0 focus:border-primary dark:focus:border-gold transition-all placeholder:text-neutral-200 "
+          className="bg-transparent py-4 border-0 border-b-2 text-base md:text-lg outline-0 focus:outline-0 focus:border-primary dark:focus:border-gold transition-all placeholder:text-neutral-200 "
         />
         {error && (
           <span className="text-error pt-3 font-bold font-mono">{error}</span>
@@ -57,7 +57,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         <TextareaAutosize
           minRows={1}
           ref={ref}
-          className="bg-transparent py-4 text-large border-0 border-b-2 text-lg outline-0 focus:outline-0 focus:border-primary  dark:focus:border-gold transition-all placeholder:text-neutral-200 scrollbar-hide"
+          className="bg-transparent py-4 border-0 border-b-2 text-base md:text-lg outline-0 focus:outline-0 focus:border-primary  dark:focus:border-gold transition-all placeholder:text-neutral-200 scrollbar-hide"
           {...rest}
         />
 
