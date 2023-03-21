@@ -1,11 +1,10 @@
 import { Layout } from "../../components/layout";
-import { type Post, type Tags, getAllPosts, getTags } from "../../lib/service";
-import { GetStaticPaths, GetStaticProps } from "next";
+import { type Tags, getTags } from "../../lib/service";
+import { GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import { type NextPage } from "next";
 import Link from "next/link";
 import TagsPills from "../../components/Tags";
-import Image from "next/image";
 
 interface PageProps {
   tags: Tags;
@@ -13,18 +12,6 @@ interface PageProps {
 interface Params extends ParsedUrlQuery {
   tag: string;
 }
-
-const MarkdownComponents: Components = {
-  img: ({ node, width, height, alt, src, ...props }) => (
-    <Image
-      src={src!}
-      width={800}
-      height={800}
-      alt={alt || ""}
-      className="w-full"
-    />
-  ),
-};
 
 const BlogPost: NextPage<PageProps> = ({ tags }) => {
   const tagNames = Object.keys(tags).map((key) => tags[key].label);
@@ -53,13 +40,8 @@ const BlogPost: NextPage<PageProps> = ({ tags }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<PageProps, Params> = async (
-  context
-) => {
-  // This is where the error occurs
-
+export const getStaticProps: GetStaticProps<PageProps, Params> = async () => {
   const tags = getTags();
-
   return {
     props: {
       tags,

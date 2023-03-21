@@ -11,8 +11,6 @@ import { type NextPage } from "next";
 import AuthorComponent from "../../../components/Author";
 import Link from "next/link";
 import Tags from "../../../components/Tags";
-import ReactMarkdown, { type Components } from "react-markdown";
-import Image from "next/image";
 
 interface PageProps {
   posts: Post[];
@@ -21,18 +19,6 @@ interface PageProps {
 interface Params extends ParsedUrlQuery {
   tag: string;
 }
-
-const MarkdownComponents: Components = {
-  img: ({ node, width, height, alt, src, ...props }) => (
-    <Image
-      src={src!}
-      width={800}
-      height={800}
-      alt={alt || ""}
-      className="w-full"
-    />
-  ),
-};
 
 const BlogPost: NextPage<PageProps> = ({ posts, tag }) => {
   return (
@@ -85,7 +71,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<PageProps, Params> = async (
   context
 ) => {
-  // This is where the error occurs
   const { tag } = context.params!;
   const allPosts = getAllPosts();
 
