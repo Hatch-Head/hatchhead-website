@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const withSvgr = require("next-svgr");
+const withOptimizedImages = require("next-optimized-images");
 
 const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,

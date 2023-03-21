@@ -65,15 +65,12 @@ const Cru = () => {
             <div className="md:basis-2/3 mb-24">
               <h2>Scale design in an engineering lead team</h2>
               <p>
-                Realti360 is a modular simulation ecosystem incorporating a
-                patient simulator, CPR feedback and video in a single system.
-                The iPad app is deployed within hospitals across shared devices
-                to facilitate staff training during adhoc periods of downtime.
+                Cru software is a rostering system for large scale workforces
               </p>
               <p>
                 While pivoting to a SAS model, the product team were tasked with
                 improving the UI across the platform to make it easier to use as
-                well as consistent across the product.
+                well as consistent across features.
               </p>
               <p>
                 Hatch Head decided that the most effective way to achieve this
@@ -84,6 +81,16 @@ const Cru = () => {
             </div>
           </div>
         </section>
+
+        <Container size={"small"}>
+          <h1 className="text-3xl font-bold text-center mb-8 dark:text-white mt-40">
+            Building a design system
+          </h1>
+          <p className="text-center text-lg dark:text-neutral-200">
+            Part designer, part engineer, what does it take to create a design
+            system?
+          </p>
+        </Container>
 
         <section className="w-full pt-40 pb-[200px]">
           <div className="container px-6 lg:space-x-24 mx-auto lg:flex flex-row prose dark:prose-dark">

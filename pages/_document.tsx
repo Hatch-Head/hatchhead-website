@@ -5,7 +5,7 @@ import { Inter } from "@next/font/google";
 
 export default function Document() {
   return (
-    <Html>
+    <Html lang="en">
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Inter"

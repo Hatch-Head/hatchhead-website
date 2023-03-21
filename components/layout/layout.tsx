@@ -20,6 +20,7 @@ export const Layout = ({ children }: Props) => {
     <>
       <Head>
         <title>Hatch Head</title>
+
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
         <link

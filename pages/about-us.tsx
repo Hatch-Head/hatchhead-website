@@ -8,6 +8,7 @@ import Image, { StaticImageData } from "next/image";
 
 import SectionHeading from "../components/blocks/sectionHeading";
 import TeamHero from "../assets/img/hatch-head-team-together.jpg";
+import Team from "../assets/img/hatch-head-team-01.png";
 import Logo from "../assets/img/logo.svg";
 
 import Andrew from "../assets/img/profile-andrew-morton.png";
@@ -52,9 +53,9 @@ type ValuesProps = {
 
 const ValueCard = ({ title, content, alt, src }: ValuesProps) => (
   <div className="md:w-1/2 shrink-0 grow mb-12 text-center bg-white dark:bg-neutral-900 rounded-sm p-8 md:p-12 items-center flex-col flex">
-    <h3 className="font-bold text-base text-neutral mb-2 dark:text-white">
+    <h4 className="font-bold text-base text-neutral mb-2 dark:text-white">
       {title}
-    </h3>
+    </h4>
     <p className="text-neutral-600 mb-8 dark:text-neutral-300 whitespace-pre-line">
       {content}
     </p>
@@ -202,7 +203,16 @@ const AboutUs = () => (
       </Container>
     </Section>
 
-    <div className="bg-fixed bg-cover bg-center bg-no-repeat w-full from-neutral-100 to-neutral-200 h-[600px] bg-[url('/img/hatch-head-team-01.png')]" />
+    <div className="h-[600px]" style={{ clipPath: "inset(0)" }}>
+      <div className="absolute z-10">
+        <Image
+          src={Team}
+          quality={100}
+          alt="The hatch head team working around a table"
+          className="position fixed top-0 w-full h-screen bg-black"
+        />
+      </div>
+    </div>
 
     <Section>
       <ContactForm />

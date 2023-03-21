@@ -63,11 +63,7 @@ type Props = {
 export const Clients = ({ title = "Clients we’ve partnered with" }: Props) => {
   return (
     <Section>
-      <Container
-        className={`flex`}
-        //data-tinafield={`${parentField}.body`}
-        size="medium"
-      >
+      <Container className={`flex`} size="medium">
         <div className="flex flex-col justify-center">
           <Title title={title} />
         </div>
@@ -81,7 +77,7 @@ export const Clients = ({ title = "Clients we’ve partnered with" }: Props) => 
               <div className="hover:text-gold items-center justify-center fill-gray-1000 dark:fill-gray-50 pt-12 pb-4">
                 {client.logo}
               </div>
-              <div className="text-center w-full mt-4 text-gray-500 w-full">
+              <div className="text-center w-full mt-4 text-gray-800 dark:text-gray-200">
                 {client.name}
               </div>
             </div>
