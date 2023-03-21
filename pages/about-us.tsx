@@ -40,7 +40,7 @@ const StaffCard = ({ name, role, src }: StaffCardProps) => (
     <h3 className="font-bold text-base text-neutral dark:text-neutral-0 mb-2">
       {name}
     </h3>
-    <p className="text-neutral-600">{role}</p>
+    <p className="text-neutral-700">{role}</p>
   </div>
 );
 
@@ -53,9 +53,9 @@ type ValuesProps = {
 
 const ValueCard = ({ title, content, alt, src }: ValuesProps) => (
   <div className="md:w-1/2 shrink-0 grow mb-12 text-center bg-white dark:bg-neutral-900 rounded-sm p-8 md:p-12 items-center flex-col flex">
-    <h4 className="font-bold text-base text-neutral mb-2 dark:text-white">
+    <h3 className="font-bold text-base text-neutral mb-2 dark:text-white">
       {title}
-    </h4>
+    </h3>
     <p className="text-neutral-600 mb-8 dark:text-neutral-300 whitespace-pre-line">
       {content}
     </p>

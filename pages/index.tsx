@@ -37,7 +37,7 @@ export default function Home() {
 
       <Section>
         <Container>
-          <Title title="We help you" className="mb-12" />
+          <Title title="We help you" className="mb-12" element="h2" />
 
           <WhatWeDoCards className="mb-24" />
         </Container>

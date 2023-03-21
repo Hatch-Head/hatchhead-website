@@ -72,9 +72,9 @@ const WhatWeDo = () => (
 
     <Section>
       <Container size="large">
-        <h1 className="text-3xl font-bold text-neutral dark:text-white mb-48">
+        <h2 className="text-3xl font-bold text-neutral dark:text-white mb-48">
           Our process
-        </h1>
+        </h2>
 
         <Row>
           <div className="lg:w-7/12 mb-24 prose dark:prose-invert">
@@ -90,7 +90,9 @@ const WhatWeDo = () => (
           </div>
 
           <div className="lg:w-5/12 mb-24 prose dark:prose-invert">
-            <h1>Define</h1>
+            <h3 className="font-bold text-2xl text-neutral-900 dark:text-white mb-4">
+              Define
+            </h3>
             <div>
               <p>
                 Define is the process of taking what we know from our Discover
@@ -102,7 +104,9 @@ const WhatWeDo = () => (
                 ideas discarded. We should now be clear on what the problem is
                 and who the people impacted are likely to be.
               </p>
-              <h4>Some thing we do at this stage</h4>
+              <h4 className="font-bold text-base">
+                Some thing we do at this stage
+              </h4>
               <div className=" flex">
                 <ul className="list-style-disc md:w-1/2">
                   <li>User Research</li>
@@ -130,7 +134,9 @@ const WhatWeDo = () => (
       <Container size="large">
         <Row>
           <div className="lg:w-1/2 mb-24 prose dark:prose-invert">
-            <h1>Ideate</h1>
+            <h3 className="font-bold text-2xl text-neutral-900 dark:text-white mb-4">
+              Ideate
+            </h3>
             <div className="prose dark:prose-invert">
               <p>
                 Ideate is the process of taking what we know from our Discover
@@ -142,7 +148,9 @@ const WhatWeDo = () => (
                 ideas discarded. We should now be clear on what the problem is
                 and who the people impacted are likely to be.
               </p>
-              <h4>Some thing we do at this stage</h4>
+              <h4 className="font-bold text-base">
+                Some thing we do at this stage
+              </h4>
               <div className="flex">
                 <ul className="list-style-disc md:w-1/2">
                   <li>Empathy Mapping</li>
@@ -171,7 +179,9 @@ const WhatWeDo = () => (
       <Container size="large">
         <Row reverse>
           <div className="lg:w-1/2 mb-24 prose dark:prose-invert">
-            <h1>Solution</h1>
+            <h3 className="font-bold text-2xl text-neutral-900 dark:text-white mb-4">
+              Solution
+            </h3>
             <div className="prose dark:prose-invert">
               <p>
                 The solution phase is like a big loop that goes something like
@@ -185,7 +195,9 @@ const WhatWeDo = () => (
                 defined. The bad ideas are discarded and the good ideas are
                 kept.
               </p>
-              <h4>Some thing we do at this stage</h4>
+              <h4 className="font-bold text-base">
+                Some thing we do at this stage
+              </h4>
               <div>
                 <ul className="list-style-disc md:w-1/2">
                   <li>Wire frames</li>
@@ -216,7 +228,9 @@ const WhatWeDo = () => (
       <Container size="large">
         <Row>
           <div className="lg:w-1/2 mb-24 prose dark:prose-invert">
-            <h1>Deliver & Orbit</h1>
+            <h3 className="font-bold text-2xl text-neutral-900 dark:text-white mb-4">
+              Deliver & Orbit
+            </h3>
             <div className="prose dark:prose-invert">
               <p>
                 The Deliver stage is the completion of our designs and the
@@ -231,8 +245,9 @@ const WhatWeDo = () => (
                 Instead, we stay in orbit with engineering and product team,
                 helping the team bring the designs into production.
               </p>
-
-              <h4>Some thing we do at this stage</h4>
+              <h4 className="font-bold text-base">
+                Some thing we do at this stage
+              </h4>
               <ul className="list-style-disc">
                 <li>Documentation</li>
                 <li>Developer handover briefs</li>
