@@ -66,7 +66,7 @@ export const HeroBanner = ({
 
               {headline && (
                 <AnimatedText
-                  className="w-full relative mb-8 md:md-2 text-[3rem] leading-[3rem] md:text-3xl 2xl:text-4xl text-neutral-1000 tracking-normal font-display dark:text-gold"
+                  className="w-full relative mb-8 md:md-2 text-[3rem] leading-[3rem] md:text-3xl 2xl:text-5xl text-neutral-1000 tracking-normal font-display dark:text-gold"
                   tag="h1"
                   text={headline}
                 />

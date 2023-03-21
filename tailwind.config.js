@@ -155,8 +155,9 @@ module.exports = {
       xl: ["2.25rem", "2.9rem"], // 36px
       "2xl": ["4.0625rem", "4.0625rem"], // 72px
       "3xl": ["6rem", "6rem"], // 96px
-      "4xl": ["10rem", "10rem"], // 160px
-      "5xl": ["20rem", "20rem"], // 320px
+      "4xl": ["8rem", "8rem"], // 160px
+      "5xl": ["10rem", "10rem"], // 160px
+      "6xl": ["20rem", "20rem"], // 320px
     },
     borderWidth: {
       DEFAULT: "1px",
