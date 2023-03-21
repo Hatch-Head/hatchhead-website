@@ -250,7 +250,7 @@ module.exports = {
             },
             h3: {
               fontSize: theme("fontSize.base"),
-              fontFamily: "Inter",
+              fontFamily: theme("fontFamily.sans"),
               fontWeight: "normal",
               marginBottom: "0rem",
               color: theme("colors.gray.600"),
@@ -258,7 +258,7 @@ module.exports = {
             h4: {
               fontSize: theme("fontSize.sm"),
               marginBottom: 0,
-              fontFamily: "Inter",
+              fontFamily: theme("fontFamily.sans"),
               fontWeight: "bold",
             },
             pre: {
