@@ -236,14 +236,14 @@ module.exports = {
 
             h1: {
               fontSize: theme("fontSize.2xl")[0],
-              fontFamily: theme("fontFamily.display").join(","),
+              fontFamily: theme("fontFamily.display"),
               fontWeight: "normal",
               marginTop: 0,
               marginBottom: "2rem",
             },
             h2: {
               fontSize: theme("fontSize.xl")[0],
-              fontFamily: theme("fontFamily.sans").join(","), // Not sure if/why the join is needed
+              fontFamily: theme("fontFamily.sans"),
               fontWeight: "normal",
               marginBottom: "1rem",
               marginTop: "0rem",
