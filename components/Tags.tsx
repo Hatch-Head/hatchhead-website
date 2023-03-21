@@ -18,7 +18,7 @@ const Tags = ({ tags = [], center = true, linkPrefix }: Props) => {
       }`}
     >
       {tags.map((tag) => {
-        const slug = slugify(tag);
+        const slug = slugify(tag).toLowerCase();
         return linkPrefix !== undefined ? (
           <Link
             key={tag}

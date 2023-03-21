@@ -31,6 +31,9 @@ const BlogPost: NextPage<PageProps> = ({ posts, tag }) => {
           <h2 className=" text-2xl md:text-3xl lg:text-4xl mb-12 font-bold text-neutral-1000 dark:text-white">
             {tag.label}
           </h2>
+          <p className="text-base dark:text-neutral-400 mb-12">
+            Articles tagged with "{tag.label}"
+          </p>
         </div>
       </header>
       {posts.map((post) => (

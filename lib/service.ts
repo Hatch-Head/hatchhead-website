@@ -91,7 +91,7 @@ export function getTags() {
     .flatMap(({ tags }) => tags);
 
   const tags = postTags.reduce((acc, tag) => {
-    const slug = slugify(tag);
+    const slug = slugify(tag).toLowerCase();
     acc[slug] = acc[slug]
       ? { count: acc[slug].count + 1, label: tag }
       : { count: 1, label: tag };
