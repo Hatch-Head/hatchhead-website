@@ -94,7 +94,7 @@ const Cru = () => {
 
         <section className="w-full pt-40 pb-[200px]">
           <div className="container px-6 lg:space-x-24 mx-auto lg:flex flex-row prose dark:prose-dark">
-            <div className="md:sticky top-[25vh] md:h-[50vh]  md:w-1/2 justify-center items-center">
+            <div className="lg:sticky top-[25vh] lg:h-[50vh]  lg:w-1/2 justify-center items-center">
               <Image
                 width={400}
                 height={400}
@@ -103,7 +103,7 @@ const Cru = () => {
                 className="w-full max-h-full"
               />
             </div>
-            <div className=" grow-0 md:h-[100vh] flex flex-col lg:w-1/2 pt-40">
+            <div className=" grow-0 lg:h-[100vh] flex flex-col lg:w-1/2 pt-40">
               <h1>Where do we start?</h1>
               <h2>We find out where we are</h2>
               <p>
