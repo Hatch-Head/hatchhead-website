@@ -19,7 +19,7 @@ export default function Home({ posts }: { posts: Post[] }) {
             Discover what we’ve uncovered{" "}
             <span className="animate-float inline-block">🤔</span>
           </h2>
-          <p className="text-base">
+          <p className="text-base dark:text-neutral-400">
             Sharing things we've learned through research and experience{" "}
           </p>
         </div>
