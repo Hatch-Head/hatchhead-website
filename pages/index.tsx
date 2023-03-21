@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { Layout } from "../components/layout";
 import { HeroBanner } from "../components/blocks/heroBanner";
-import video from "../assets/vid/reel.mp4";
+import video from "../assets/vid/reel-short.mp4";
 import { Clients } from "../components/blocks/clients";
 import Title from "../components/title";
 import { Section } from "../components/util/section";

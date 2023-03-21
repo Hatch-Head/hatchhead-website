@@ -12,8 +12,8 @@ export default function Home({ posts }: { posts: Post[] }) {
     <Layout>
       <header className="border-0 border-b-2 border-neutral-900">
         <div className="container max-w-4xl py-40">
-          <h1 className=" text-2xl md:text-4xl font-bold text-neutral-1000 dark:text-white">
-            Insights <span className="animate-float">🤔</span>
+          <h1 className=" text-2xl md:text-3xl font-bold text-neutral-1000 dark:text-white">
+            Insights <span className="animate-float inline-block">🤔</span>
           </h1>
         </div>
       </header>
