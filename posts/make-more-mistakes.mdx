@@ -1,0 +1,44 @@
+---
+title: Make more mistakes
+date: '2023-03-22'
+author: andrew-morton
+banner: ../img/blog-slip-banner.jpg
+published: false
+excerpt: As much as we try, our users are going to make mistakes. Lean into that and start by building with errors in mind first.
+tags: ["UI Design", "UX Design", "Developer"]
+---
+
+Talk to any developer about a feature you'd like to create. I'm sure you've had the following conversation at some point
+
+> It's so simple, I just want the user to type in their phone number and then post that to the server. Why is it taking so long?
+
+Well...
+- What happens if the user types in a phone number that's too long?
+- What happens if they type in a phone number that's too short?
+- What happens if they type in a phone number that's not a number?
+- What happens if the number alread exitsts in the database?
+- What if the server falls over when submitting?
+
+You can imagin infiniate scenarios where the "happy flow" does not happen and often only 1 scenaro when the scenaro is the correct one. So, why do we design and develop with the ideal scenaro first? In my career both designeres and developers have often considered the errors states as an afterthough or something that can be added later. 
+
+This is a mistake.
+
+# For designers
+
+# Developers
+
+Build the errors first. In a perfect world you should lead on Test Driven Development (TTD) where you
+
+When first getting a task your instinct is to jump straight into the happy flow. But, before you do that, think about the errors.
+
+```js
+try {
+  const response = await fetch('https://api.com', {
+    method: 'POST',
+    body: ...
+  });
+} catch (error) {
+  // This helps you as a developer but does not help your users and 
+  console.log('There was an error', error);
+}
+```

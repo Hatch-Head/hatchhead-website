@@ -266,10 +266,21 @@ module.exports = {
               lineHeight: 1.5,
             },
             code: {
-              backgroundColor: theme("colors.gray.100"),
+              backgroundColor: theme("colors.gray.900"),
               padding: "0.25rem",
               borderRadius: "3px",
               margin: "-0.25rem 1px",
+              color: theme("colors.gray.100"),
+            },
+            blockquote: {
+              color: theme("colors.neutral.100"),
+              fontStyle: "normal",
+              padding: "1.25rem",
+              backgroundColor: theme("colors.neutral.900"),
+            },
+            "blockquote p": {
+              fontSize: theme("fontSize.base"),
+              lineHeight: theme("fontSize.lg"),
             },
             a: {
               color: theme("colors.gold.DEFAULT"),
@@ -285,6 +296,10 @@ module.exports = {
               lineHeight: "2rem",
               marginTop: 0,
               marginBottom: theme("spacing.4"),
+            },
+            ul: {
+              fontSize: theme("fontSize.base"),
+              lineHeight: "2rem",
             },
           },
         },

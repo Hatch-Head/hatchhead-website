@@ -5,6 +5,7 @@ import { remark } from "remark";
 import html from "remark-html";
 const postsDirectory = join(process.cwd(), "posts");
 
+const isDev = process.env.NODE_ENV === "development";
 export interface Post {
   title: string;
   date: string;
@@ -14,6 +15,7 @@ export interface Post {
   banner?: string;
   author?: Author;
   tags: string[];
+  published: boolean;
 }
 
 export interface Author {
@@ -46,6 +48,7 @@ export function getPostBySlug(slug: string) {
   const author = data.author ? getAuthor(data.author) : undefined;
 
   const post = {
+    published: true,
     ...data,
     content,
     slug: realSlug,
@@ -59,7 +62,7 @@ export function getAllPosts() {
   const slugs = getPostSlugs();
   const posts = slugs
     .map((slug) => getPostBySlug(slug))
-    // sort posts by date in descending order
+    .filter((post) => post.published !== false || isDev)
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts as Post[];
 }
