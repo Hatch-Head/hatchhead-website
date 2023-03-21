@@ -236,21 +236,21 @@ module.exports = {
 
             h1: {
               fontSize: theme("fontSize.2xl")[0],
-              fontFamily: theme("fontFamily.display"),
+              fontFamily: theme("fontFamily.display").join(","),
               fontWeight: "normal",
               marginTop: 0,
               marginBottom: "2rem",
             },
             h2: {
               fontSize: theme("fontSize.xl")[0],
-              fontFamily: theme("fontFamily.sans"),
+              fontFamily: theme("fontFamily.display").join(","),
               fontWeight: "normal",
               marginBottom: "1rem",
               marginTop: "0rem",
             },
             h3: {
               fontSize: theme("fontSize.base"),
-              fontFamily: theme("fontFamily.sans"),
+              fontFamily: theme("fontFamily.display").join(","),
               fontWeight: "normal",
               marginBottom: "0rem",
               color: theme("colors.gray.600"),
@@ -258,7 +258,7 @@ module.exports = {
             h4: {
               fontSize: theme("fontSize.sm"),
               marginBottom: 0,
-              fontFamily: theme("fontFamily.sans"),
+              fontFamily: theme("fontFamily.display").join(","),
               fontWeight: "bold",
             },
             pre: {
