@@ -18,10 +18,12 @@ const FeatureList = ({ items }: Props) => {
       {items.map(({ label, href }, index) => {
         if (href) {
           return (
-            <Link key={href} href={href} className={style}>
-              <ArrowRight />
-              <span>{label}</span>
-            </Link>
+            <li key={href}>
+              <Link href={href} className={style}>
+                <ArrowRight />
+                <span>{label}</span>
+              </Link>
+            </li>
           );
         } else {
           return (

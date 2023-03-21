@@ -6,7 +6,6 @@ import { Theme } from "./theme";
 import { useDarkMode } from "usehooks-ts";
 import { useRouter } from "next/router";
 import { ThemeProvider } from "next-themes";
-import { MDXProvider } from "@mdx-js/react";
 
 type Props = {
   children: React.ReactNode;
@@ -78,7 +77,7 @@ export const Layout = ({ children }: Props) => {
               // transition={{ type: "linear" }} // Set the transition to linear
               // key={asPath}
               >
-                <MDXProvider>{children}</MDXProvider>
+                {children}
               </main>
               {/* </AnimatePresence> */}
             </div>

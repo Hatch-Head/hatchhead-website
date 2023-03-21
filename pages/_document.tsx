@@ -9,7 +9,8 @@ export default function Document() {
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Inter"
-          rel="stylesheet"
+          rel="preload"
+          as="font"
         />
       </Head>
       <body>

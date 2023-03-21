@@ -3,6 +3,9 @@ import { type Post, getAllPosts } from "../../lib/service";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import { type NextPage } from "next";
+import AuthorComponent from "../../components/Author";
+import Link from "next/link";
+import Tags from "../../components/Tags";
 import { remark } from "remark";
 import html from "remark-html";
 
@@ -18,10 +21,25 @@ interface Params extends ParsedUrlQuery {
 const BlogPost: NextPage<PageProps> = ({ post, _html }) => {
   return (
     <Layout>
-      <header className="flex h-[500px] justify-center items-center container max-w-4xl pt-40">
-        <h1 className="text-center font-bold text-xl md:text-3xl text-neutral-900 dark:text-white">
+      <header className="flex flex-col pt-40 py-10 justify-center container max-w-4xl">
+        <Link href="/insights" className="font-bold text-neutral-450">
+          Insights
+        </Link>
+        <h1 className="font-bold text-xl md:text-3xl text-neutral-900 dark:text-white mb-4">
           {post.title}
         </h1>
+        <p className="text-lg text-neutral-450 mb-12">{post.excerpt}</p>
+
+        {post.author && (
+          <AuthorComponent
+            author={post.author}
+            time="5 min read"
+            date={post.date}
+            className="mb-12"
+          />
+        )}
+
+        <Tags tags={post.tags} center={false} />
       </header>
       {post.banner && (
         <div
@@ -60,7 +78,7 @@ export const getStaticProps: GetStaticProps<PageProps, Params> = async (
     return { notFound: true };
   }
   //const _html = await remark().use(html).process(post.content);
-  const _html = post.content;
+  const _html = await remark().use(html).process(post.content);
 
   return {
     props: {

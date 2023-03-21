@@ -12,6 +12,26 @@ export interface Post {
   content: string;
   excerpt: string;
   banner?: string;
+  author?: Author;
+  tags: string[];
+}
+
+export interface Author {
+  name: string;
+  avatar: string;
+}
+
+export function getAuthor(slug: string) {
+  const dir = join(process.cwd(), "content/authors");
+  const loc = join(dir, `${slug}.md`);
+  const fileContents = fs.readFileSync(loc, "utf8");
+  const { data } = matter(fileContents);
+
+  const author = {
+    ...data,
+  } as Author;
+
+  return author;
 }
 
 export function getPostSlugs() {
@@ -23,14 +43,15 @@ export function getPostBySlug(slug: string) {
   const fullPath = join(postsDirectory, `${realSlug}.mdx`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
+  const author = data.author ? getAuthor(data.author) : undefined;
 
   const post = {
     ...data,
     content,
     slug: realSlug,
+    author,
   } as Post;
 
-  console.log("post", post);
   return post;
 }
 

@@ -20,16 +20,18 @@ export default function Home({ posts }: { posts: Post[] }) {
       <div className="">
         {recentPosts.map((post) => (
           <Link key={post.slug} href={`/insights/${post.slug}`}>
-            <article className="border-0 border-b border-neutral-900 py-12">
+            <article className="border-0 border-b border-neutral-900 py-12 group">
               <div className="container py-12 flex flex-col max-w-4xl">
-                <h1 className="font-bold text-xl text-neutral-1000 dark:text-white">
+                <h1 className="font-bold text-xl text-neutral-1000 dark:text-white group-hover:text-primary dark:group-hover:text-gold">
                   {post.title}
                 </h1>
                 <DateFormatter
                   dateString={post.date}
-                  className="font-mono mb-8"
+                  className="font-mono mb-8 text-neutral-400"
                 />
-                <div className="text-base max-w-3xl">{post.excerpt}</div>
+                <div className="text-base max-w-3xl text-neutral-600 dark:text-neutral-300">
+                  {post.excerpt}
+                </div>
               </div>
             </article>
           </Link>
