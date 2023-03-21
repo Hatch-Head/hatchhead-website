@@ -33,7 +33,7 @@ export default function Home({ posts }: { posts: Post[] }) {
           >
             <article className="border-0 border-b border-neutral-900 py-12 group">
               <div className="container py-12 flex flex-col max-w-4xl">
-                <h1 className="font-bold text-2xl text-neutral-1000 mb-4 dark:text-white group-hover:text-primary dark:group-hover:text-gold">
+                <h1 className="font-bold text-xl md:text-2xl text-neutral-1000 mb-4 dark:text-white group-hover:text-primary dark:group-hover:text-gold">
                   {post.title}
                 </h1>
                 <AuthorComponent

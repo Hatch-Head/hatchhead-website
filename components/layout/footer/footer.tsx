@@ -2,13 +2,10 @@ import React from "react";
 import Link from "next/link";
 import { Container } from "../../util/container";
 import Logo from "../../../assets/img/hatch-head-logo-stacked.svg";
-import { useSettings } from "../../../hooks/useSettings";
 import SocialLinks from "../../SocialLinks";
 export const Footer = () => {
-  const { social } = useSettings();
-
   return (
-    <footer className="bg-gray-1000 z-0 text-gray-50 dark:bg-black">
+    <footer className="bg-gray-1000 z-0 text-gray-50 dark:bg-black overflow-hidden">
       <Container className="relative" size="large">
         <div className="md:flex gap-6">
           <div className="flex-none mb-8">
@@ -60,7 +57,7 @@ export const Footer = () => {
           </div>
         </div>
       </Container>
-      <div className="bg-primary dark:bg-gold -skew-x-12 max-w-7xl mx-auto h-[86px]" />
+      <div className="bg-primary dark:bg-gold -skew-x-12 max-w-7xl mx-auto h-[86px] w-full" />
     </footer>
   );
 };

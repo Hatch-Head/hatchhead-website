@@ -6,17 +6,27 @@ import { type NextPage } from "next";
 import AuthorComponent from "../../components/Author";
 import Link from "next/link";
 import Tags from "../../components/Tags";
-import { remark } from "remark";
-import html from "remark-html";
-
+import ReactMarkdown, { type Components } from "react-markdown";
+import Image from "next/image";
 interface PageProps {
   post: Post;
   _html: string;
 }
-
 interface Params extends ParsedUrlQuery {
   slug: string;
 }
+
+const MarkdownComponents: Components = {
+  img: ({ node, width, height, alt, src, ...props }) => (
+    <Image
+      src={src!}
+      width={800}
+      height={800}
+      alt={alt || ""}
+      className="w-full"
+    />
+  ),
+};
 
 const BlogPost: NextPage<PageProps> = ({ post, _html }) => {
   return (
@@ -47,10 +57,13 @@ const BlogPost: NextPage<PageProps> = ({ post, _html }) => {
           style={{ backgroundImage: `url(${post.banner})` }}
         />
       )}
-      <div
+      <div className="prose container dark:prose-invert max-w-4xl pb-40  [&>*:first-child]:text-lg [&>*:first-child]:mb-12">
+        <ReactMarkdown components={MarkdownComponents}>{_html}</ReactMarkdown>
+      </div>
+      {/* <div
         className="space-y-12 container max-w-4xl dark:prose-invert blog-article pb-40 first:text-white [&>*:first-child]:text-lg [&>*:first-child]:mb-12 prose"
         dangerouslySetInnerHTML={{ __html: _html }}
-      />
+      /> */}
     </Layout>
   );
 };
@@ -77,12 +90,12 @@ export const getStaticProps: GetStaticProps<PageProps, Params> = async (
     return { notFound: true };
   }
   //const _html = await remark().use(html).process(post.content);
-  const _html = await remark().use(html).process(post.content);
+  //const _html = await remark().use(html).process(post.content);
 
   return {
     props: {
       post,
-      _html: _html.toString(),
+      _html: post.content,
     },
   };
 };

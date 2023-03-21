@@ -29,13 +29,13 @@ export const Header = () => {
     >
       <div className={`relative z-10 container`}>
         <div className="flex items-center justify-between relative">
-          <h4 className="select-none text-lg font-bold tracking-tight my-4 transition duration-150 ease-out transform">
+          <h4 className="select-none text-lg font-bold tracking-tight my-2 md:my-4 transition duration-150 ease-out transform">
             <Link
               href="/"
               aria-label="Go back to the homepage"
               className="flex items-center hover:text-primary dark:hover:text-gold transition-all"
             >
-              <Logo className="mr-4 h-[38px]" />
+              <Logo className="mr-4 h-[24px] md:h-[38px]" />
               <div className="md:group-hover:opacity-100 group-hover:translate-x-0 -translate-x-6 opacity-0  md:w-[320px] transition-all">
                 Hatch Head
               </div>
