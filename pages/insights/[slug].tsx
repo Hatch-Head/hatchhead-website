@@ -43,7 +43,7 @@ const BlogPost: NextPage<PageProps> = ({ post, _html }) => {
       </header>
       {post.banner && (
         <div
-          className="w-full mb-24 h-[500px] bg-black bg-cover bg-center saturate-0"
+          className="w-full mb-24 h-[500px] bg-black bg-cover bg-center"
           style={{ backgroundImage: `url(${post.banner})` }}
         />
       )}

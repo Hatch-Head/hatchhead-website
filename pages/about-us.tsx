@@ -208,8 +208,10 @@ const AboutUs = () => (
         <Image
           src={Team}
           quality={100}
+          width={1200}
+          height={800}
           alt="The hatch head team working around a table"
-          className="position fixed top-0 w-full h-screen bg-black"
+          className="position fixed top-0 w-full h-screen bg-black object-cover"
         />
       </div>
     </div>

@@ -65,7 +65,7 @@ export default function Home() {
             src={MissionImage}
             quality={100}
             alt="The hatch head team working around a table"
-            className="position fixed top-0 w-full h-screen"
+            className="position fixed top-0 w-full h-screen "
           />
         </div>
         <div className="absolute top-0 left-0 w-full h-full z-20 flex items-center justify-center">

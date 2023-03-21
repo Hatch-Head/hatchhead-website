@@ -103,27 +103,30 @@ const WhatWeDo = () => (
                 and who the people impacted are likely to be.
               </p>
               <h4>Some thing we do at this stage</h4>
-              <Row>
-                <ul className="list-style-arrow md:w-1/2">
+              <div className=" flex">
+                <ul className="list-style-disc md:w-1/2">
                   <li>User Research</li>
                   <li>Desktop Research</li>
                   <li>Competitor Analysis</li>
                   <li>Field Studies</li>
                 </ul>
-                <ul className="list-style-arrow md:w-1/2">
+                <ul className="list-style-disc md:w-1/2">
                   <li>User Journey Mapping</li>
                   <li>User Personas</li>
                   <li>Empathy Mapping</li>
                   <li>Service Blueprints</li>
                 </ul>
-              </Row>
+              </div>
             </div>
           </div>
         </Row>
       </Container>
     </Section>
 
-    <Section className="overflow-x-hidden">
+    <Section
+      className="overflow-x-hidden overflow-y-hidden"
+      color="transparent"
+    >
       <Container size="large">
         <Row>
           <div className="lg:w-1/2 mb-24 prose dark:prose-invert">
@@ -140,13 +143,12 @@ const WhatWeDo = () => (
                 and who the people impacted are likely to be.
               </p>
               <h4>Some thing we do at this stage</h4>
-              <Row>
-                <ul className="list-style-arrow md:w-1/2">
-                  <li>Empathy Mapping</li>
+              <div className="flex">
+                <ul className="list-style-disc md:w-1/2">
                   <li>Empathy Mapping</li>
                   <li>Service Blueprints</li>
                 </ul>
-              </Row>
+              </div>
             </div>
           </div>
 
@@ -165,7 +167,7 @@ const WhatWeDo = () => (
       </Container>
     </Section>
 
-    <Section>
+    <Section className="overflow-visible" color="transparent">
       <Container size="large">
         <Row reverse>
           <div className="lg:w-1/2 mb-24 prose dark:prose-invert">
@@ -175,7 +177,7 @@ const WhatWeDo = () => (
                 The solution phase is like a big loop that goes something like
                 this:
               </p>
-              <div className="bg-white p-4 rounded-sm mb-4">
+              <div className="bg-neutral-100 p-4 rounded-sm mb-4 text-center text-neutral-900 dark:text-neutral-900">
                 Design &#8594; Test &#8594; Evaluate &#8594; Repeat
               </div>
               <p>
@@ -184,14 +186,14 @@ const WhatWeDo = () => (
                 kept.
               </p>
               <h4>Some thing we do at this stage</h4>
-              <Row>
-                <ul className="list-style-arrow md:w-1/2">
+              <div>
+                <ul className="list-style-disc md:w-1/2">
                   <li>Wire frames</li>
                   <li>Usability Testing</li>
                   <li>Prototyping</li>
                   <li>Service Blueprints</li>
                 </ul>
-              </Row>
+              </div>
             </div>
           </div>
 
@@ -210,7 +212,7 @@ const WhatWeDo = () => (
       </Container>
     </Section>
 
-    <Section>
+    <Section color="transparent">
       <Container size="large">
         <Row>
           <div className="lg:w-1/2 mb-24 prose dark:prose-invert">
@@ -230,8 +232,8 @@ const WhatWeDo = () => (
                 helping the team bring the designs into production.
               </p>
 
-              <h3>Some thing we do at this stage</h3>
-              <ul className="list-style-arrow">
+              <h4>Some thing we do at this stage</h4>
+              <ul className="list-style-disc">
                 <li>Documentation</li>
                 <li>Developer handover briefs</li>
                 <li>User Flows</li>
