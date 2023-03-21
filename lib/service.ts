@@ -13,7 +13,7 @@ export interface Post {
   content: string;
   excerpt: string;
   banner?: string;
-  author?: Author;
+  author: Author;
   tags: string[];
   published: boolean;
 }
