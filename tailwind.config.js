@@ -181,9 +181,9 @@ module.exports = {
       // that is actual animation
       keyframes: (theme) => ({
         float: {
-          "0%": { transform: "translateY(-7px)" },
+          "0%": { transform: "translateY(-10px)" },
           "50%": { transform: "translateY(7px)" },
-          "100%": { transform: "translateY(-7px)" },
+          "100%": { transform: "translateY(-10px)" },
         },
         fadeIn: {
           "0%": { opacity: 0 },

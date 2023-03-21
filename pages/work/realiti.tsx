@@ -24,7 +24,7 @@ export default function HomePage() {
             <CaseStudiesHeader
               heading="Realiti"
               subHeading="Clinical education made easy on any screen"
-              video="/vid/realiti360.mp4"
+              //video="/vid/realiti360.mp4"
             />
           </motion.div>
           <div className="w-full relative pt-40">
@@ -127,8 +127,14 @@ export default function HomePage() {
                   across a complex ecosystem of controls.
                 </p>
               </div>
-              <div className="md:col-span-6">
-                IMAGE of the different states of the widget, editing etc
+              <div className="md:col-span-6 items-center justify-center flex">
+                <video autoPlay muted playsInline loop>
+                  <source
+                    src="/vid/widget-elements.mov"
+                    type="video/quicktime"
+                  />
+                  <source src="/vid/widget-elements.webm" type="video/webm" />
+                </video>
               </div>
             </div>
           </div>
