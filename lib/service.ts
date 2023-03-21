@@ -3,6 +3,8 @@ import { join } from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import slugify from "slugify";
+
 const postsDirectory = join(process.cwd(), "posts");
 
 const isDev = process.env.NODE_ENV === "development";
@@ -70,4 +72,31 @@ export function getAllPosts() {
 export async function markdownToHtml(markdown: string) {
   const result = await remark().use(html).process(markdown);
   return result.toString();
+}
+
+export type Tag = {
+  count: number;
+  label: string;
+};
+
+export type Tags = {
+  [key: string]: Tag;
+};
+
+export function getTags() {
+  const slugs = getPostSlugs();
+  const postTags = slugs
+    .map((slug) => getPostBySlug(slug))
+    .filter((post) => post.published !== false || isDev)
+    .flatMap(({ tags }) => tags);
+
+  const tags = postTags.reduce((acc, tag) => {
+    const slug = slugify(tag);
+    acc[slug] = acc[slug]
+      ? { count: acc[slug].count + 1, label: tag }
+      : { count: 1, label: tag };
+    return acc;
+  }, {} as Tags);
+
+  return tags;
 }

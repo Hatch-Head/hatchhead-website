@@ -57,7 +57,7 @@ const BlogPost: NextPage<PageProps> = ({ post, _html }) => {
           style={{ backgroundImage: `url(${post.banner})` }}
         />
       )}
-      <div className="prose container dark:prose-invert max-w-4xl pb-40  [&>*:first-child]:text-lg [&>*:first-child]:mb-12">
+      <div className="prose container dark:prose-invert max-w-4xl pb-40 [&>*:first-child]:text-lg [&>*:first-child]:mb-12">
         <ReactMarkdown components={MarkdownComponents}>{_html}</ReactMarkdown>
       </div>
       {/* <div

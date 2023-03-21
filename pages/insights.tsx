@@ -26,13 +26,9 @@ export default function Home({ posts }: { posts: Post[] }) {
       </header>
       <div className="">
         {recentPosts.map((post) => (
-          <Link
-            key={post.slug}
-            href={`/insights/${post.slug}`}
-            className="py-20"
-          >
-            <article className="border-0 border-b border-neutral-900 py-12 group">
-              <div className="container py-12 flex flex-col max-w-4xl">
+          <article className="border-0 border-b border-neutral-900 group py-20">
+            <div className="container py-12 flex flex-col max-w-4xl">
+              <Link key={post.slug} href={`/insights/${post.slug}`}>
                 <h1 className="font-bold text-xl md:text-2xl text-neutral-1000 mb-4 dark:text-white group-hover:text-primary dark:group-hover:text-gold">
                   {post.title}
                 </h1>
@@ -44,10 +40,15 @@ export default function Home({ posts }: { posts: Post[] }) {
                 <div className="text-base max-w-3xl my-12 text-neutral-600 dark:text-neutral-300">
                   {post.excerpt}
                 </div>{" "}
-                <Tags tags={post.tags} center={false} />
-              </div>
-            </article>
-          </Link>
+              </Link>
+
+              <Tags
+                tags={post.tags}
+                center={false}
+                linkPrefix="insights/tags"
+              />
+            </div>
+          </article>
         ))}
       </div>
     </Layout>
