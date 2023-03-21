@@ -25,7 +25,7 @@ const ContentBlock = ({
   children: React.ReactNode;
 }) => (
   <div className="flex flex-col md:w-1/2">
-    <h1 className=" text-neutral-500 mb-4 text-sm">{preHeading}</h1>
+    <h1 className=" text-neutral-700 mb-4 text-sm">{preHeading}</h1>
     <h2 className="font-display text-2xl mb-8 text-neutral dark:text-white">
       {heading}
     </h2>
