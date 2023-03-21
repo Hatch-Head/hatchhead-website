@@ -43,11 +43,11 @@ const AnimatedCharacters = ({
       opacity: 0,
       transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.3 },
     },
-    exit: {
-      y: "200%",
-      opacity: 0,
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.3 },
-    },
+    // exit: {
+    //   y: "200%",
+    //   opacity: 0,
+    //   transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0 },
+    // },
     visible: {
       y: 0,
       rotate: 0,
@@ -75,7 +75,7 @@ const AnimatedCharacters = ({
           className="App"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: "some" }}
+          viewport={{ once: true, amount: "some" }}
           variants={container}
         >
           <Wrapper key={index}>
@@ -108,7 +108,7 @@ const AnimatedCharacters = ({
         className="App"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: "some" }}
+        viewport={{ once: true, amount: "some" }}
         variants={container}
       >
         {splitWords.map((word, index) => {
