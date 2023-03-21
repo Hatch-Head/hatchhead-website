@@ -59,7 +59,8 @@ export const getStaticProps: GetStaticProps<PageProps, Params> = async (
   if (!post) {
     return { notFound: true };
   }
-  const _html = await remark().use(html).process(post.content);
+  //const _html = await remark().use(html).process(post.content);
+  const _html = post.content;
 
   return {
     props: {

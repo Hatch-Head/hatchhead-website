@@ -1,20 +1,12 @@
 import React from "react";
 import Head from "next/head";
-import { motion, AnimatePresence } from "framer-motion";
 import { Header } from "./header";
 import { Footer } from "./footer";
-import layoutData from "../../content/global";
 import { Theme } from "./theme";
 import { useDarkMode } from "usehooks-ts";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import { ThemeProvider } from "next-themes";
-
-const variants = {
-  hidden: { opacity: 0, y: -90 },
-  enter: { opacity: 1, y: 0, transition: { duration: 0.9 } },
-  exit: { opacity: 0, y: 0, transition: { duration: 0.4 } },
-};
+import { MDXProvider } from "@mdx-js/react";
 
 type Props = {
   children: React.ReactNode;
@@ -85,7 +77,7 @@ export const Layout = ({ children }: Props) => {
               // transition={{ type: "linear" }} // Set the transition to linear
               // key={asPath}
               >
-                {children}
+                <MDXProvider>{children}</MDXProvider>
               </main>
               {/* </AnimatePresence> */}
             </div>
