@@ -150,7 +150,7 @@ module.exports = {
     fontSize: {
       xs: [".775rem", "2rem"], // 14px
       sm: ["1.2rem", "1.9rem"], // 14px
-      base: ["1.5rem", "1.5rem"], // 24px
+      base: ["1.5rem", "2.1rem"], // 24px
       lg: ["2.25rem", "2.7rem"], // 36px
       xl: ["2.25rem", "2.9rem"], // 36px
       "2xl": ["4.0625rem", "4.0625rem"], // 72px
@@ -292,14 +292,14 @@ module.exports = {
               content: '""',
             },
             p: {
-              fontSize: theme("fontSize.base"),
-              lineHeight: "2rem",
+              fontSize: theme("fontSize.base[0]"),
+              lineHeight: theme("fontSize.base[1]"),
               marginTop: 0,
               marginBottom: theme("spacing.4"),
             },
             ul: {
-              fontSize: theme("fontSize.base"),
-              lineHeight: "2rem",
+              fontSize: theme("fontSize.base[0]"),
+              lineHeight: theme("fontSize.base[1]"),
             },
           },
         },

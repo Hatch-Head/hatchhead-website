@@ -36,18 +36,15 @@ export default function Home({ posts }: { posts: Post[] }) {
                 <h1 className="font-bold text-2xl text-neutral-1000 mb-4 dark:text-white group-hover:text-primary dark:group-hover:text-gold">
                   {post.title}
                 </h1>
-
                 <AuthorComponent
                   time="5 min read"
                   date={post.date}
                   author={post.author}
-                  className="mb-12"
                 />
-
-                <Tags tags={post.tags} center={false} />
-                <div className="text-base max-w-3xl mt-12 text-neutral-600 dark:text-neutral-300">
+                <div className="text-base max-w-3xl my-12 text-neutral-600 dark:text-neutral-300">
                   {post.excerpt}
-                </div>
+                </div>{" "}
+                <Tags tags={post.tags} center={false} />
               </div>
             </article>
           </Link>
