@@ -20,7 +20,7 @@ const Page = () => (
         <div className="prose dark:prose-invert">
           <h1>When do you need UI &amp; Interaction Design</h1>
 
-          <ul>
+          <ul className="list-disc">
             <li>Improve the aesthetic look &amp; "feel" of your product</li>
             <li>Create a feeling of delight and professionalism</li>
             <li>
@@ -45,7 +45,7 @@ const Page = () => (
 
           <h3>What deliverables can you expect from UI &amp; Interaction?</h3>
 
-          <ul>
+          <ul className="list-disc">
             <li>Design Systems</li>
             <li>Style guides</li>
             <li>Iconography Library</li>

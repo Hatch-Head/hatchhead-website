@@ -18,7 +18,7 @@ const Page = () => (
     <Section>
       <Container width={"medium"}>
         <div className="prose dark:prose-invert">
-          <h1>When do you need a product website?</h1>
+          <h1>When is UX Design & Optimization useful?</h1>
 
           <ul className="list-disc">
             <li>Improve user acquisition</li>
