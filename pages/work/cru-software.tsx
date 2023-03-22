@@ -92,7 +92,7 @@ const Cru = () => {
           </p>
         </Container>
 
-        <section className="w-full pt-40 pb-[200px]">
+        <section className="w-full pt-40 pb-12 lg:pb-[200px]">
           <div className="container px-6 lg:space-x-24 mx-auto lg:flex flex-row prose dark:prose-dark">
             <div className="lg:sticky top-[25vh] lg:h-[50vh]  lg:w-1/2 justify-center items-center">
               <Image
@@ -103,7 +103,7 @@ const Cru = () => {
                 className="w-full max-h-full"
               />
             </div>
-            <div className=" grow-0 lg:h-[100vh] flex flex-col lg:w-1/2 pt-40">
+            <div className="py-12 lg:py-0 lg:h-[100vh] flex flex-col lg:w-1/2 pt-40">
               <h1>Where do we start?</h1>
               <h2>We find out where we are</h2>
               <p>
@@ -121,7 +121,7 @@ const Cru = () => {
         </section>
         <section className="w-full pb-0">
           <div className="container px-6 lg:space-x-24 mx-auto lg:flex flex-row prose dark:prose-dark">
-            <div className="md:sticky top-[40px] md:h-[100vh] md:w-1/2 items-center flex justify-center">
+            <div className="lg:sticky top-[40px] lg:h-[100vh] lg:w-1/2 items-center flex justify-center">
               <Image
                 width={720}
                 height={1450}
@@ -130,7 +130,7 @@ const Cru = () => {
                 className="w-full max-h-[80vh] object-contain"
               />
             </div>
-            <div className=" grow-0 md:h-[200vh] justify-center flex flex-col lg:w-1/2 prose-invert text-white">
+            <div className="lg:h-[200vh] py-12 lg:py-0 justify-center flex flex-col lg:w-1/2 prose-invert text-white">
               <h1 ref={ref}>2. Define the naming conventions</h1>
               <h2>A shared language between all element and team members</h2>
               <p>
@@ -139,9 +139,9 @@ const Cru = () => {
             </div>
           </div>
         </section>
-        <section className="w-full pb-[300px]">
+        <section className="w-full pb-12 lg:pb-[300px]">
           <div className="container px-6 lg:space-x-24 mx-auto lg:flex flex-row prose dark:prose-dark">
-            <div className="md:sticky top-[40px] md:h-[100vh] md:w-1/2 items-center flex justify-center">
+            <div className="lg:sticky lg:top-[40px] lg:h-[100vh] lg:w-1/2 items-center flex justify-center">
               <Image
                 width={530}
                 height={530}
@@ -150,7 +150,7 @@ const Cru = () => {
                 className="w-full max-h-[80vh] object-contain"
               />
             </div>
-            <div className=" grow-0 md:h-[150vh] pt-50 flex flex-col lg:w-1/2 justify-center">
+            <div className="lg:h-[150vh] lg:py-0 py-12 pt-50 flex flex-col lg:w-1/2 justify-center">
               <h1>3. Bring it all together</h1>
               <h2>Using the rules to create new elements</h2>
               <p>
