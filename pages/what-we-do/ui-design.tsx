@@ -3,6 +3,7 @@ import { Section } from "../../components/util/section";
 import { Container } from "../../components/util/container";
 import Head from "next/head";
 import { HeroBanner } from "../../components/blocks/heroBanner";
+import ContactForm from "../../components/forms/contactForm";
 
 const Page = () => (
   <Layout>
@@ -52,6 +53,10 @@ const Page = () => (
           </ul>
         </div>
       </Container>
+    </Section>
+
+    <Section>
+      <ContactForm />
     </Section>
   </Layout>
 );
