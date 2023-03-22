@@ -19,26 +19,27 @@ const Page = () => (
         <div className="prose dark:prose-invert">
           <h1>When do you need a product website?</h1>
 
-          <ul>
+          <ul className="list-disc">
             <li>Improve user acquisition</li>
-            <li>Improve user engagement</li>
-            <li>Designing new features</li>
+            <li>Improve user engagement aka 'stickiness'</li>
+            <li>Adding or changing features</li>
           </ul>
 
           <h3>Overview</h3>
           <p>
-            There’s no more important touch point in the marketing of product
-            than the product website. It’s a crucial element that introduces the
-            world to the products’ mission, it’s primary selling point and, in
-            some cases, serves as the single point for user acqusition.
+            It's essential that your users are able to experience features and
+            navigate your digital app or website with as few challenges as
+            possible. To accomplish this, you must understand the users, their
+            habits, motivations and general mental models they're in when
+            engaging your product. Optimising for the user's experience is an
+            endless pursuit, but one that pays dividends.
           </p>
 
-          <h3>What deliverables can you expect from a product website?</h3>
-          <ul>
-            <li>Responsive Website optimised for mobile and desktop</li>
-            <li>UX Copy</li>
-            <li>Landing pages</li>
-            <li>SEO-optimised pages</li>
+          <h3>What deliverables can you expect from UX Optimisation?</h3>
+          <ul className="list-disc">
+            <li>Wireframes</li>
+            <li>User flows</li>
+            <li>Information Architecture Map</li>
           </ul>
         </div>
       </Container>

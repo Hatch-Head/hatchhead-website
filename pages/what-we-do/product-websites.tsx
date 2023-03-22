@@ -17,29 +17,29 @@ const Page = () => (
     <Section>
       <Container width={"medium"}>
         <div className="prose dark:prose-invert">
-          <h1>When is UX Design and Optimization useful?</h1>
+          <h1>When do you need a product website?</h1>
 
-          <ul>
+          <ul className="list-disc">
             <li>Improve user acquisition</li>
-            <li>Improve user engagement aka 'stickiness'</li>
-            <li>Adding or changing features</li>
+            <li>Improve user engagement</li>
+            <li>Designing new features </li>
           </ul>
 
           <h3>Overview</h3>
           <p>
-            It’s essential that your users are able to experience features and
-            navigate your digital app or website with as few challenges as
-            possible. To accomplish this, you must understand the users, their
-            habits, motivations and general mental models they’re in when
-            engaging your product. Optimising for the user’s experience is an
-            endless pursuit, but one that pays dividends.
+            There's no more important touch point in the marketing of product
+            than the product website. It's a crucial element that introduces the
+            world to the products' mission, it's primary selling point and, in
+            some cases, serves as the single point for user acquisition.
           </p>
 
-          <h3>What deliverables can you expect from UX Optimisation?</h3>
-          <ul>
-            <li>Wireframes</li>
-            <li>User flows</li>
-            <li>Information Architecture Map</li>
+          <h3>What deliverables can you expect from a Product Website?</h3>
+
+          <ul className="list-disc">
+            <li>Responsive Website</li>
+            <li>UX Copy</li>
+            <li>Landing pages</li>
+            <li>Seo-optimised pages</li>
           </ul>
         </div>
       </Container>
