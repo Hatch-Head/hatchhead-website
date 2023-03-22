@@ -18,11 +18,11 @@ export default function HomePage() {
       <Layout>
         <>
           <Head>
-            <meta name="description" content="iSimulate Realiti360 design" />
+            <meta name="description" content="iSimulate REALITi design" />
           </Head>
           <motion.div layoutId="Realiti">
             <CaseStudiesHeader
-              heading="Realiti"
+              heading="REALITi"
               subHeading="Clinical education made easy on any screen"
               //video="/vid/realiti360.mp4"
             />

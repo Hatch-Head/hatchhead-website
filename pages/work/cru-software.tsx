@@ -27,7 +27,7 @@ const Cru = () => {
     <Layout>
       <div className={`${bodyClass} transition-colors duration-500`}>
         <HeroBanner
-          headline="Cru software"
+          headline="Cru Software"
           text="Creating a Design System to bring features to market faster"
         />
 

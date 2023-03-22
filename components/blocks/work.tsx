@@ -4,7 +4,7 @@ const Work = () => (
   <div className="container">
     <CaseStudyCard
       to="/work/realiti"
-      name="Realiti 360"
+      name="REALITi"
       tags={["UI Design", "UX"]}
       image={{
         src: require("../../assets/img/work/irealiti-hero.png"),
@@ -34,7 +34,7 @@ const Work = () => (
     <CaseStudyCard
       reverse
       to="/work/cru-software"
-      name="CruSoftware"
+      name="Cru Software"
       tags={["Design System", "UI Design"]}
       image={{
         src: require("../../assets/img/work/crusoftware-hero.png"),
