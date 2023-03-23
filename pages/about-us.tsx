@@ -97,15 +97,15 @@ const AboutUs = () => (
             </p>
 
             <p className="text-md pb-5">
-              We took a chance. And in 2021, this idea become a reality when Hatch Head opened its
-              doors. In just 18 months, Hatch Head was recognized
-              internationally and at home for our design work, for
+              We took a chance. And in 2021, this idea become a reality when
+              Hatch Head opened its doors. In just 18 months, Hatch Head was
+              recognized internationally and at home for our design work, for
               brands both big and small, local & international.
-
             </p>
 
             <p className="text-md">
-              The heart of a designer with the head of an engineer. That's Hatch Head.
+              The heart of a designer with the head of an engineer. That's Hatch
+              Head.
             </p>
             <div className="mb-20"></div>
             <Logo width={120} />
@@ -190,7 +190,7 @@ const AboutUs = () => (
       </Container>
     </Section>
 
-    <Section className="items-center justify-center text-center pb-40">
+    <Section className="items-center justify-center text-center pb-24 md:pb-40">
       <Container>
         <h1 className="text-2xl md:text-3xl font-bold text-neutral dark:text-neutral-0 mb-8">
           Mission
@@ -199,20 +199,21 @@ const AboutUs = () => (
           To provide the design behind our clients' success.
         </p>
         <p>
-          We use design and technology to help businesses be market-leaders, moving faster, and delivering more value.
+          We use design and technology to help businesses be market-leaders,
+          moving faster, and delivering more value.
         </p>
       </Container>
     </Section>
 
-    <div className="h-[600px]" style={{ clipPath: "inset(0)" }}>
-      <div className="absolute z-10">
+    <div className="md:h-[600px]" style={{ clipPath: "inset(0)" }}>
+      <div className="md:absolute z-10">
         <Image
           src={Team}
           quality={100}
           width={1200}
           height={800}
           alt="The hatch head team working around a table"
-          className="position fixed top-0 w-full h-screen bg-black object-cover"
+          className="position md:fixed top-0 w-full md:h-screen bg-black md:object-cover"
         />
       </div>
     </div>
