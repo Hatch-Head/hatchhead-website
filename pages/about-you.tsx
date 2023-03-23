@@ -70,7 +70,7 @@ const AboutYou = () => {
         size="medium"
         headline="Hey, nice to know you."
         tagline="About you"
-        text="We're deeply involved with our clients. That's why it's important to us that we know you, as well as you know us. And we don't just work with anyone. Instead, we're ideal for a few situations that we've outlined below.
+        text="We're deeply involved with our clients. That's why it's important to us that we know you, as well as you know us.
 
 "
       />

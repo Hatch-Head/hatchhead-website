@@ -32,7 +32,7 @@ export default function HomePage() {
             <CaseStudiesHeader
               heading="always"
               subHeading="Your clinic’s essentials delivered to your door"
-              //video="/vid/realiti360.mp4"
+            //video="/vid/realiti360.mp4"
             />
           </motion.div>
           <style type="text/css">{styleTint}</style>
@@ -48,7 +48,7 @@ export default function HomePage() {
                     </tr>
                     <tr>
                       <th>Year:</th>
-                      <td>2021</td>
+                      <td>2022</td>
                     </tr>
                     <tr>
                       <th>Website:</th>

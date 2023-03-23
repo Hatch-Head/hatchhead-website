@@ -51,7 +51,7 @@ const Cru = () => {
                 <h5 className="text-xs font-bold uppercase text-neutral-300">
                   Year
                 </h5>
-                2021
+                2022
               </div>
 
               <div className="block mb-6">

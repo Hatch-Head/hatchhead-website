@@ -28,7 +28,7 @@ export default function Home() {
         text="We're trusted by ambitious businesses and entrepreneurs to develop transformational ideas into tangible, valuable products."
         video={video}
         size="full"
-        //containerProps={{ size: "full" }}
+      //containerProps={{ size: "full" }}
       />
 
       <Clients />
@@ -71,11 +71,10 @@ export default function Home() {
         <div className="absolute top-0 left-0 w-full h-full z-20 flex items-center justify-center">
           <Container width="medium" className=" text-white text-center">
             <h1 className="text-lg md:text-2xl font-bold text-center mb-8 text-white">
-              We provide the design behind our clients success
+              We provide the design behind our clients' success.
             </h1>
             <p className="text-center text-base md:text-lg text-neutral-400">
-              We are designing for businesses, big or small so they can achieve
-              whatever they aim to achieve.
+              We use design and technology to help businesses be market-leaders, moving faster, and delivering more value.
             </p>
           </Container>
         </div>

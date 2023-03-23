@@ -97,14 +97,14 @@ const AboutUs = () => (
             </p>
 
             <p className="text-sm">
-              This idea in 2021 become a reality when Hatch Head opened its
-              doors. In just 18 months, Hatch Head have been recognized
-              internationally and at home for their design work. They’ve worked
-              with brands both big and small, local to international.
+              We took a chance. And in 2021, this idea become a reality when Hatch Head opened its
+              doors. In just 18 months, Hatch Head was recognized
+              internationally and at home for their design work, for
+              brands both big and small, local & international.
             </p>
 
             <p className="text-sm">
-              The heart of a designer combined with the head of an engineer.
+              The heart of a designer with the head of an engineer.
             </p>
             <Logo width={120} />
           </div>
@@ -194,11 +194,10 @@ const AboutUs = () => (
           Mission
         </h1>
         <p className="text-base md:text-lg mb-4">
-          To provide the design behind our clients success.
+          To provide the design behind our clients' success.
         </p>
         <p>
-          We are designing for businesses, big or small so they can achieve
-          whatever they set out to achieve.
+          We use design and technology to help businesses be market-leaders, moving faster, and delivering more value.
         </p>
       </Container>
     </Section>

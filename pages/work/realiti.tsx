@@ -24,7 +24,7 @@ export default function HomePage() {
             <CaseStudiesHeader
               heading="REALITi"
               subHeading="Clinical education made easy on any screen"
-              //video="/vid/realiti360.mp4"
+            //video="/vid/realiti360.mp4"
             />
           </motion.div>
           <div className="w-full relative pt-40">
@@ -47,7 +47,7 @@ export default function HomePage() {
                   <h5 className="text-xs font-bold uppercase text-neutral-300">
                     Year
                   </h5>
-                  2021
+                  2022
                 </div>
 
                 <div className="block mb-6">
