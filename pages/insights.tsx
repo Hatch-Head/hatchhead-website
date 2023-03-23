@@ -16,7 +16,7 @@ export default function Home({ posts }: { posts: Post[] }) {
         <div className="container max-w-4xl py-40">
           <h1 className="font-bold text-neutral-450">Insights</h1>
           <h2 className=" text-2xl md:text-3xl lg:text-4xl mb-12 font-bold text-neutral-1000 dark:text-white">
-            Discover what we’ve uncovered{" "}
+            Insights into product & design{" "}
             <span className="animate-float inline-block">🤔</span>
           </h2>
           <p className="text-base dark:text-neutral-400">
