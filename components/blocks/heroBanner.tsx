@@ -5,6 +5,7 @@ import Row from "../util/row";
 import ScrollIndicator from "../scrollIndicator";
 import AnimatedText from "../transitions/AnimatedText";
 import { StaticImageData } from "next/image";
+import Image from "next/image";
 
 type Props = {
   size?: "large" | "medium" | "small" | "full";
@@ -12,7 +13,7 @@ type Props = {
   containerProps?: Partial<ContainerProps>;
   video?: string;
   image?: {
-    src: string | StaticImageData;
+    src: string;
     alt?: string;
   };
   tagline?: string;
