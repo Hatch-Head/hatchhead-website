@@ -43,8 +43,7 @@ const Work = () => (
         src: require("../../assets/img/work/crusoftware-backdrop.png"),
       }}
     >
-      Aimed to facilitate the tasks needed to accomplish by transforming the
-      user experience.
+      Delivering out a Design System to help bring consistency at scale.
     </CaseStudyCard>
   </div>
 );
