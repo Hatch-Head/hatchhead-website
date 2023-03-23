@@ -1,4 +1,4 @@
 ---
 name: Brent Wallace
-avatar: /img/avatars/brent.svg
+avatar: /img/avatars/brent.png
 ---

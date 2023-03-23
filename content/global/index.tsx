@@ -71,7 +71,7 @@ const settings: SiteSettings = {
         icon: <Dribbble />,
       },
       linkedIn: {
-        name: "Linked In",
+        name: "LinkedIn",
         url: "https://au.linkedin.com/company/hatch-head",
         icon: <LinkedIn />,
       },
