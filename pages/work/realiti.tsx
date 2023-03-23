@@ -9,6 +9,8 @@ import BuildUI from "../../components/case-studies/irealiti/buildUI";
 import Image from "next/image";
 import Mockup from "../../assets/img/realiti-ipad-mockups.png";
 import WidgetLayout from "../../assets/img/work/realiti-widget-layout.svg";
+import GDA from "../../assets/img/good-design-awards-winner-2022.png";
+import UXAwards from "../../assets/img/ux-design-award-nominated-2022.svg";
 
 export default function HomePage() {
   const { scrollY } = useScroll();
@@ -24,7 +26,7 @@ export default function HomePage() {
             <CaseStudiesHeader
               heading="REALITi"
               subHeading="Clinical education made easy on any screen"
-            //video="/vid/realiti360.mp4"
+              //video="/vid/realiti360.mp4"
             />
           </motion.div>
           <div className="w-full relative pt-40">
@@ -58,10 +60,36 @@ export default function HomePage() {
                 </div>
 
                 <div className="block mb-6">
-                  <h5 className="text-xs font-bold uppercase text-neutral-300">
-                    Awards
+                  <h5 className="text-xs font-bold uppercase text-neutral-300 mb-0">
+                    Recognition
                   </h5>
-                  TODO: Get GDA logo and link to site
+                  <div className="flex space-x-4 wrap">
+                    <a
+                      href="https://good-design.org/projects/realiti-control-ui-redesign/"
+                      target="_blank"
+                      rel="no-follow"
+                      className="w-1/2"
+                    >
+                      <Image
+                        src={GDA}
+                        alt="Good Design Awards Winner 2022"
+                        width={200}
+                        height={200}
+                      />
+                    </a>
+                    <a
+                      href="https://www.ux-design-awards.com/winners/realiti-360-control-benutzeroberflaeche"
+                      className="w-1/2 text-neutral-900 dark:text-white"
+                      target="_blank"
+                      rel="no-follow"
+                    >
+                      <UXAwards
+                        alt="UX Design Award Nominated 2022"
+                        width={200}
+                        className="w-1/2"
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
 

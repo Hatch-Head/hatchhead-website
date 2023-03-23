@@ -32,6 +32,7 @@ const style = {
   //maxWidth: "50%",
   position: "sticky",
   top: 100,
+  pointerEvents: "none",
 };
 
 const BuildUI = () => {
@@ -59,7 +60,7 @@ const BuildUI = () => {
   return (
     <div>
       <div
-        className="h-[2700px] pt-40 container lg:px-80 mx-auto"
+        className="h-[2700px] pt-40 container lg:px-80 mx-auto pointer-events-none"
         ref={parallax.ref}
       >
         <StickyBox offsetTop={200} offsetBottom={-300}>

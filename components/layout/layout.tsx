@@ -58,6 +58,12 @@ export const Layout = ({ children }: Props) => {
           type="font/woff2"
           crossOrigin="anonymous"
         />
+
+        <meta
+          name="description"
+          content="Brisbane digital product agency"
+          key="description"
+        />
       </Head>
       {/* <Theme data={data?.theme}> */}
       <Theme>

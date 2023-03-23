@@ -18,7 +18,11 @@ export default function Home() {
     <Layout>
       <Head>
         <title>Hatch Head</title>
-        <meta name="description" content="Brisbane digital product agency" />
+        <meta
+          name="description"
+          content="Brisbane digital product agency"
+          key="description"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -28,7 +32,7 @@ export default function Home() {
         text="We're trusted by ambitious businesses and entrepreneurs to develop transformational ideas into tangible, valuable products."
         video={video}
         size="full"
-      //containerProps={{ size: "full" }}
+        //containerProps={{ size: "full" }}
       />
 
       <Clients />
@@ -74,7 +78,8 @@ export default function Home() {
               We provide the design behind our clients' success.
             </h1>
             <p className="text-center text-base md:text-lg text-neutral-400">
-              We use design and technology to help businesses be market-leaders, moving faster, and delivering more value.
+              We use design and technology to help businesses be market-leaders,
+              moving faster, and delivering more value.
             </p>
           </Container>
         </div>

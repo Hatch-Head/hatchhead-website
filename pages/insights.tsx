@@ -5,6 +5,7 @@ import DateFormatter from "../components/Date";
 import { GetStaticProps } from "next";
 import AuthorComponent from "../components/Author";
 import Tags from "../components/Tags";
+import Head from "next/head";
 
 export default function Home({ posts }: { posts: Post[] }) {
   //const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
@@ -12,6 +13,13 @@ export default function Home({ posts }: { posts: Post[] }) {
 
   return (
     <Layout>
+      <Head>
+        <meta
+          name="description"
+          content="Insights from Hatch Head Brisbane"
+          key="description"
+        />
+      </Head>
       <header className="border-0 border-b-2 border-neutral-900">
         <div className="container max-w-4xl py-40">
           <h1 className="font-bold text-neutral-450">Insights</h1>
