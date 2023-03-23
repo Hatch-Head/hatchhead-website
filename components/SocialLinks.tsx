@@ -13,6 +13,8 @@ const SocialLinks = () => {
             href={network.url}
             aria-label={`Hatch Head on ${network.name}`}
             className="flex hover:text-gold dark:hover:text-primary font-mono"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <span className="mr-2">{network.icon}</span> {network.name}
           </a>
