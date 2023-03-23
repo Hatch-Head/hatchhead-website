@@ -37,7 +37,7 @@ export default function Home() {
 
       <Section>
         <Container>
-          <Title title="We help you" className="mb-12" element="h2" />
+          <Title title="What we do" className="mb-12" element="h2" />
 
           <WhatWeDoCards className="mb-24" />
         </Container>
@@ -50,7 +50,7 @@ export default function Home() {
           Projects
         </h1>
         <p className="text-base md:text-lg md:max-w-2xl">
-          Here are a few key projects
+          Some of our key projects
         </p>
       </div>
 

@@ -78,34 +78,36 @@ const AboutUs = () => (
     <HeroBanner
       headline="Who are we?"
       tagline="About us"
-      text="Allow me to introduce... ourselves"
+      text="Introducing ourselves"
     />
 
     <Section>
       <Container>
         <Row>
           <div className="md:w-1/2 justify-center prose dark:prose-invert  flex flex-col">
-            <p>
+            <p className="text-md pb-5">
               Hatch Head started as an idea. What if there was a product design
               agency that was design-led but had three decades of engineering
               experience behind it?
             </p>
 
-            <p className="text-sm">
+            <p className="text-md pb-5">
               The thinking being that design and engineering, when working
               together, can change how people experience the world.
             </p>
 
-            <p className="text-sm">
+            <p className="text-md pb-5">
               We took a chance. And in 2021, this idea become a reality when Hatch Head opened its
               doors. In just 18 months, Hatch Head was recognized
-              internationally and at home for their design work, for
+              internationally and at home for our design work, for
               brands both big and small, local & international.
+
             </p>
 
-            <p className="text-sm">
-              The heart of a designer with the head of an engineer.
+            <p className="text-md">
+              The heart of a designer with the head of an engineer. That's Hatch Head.
             </p>
+            <div className="mb-20"></div>
             <Logo width={120} />
           </div>
           <div className="md:w-1/2">
@@ -137,7 +139,7 @@ const AboutUs = () => (
 
           <StaffCard
             name="Brent Wallace"
-            role="Director, Business analyst"
+            role="Director, Product strategy"
             src={Brent}
           />
 
