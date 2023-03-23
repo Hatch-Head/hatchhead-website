@@ -51,19 +51,19 @@ const WhatWeDo = () => (
           items={[
             {
               label: "UI Design",
-              href: "/what-we-do/ui-design",
+              //href: "/what-we-do/ui-design",
             },
             {
               label: "UX Design",
-              href: "/what-we-do/ux-design",
+              //href: "/what-we-do/ux-design",
             },
             {
               label: "Research",
-              href: "/what-we-do/ux-research",
+              //href: "/what-we-do/ux-research",
             },
             {
               label: "Product Strategy",
-              href: "/what-we-do/product-strategy",
+              //href: "/what-we-do/product-strategy",
             },
           ]}
         />
