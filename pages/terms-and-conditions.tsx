@@ -35,7 +35,7 @@ const TermsAndConditions = () => (
 
         <h2>2. Client obligations</h2>
 
-        <p>The Client, using qualified personnel, shall:</p>
+        <ol type="i">The Client, using qualified personnel, shall:</ol>
 
         <ol type="a">
           <li>
@@ -185,20 +185,20 @@ const TermsAndConditions = () => (
 
         <h3>5.5 Failure to pay</h3>
 
-        <p>
+        <ol type="a">
           If the Client does not pay the Fees on or before the due date, Hatch
           Head shall be entitled to receive interest on overdue payments of 1%
           per month and shall be entitled to withhold delivery or part thereof
           of Services yet to be provided.
-        </p>
+        </ol>
 
         <h3>5.6 Set off</h3>
 
-        <p>
+        <ol type="a">
           Hatch Head may, without limiting any other rights or remedies it may
           have, set off any amounts owed to it by the Client under these Terms
           against any amounts payable by Hatch Head to the Client.
-        </p>
+        </ol>
 
         <h2>6. Intellectual Property Rights</h2>
 
@@ -206,13 +206,15 @@ const TermsAndConditions = () => (
 
         <ol type="a">
           <li>
-            Upon full payment of the Fees, the Intellectual Property Rights,
+            Upon full payment of the Fees, and subject to the Client’s final approval of such Deliverables in accordance with clause 3, the Intellectual Property Rights,
             other than the Background IP and the Third Party IP, in each of the
             Deliverables, the Application(s) and the Documentation shall vest in
             and become the absolute property of the Client Assigned IP) and the
             Client grants to Hatch Head a perpetual non-exclusive, royalty-free
             right to use the Assigned IP so long as such use does not otherwise
             breach its obligations under these Terms.
+
+
           </li>
           <li>
             The
@@ -248,11 +250,14 @@ const TermsAndConditions = () => (
               </li>
             </ol>
           </li>
+          <li>
+            Notwithstanding anything else in this clause 6.1, the parties agree that all Intellectual Property Rights in any designs, concepts or other creative materials that do not form part of a final, approved Deliverables or are otherwise rejected by the Client at any time (including under clause 3) shall remain the property of Hatch Head.
+          </li>
         </ol>
 
         <h3>6.2 Initial Proposal</h3>
 
-        <p>
+        <ol type="a">
           Notwithstanding clause 6.1, where the Services consist (in whole or in
           part) of a detailed plan by Hatch Head setting out how Hatch Head
           proposes to complete a specific project or mandate, and such Proposal
@@ -262,7 +267,7 @@ const TermsAndConditions = () => (
           such Proposal to any third party for the purposes of requesting that
           third party to utilise, replicate or modify such Proposal for the
           purpose of providing any similar services to the Client.
-        </p>
+        </ol>
 
         <h3>6.3 Client Data</h3>
 
@@ -357,11 +362,11 @@ const TermsAndConditions = () => (
 
         <h3>7.2 Termination for cause</h3>
 
-        <p>
+        <ol type="a">
           In addition to any other rights to terminate set out in these Terms
           either party may at any time terminate this agreement with immediate
           effect by giving written notice to the other party if:
-        </p>
+        </ol>
 
         <ol type="a">
           <li>
@@ -551,11 +556,11 @@ const TermsAndConditions = () => (
 
         <h3>9.2 Mitigation</h3>
 
-        <p>
+        <ol type="a">
           Each party must mitigate any loss it suffers as a result of the breach
           by the other party to these Terms or any warranty or indemnity
           provided under these Terms.{" "}
-        </p>
+        </ol>
 
         <h3>9.3 Maximum liability</h3>
 
@@ -586,42 +591,43 @@ const TermsAndConditions = () => (
 
         <h3>9.4 Consequential Loss</h3>
 
-        <p>
+        <ol type="i">
           Neither party will be liable to the other or any other person for any
           Consequential Loss.
-        </p>
+        </ol>
 
         <h3>9.5 Australian Consumer Law</h3>
 
-        <p>
+        <ol type="a">
           If the Australian Consumer Law applies to the supply of goods or
           services under these Terms, Hatch Head acknowledges and agrees that
           its goods and services come with a guarantee that cannot be excluded
           under the Australian Consumer Law, and that the following mandatory
           notice under section 102(1) of the Australian Consumer Law that must
           be provided to the Client will apply:
-        </p>
-        <p>
+        </ol>
+        <ol type="a">
           <i>
             Our goods and services come with guarantees that cannot be excluded
             under the Australian Consumer Law. For major failures with the
             service, you are entitled:
           </i>
-        </p>
 
-        <ul>
-          <li>
-            <i>to cancel your service contract with us; and</i>
-          </li>
-          <li>
-            <i>
-              to a refund for the unused portion, or to compensation for its
-              reduced value.
-            </i>
-          </li>
-        </ul>
 
-        <p>
+          <ol type="a">
+            <li>
+              <i>to cancel your service contract with us; and</i>
+            </li>
+            <li>
+              <i>
+                to a refund for the unused portion, or to compensation for its
+                reduced value.
+              </i>
+            </li>
+          </ol>
+        </ol>
+
+        <ol type="a">
           <i>
             You are also entitled to choose a refund or replacement for major
             failures with goods. If a failure with the goods or a service does
@@ -632,7 +638,9 @@ const TermsAndConditions = () => (
             be compensated for any other reasonably foreseeable loss or damage
             from a failure in the goods or service.
           </i>
-        </p>
+        </ol>
+
+
 
         <h2>10. Data Protection</h2>
 
@@ -681,11 +689,11 @@ const TermsAndConditions = () => (
 
         <h2>12. Force Majeure</h2>
 
-        <p>
+        <ol type="a">
           Neither party shall be liable for any delay or failure to perform its
           obligations pursuant to this document if such delay is due to a Force
           Majeure Event.{" "}
-        </p>
+        </ol>
 
         <h2>13. Dispute Resolution</h2>
 
@@ -751,56 +759,56 @@ const TermsAndConditions = () => (
 
         <h3>14.1 Amendments</h3>
 
-        <p>
+        <ol type="i">
           This document may only be amended by written agreement between all
           parties.
-        </p>
+        </ol>
 
         <h3>14.2 Governing law and jurisdiction</h3>
 
-        <p>
+        <ol type="i">
           The laws of Queensland govern this document and each party irrevocably
           submits to the non-exclusive jurisdiction of the courts of Queensland
           and courts competent to hear appeals from those courts.
-        </p>
+        </ol>
 
         <h3>14.3 Assignment</h3>
 
-        <p>
+        <ol type="i">
           Neither party may assign, in whole or in part any of its rights and
           obligations under this document without the prior written consent of
           the other party.
-        </p>
+        </ol>
 
         <h3>14.4 Severability</h3>
 
-        <p>
+        <ol type="i">
           A clause or part of a clause of this document that is illegal or
           unenforceable may be severed from this document and the remaining
           clauses or parts of the clause of this document continue in force.
-        </p>
+        </ol>
 
         <h3>14.5 Entire agreement</h3>
 
-        <p>
+        <ol type="i">
           These Terms supersede all previous agreements about its subject
           matter. This agreement embodies the entire agreement between the
           parties.
-        </p>
+        </ol>
 
         <h3>14.6 Further assurances</h3>
 
-        <p>
+        <ol type="i">
           Each party must do all things reasonably necessary to give effect to
           this document and the transactions contemplated by it.
-        </p>
+        </ol>
 
         <h3>14.7 Costs</h3>
 
-        <p>
+        <ol type="i">
           Each party bears its own costs in relation to the preparation of these
           Terms.
-        </p>
+        </ol>
 
         <h3>14.8 No waiver</h3>
 
@@ -858,7 +866,7 @@ const TermsAndConditions = () => (
 
         <h3>15.1 Defined terms</h3>
 
-        <p>In these terms:</p>
+        <ol type="i">In these terms:</ol>
 
         <ol type="a">
           <li>
@@ -934,8 +942,8 @@ const TermsAndConditions = () => (
             </ol>
           </li>
           <li>
-            <b>Deliverables</b> means the products or services to be delivered
-            to the Client by Hatch Head as set out in a Proposal.{" "}
+            <b>Deliverables</b> means the products or services to be delivered as final
+            to, and approved by, the Client by Hatch Head as set out in a Proposal.{" "}
           </li>
           <li>
             <b>Documentation</b> means any operating manuals, user instruction
@@ -1007,7 +1015,7 @@ const TermsAndConditions = () => (
 
         <h3>15.2 Interpretation</h3>
 
-        <p>In these Terms:</p>
+        <ol type="i">In these Terms:</ol>
 
         <ol type="a">
           <li>
