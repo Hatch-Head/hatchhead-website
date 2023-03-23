@@ -4,6 +4,7 @@ import { Section, SectionProps } from "../util/section";
 import Row from "../util/row";
 import ScrollIndicator from "../scrollIndicator";
 import AnimatedText from "../transitions/AnimatedText";
+import { StaticImageData } from "next/image";
 
 type Props = {
   size?: "large" | "medium" | "small" | "full";
@@ -11,7 +12,7 @@ type Props = {
   containerProps?: Partial<ContainerProps>;
   video?: string;
   image?: {
-    src: string;
+    src: string | StaticImageData;
     alt?: string;
   };
   tagline?: string;
@@ -30,6 +31,7 @@ export const HeroBanner = ({
   containerProps = { size: "xLarge" },
 }: Props) => {
   const heightClass = size === "large" ? "h-screen" : "";
+  const poster = typeof image?.src == "string" ? image.src : undefined;
 
   return (
     <Section
@@ -45,7 +47,7 @@ export const HeroBanner = ({
           loop
           src={video}
           preload={"none"}
-          poster={image?.src}
+          poster={poster}
           className="absolute animate-fadeIn z-0 w-full min-w-full min-h-full max-w-none l-0 t-0 opacity-30 object-center object-cover h-full"
         />
       )}
@@ -86,7 +88,7 @@ export const HeroBanner = ({
             />
           )} */}
             </div>
-            {image && (
+            {image && video === undefined && (
               <div className="row-start-1 flex justify-center">
                 <img
                   className="w-full max-w-xs lg:max-w-none h-auto"

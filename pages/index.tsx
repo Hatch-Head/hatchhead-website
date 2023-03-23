@@ -31,6 +31,7 @@ export default function Home() {
         headline="Hatch Head is a digital product design agency."
         text="We're trusted by ambitious businesses and entrepreneurs to develop transformational ideas into tangible, valuable products."
         video={video}
+        image={{ src: "/img/reel-poster.png" }}
         size="full"
         //containerProps={{ size: "full" }}
       />
