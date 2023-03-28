@@ -53,7 +53,7 @@ const BlogPost: NextPage<PageProps> = ({ posts, tag }) => {
               </div>{" "}
             </Link>
 
-            <Tags tags={post.tags} center={false} linkPrefix="insights/tags" />
+            <Tags tags={post.tags} center={false} linkPrefix="/insights/tags" />
           </div>
         </article>
       ))}

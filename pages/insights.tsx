@@ -53,7 +53,7 @@ export default function Home({ posts }: { posts: Post[] }) {
               <Tags
                 tags={post.tags}
                 center={false}
-                linkPrefix="insights/tags"
+                linkPrefix="/insights/tags"
               />
             </div>
           </article>

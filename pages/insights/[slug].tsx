@@ -49,7 +49,7 @@ const BlogPost: NextPage<PageProps> = ({ post, _html }) => {
           />
         )}
 
-        <Tags tags={post.tags} center={false} linkPrefix="insights/tags" />
+        <Tags tags={post.tags} center={false} linkPrefix="/insights/tags" />
       </header>
       {post.banner && (
         <div className="w-full mb-24 bg-[#2A2A2A] bg-contain bg-center bg-no-repeat p-0">
