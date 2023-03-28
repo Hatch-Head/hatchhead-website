@@ -52,7 +52,7 @@ const BlogPost: NextPage<PageProps> = ({ post, _html }) => {
         <Tags tags={post.tags} center={false} linkPrefix="insights/tags" />
       </header>
       {post.banner && (
-        <div className="w-full mb-24 h-[450px] bg-[#2A2A2A] bg-contain bg-center bg-no-repeat p-0">
+        <div className="w-full mb-24 bg-[#2A2A2A] bg-contain bg-center bg-no-repeat p-0">
           <Image
             src={post.banner}
             width={1200}
