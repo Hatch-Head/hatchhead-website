@@ -52,10 +52,15 @@ const BlogPost: NextPage<PageProps> = ({ post, _html }) => {
         <Tags tags={post.tags} center={false} linkPrefix="insights/tags" />
       </header>
       {post.banner && (
-        <div
-          className="w-full mb-24 h-[450px] bg-black bg-contain bg-center bg-no-repeat p-0"
-          style={{ backgroundImage: `url(${post.banner})` }}
-        />
+        <div className="w-full mb-24 h-[450px] bg-[#2A2A2A] bg-contain bg-center bg-no-repeat p-0">
+          <Image
+            src={post.banner}
+            width={1200}
+            height={600}
+            alt="Banner image for blog post"
+            className="mx-auto"
+          />
+        </div>
       )}
       <div className="prose container dark:prose-invert max-w-4xl pb-40 [&>*:first-child]:text-lg [&>*:first-child]:mb-12">
         <ReactMarkdown components={MarkdownComponents}>{_html}</ReactMarkdown>
