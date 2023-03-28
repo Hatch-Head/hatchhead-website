@@ -22,7 +22,7 @@ const Tags = ({ tags = [], center = true, linkPrefix }: Props) => {
         return linkPrefix !== undefined ? (
           <Link
             key={tag}
-            href={`/${linkPrefix}/${slug}`}
+            href={`${linkPrefix}/${slug}`}
             className={`${style} hover:bg-black hover:text-white dark dark:hover:bg-white dark:hover:text-black`}
             suppressHydrationWarning
           >
