@@ -118,8 +118,7 @@ export const getStaticProps: GetStaticProps<PageProps, Params> = async (
 ) => {
   // This is where the error occurs
 
-  const { req } = context;
-  const host = req?.headers.host || "https://hatchhead.co";
+  const host = "https://hatchhead.co";
 
   const { slug } = context.params!;
   const posts = getAllPosts();
