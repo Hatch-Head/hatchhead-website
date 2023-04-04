@@ -1,5 +1,4 @@
 import { createCanvas, loadImage, registerFont } from "canvas";
-import drawMultilineText from "canvas-multiline-text";
 import { writeFileSync, existsSync, mkdirSync } from "fs";
 import path from "path";
 
@@ -92,7 +91,6 @@ export const generateOgImage = async ({
   const dir = path.resolve("public", "og");
   const filepath = path.resolve(dir, `${slug}.png`);
 
-  console.log(dir, filepath);
   // check if directory doesn't exist, if it doesn't, we create it
   if (!existsSync(dir)) {
     mkdirSync(dir);
@@ -103,7 +101,7 @@ export const generateOgImage = async ({
   const shouldRender = !existsSync(filepath) || true;
 
   if (shouldRender) {
-    console.log("write to path", filepath);
+    console.log("Generating blog og:image: ", filepath);
     try {
       const imgBuffer = await createImage({ title, image });
       writeFileSync(filepath, imgBuffer);
