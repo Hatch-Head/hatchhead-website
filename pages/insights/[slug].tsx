@@ -8,9 +8,12 @@ import Link from "next/link";
 import Tags from "../../components/Tags";
 import ReactMarkdown, { type Components } from "react-markdown";
 import Image from "next/image";
+import { generateOgImage } from "../../lib/generateOgImage";
+import Head from "next/head";
 interface PageProps {
   post: Post;
   _html: string;
+  host: string;
 }
 interface Params extends ParsedUrlQuery {
   slug: string;
@@ -28,9 +31,36 @@ const MarkdownComponents: Components = {
   ),
 };
 
-const BlogPost: NextPage<PageProps> = ({ post, _html }) => {
+const BlogPost: NextPage<PageProps> = ({ post, _html, host }) => {
+  //const HOSTNAME =
+  //  window?.location?.hostname || "https://www.alexanderdavidson.com";
+
   return (
     <Layout>
+      <Head>
+        <title>Hatch Head Insights: {post.title}</title>
+        <meta
+          name="description"
+          content="Take a look at a showcase of sites our customers create and learn how they use Vercel to build a better web, scale their business, and improve performance."
+        />
+
+        <meta property="og:url" content={`${host}/insights/${post.slug}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:image" content={`${host}/og/${post.slug}.png`} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content={host} />
+        <meta
+          property="twitter:url"
+          content={`${host}/insights/${post.slug}`}
+        />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.excerpt} />
+        <meta name="twitter:image" content={`${host}/og/${post.slug}.png`} />
+      </Head>
+
       <header className="flex flex-col pt-40 py-10 justify-center container max-w-4xl">
         <Link href="/insights" className="font-bold text-neutral-450">
           Insights
@@ -87,6 +117,10 @@ export const getStaticProps: GetStaticProps<PageProps, Params> = async (
   context
 ) => {
   // This is where the error occurs
+
+  const { req } = context;
+  const host = req?.headers.host || "https://hatchhead.co";
+
   const { slug } = context.params!;
   const posts = getAllPosts();
 
@@ -94,6 +128,8 @@ export const getStaticProps: GetStaticProps<PageProps, Params> = async (
   if (!post) {
     return { notFound: true };
   }
+
+  await generateOgImage({ slug, title: post.title, image: post.banner });
   //const _html = await remark().use(html).process(post.content);
   //const _html = await remark().use(html).process(post.content);
 
@@ -101,8 +137,8 @@ export const getStaticProps: GetStaticProps<PageProps, Params> = async (
     props: {
       post,
       _html: post.content,
+      host,
     },
   };
 };
-
 export default BlogPost;
