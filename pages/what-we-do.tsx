@@ -44,7 +44,7 @@ const WhatWeDo = () => (
     <Section>
       <SectionHeading
         title="Capabilities"
-        content="Building and designing better product experiences your customers will love"
+        content="Solving problems with a key services"
       />
       <Container>
         <FeatureList
@@ -84,7 +84,7 @@ const WhatWeDo = () => (
                 alt="Dots"
                 width={930}
                 height={930}
-                //className="mt-[300px] mb-"
+              //className="mt-[300px] mb-"
               />
             </Parallax>
           </div>
@@ -94,31 +94,27 @@ const WhatWeDo = () => (
               Define
             </h3>
             <div>
-              <p>
-                Define is the process of taking what we know from our Discover
-                stage and sorting it into a clear identity of our users and the
-                problems they have.
-              </p>
-              <p>
-                Expect assumptions to be validated, new ideas inserted and old
-                ideas discarded. We should now be clear on what the problem is
-                and who the people impacted are likely to be.
-              </p>
+              <p>To begin the problem-solving process, we first need to understand what, exactly, the problem really is. </p>
+
+              <p>We do this like things like talking to users, doing research, observing people while they work, reviewing analytical data and doing things like surveys. </p>
+
+              <p>We then take all our hours of research and interviews and boil them down into finding patterns to draw our insights from. </p>
+
+              <p>By the end, we have a clearer picture of what the problem(s) really are. Armed, then, with the truth, we are in the best possible position to create the ideal solution.</p>
+
+
               <h4 className="font-bold text-base">
-                Some thing we do at this stage
+                What we do and produce
               </h4>
               <div className=" flex">
-                <ul className="list-style-disc md:w-1/2">
-                  <li>User Research</li>
-                  <li>Desktop Research</li>
-                  <li>Competitor Analysis</li>
-                  <li>Field Studies</li>
-                </ul>
-                <ul className="list-style-disc md:w-1/2">
-                  <li>User Journey Mapping</li>
-                  <li>User Personas</li>
-                  <li>Empathy Mapping</li>
-                  <li>Service Blueprints</li>
+                <ul className="list-style-disc ">
+                  <li>User Research to gather data on users' needs, motivations, and pain points.</li>
+                  <li>Desktop Research to gain insights from existing sources.</li>
+                  <li>Competitor Analysis to identify opportunities for differentiation.</li>
+                  <li>Field Studies to observe users in their natural environment.</li>
+                  <li>User Journey Maps to identify pain points and areas for improvement.</li>
+                  <li>User Personas to ensure the product meets the needs of the target audience.</li>
+                  <li>Service Blueprints to visualise the customer journey and improve the customer experience.</li>
                 </ul>
               </div>
             </div>
@@ -286,7 +282,7 @@ const WhatWeDo = () => (
     <Section>
       <ContactForm />
     </Section>
-  </Layout>
+  </Layout >
 );
 
 export default WhatWeDo;
