@@ -39,13 +39,10 @@ const BlogPost: NextPage<PageProps> = ({ post, _html, host }) => {
     <Layout>
       <Head>
         <title>Hatch Head Insights: {post.title}</title>
-        <meta
-          name="description"
-          content="Take a look at a showcase of sites our customers create and learn how they use Vercel to build a better web, scale their business, and improve performance."
-        />
+        <meta name="description" key="description" content={post.excerpt} />
 
         <meta property="og:url" content={`${host}/insights/${post.slug}`} />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:image" content={`${host}/og/${post.slug}.png`} />
