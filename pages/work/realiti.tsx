@@ -142,7 +142,7 @@ export default function HomePage() {
         quote="We had to incorporate into our thinking that the learning environment for clinicians is one where they have a small window of time to teach, in-between patients and rounds."
       /> */}
 
-          <BuildUI />
+          {/* <BuildUI /> */}
           <div className="w-full bg-gray-50 dark:bg-gray-1000 relative pt-20 pb-24">
             <div className="container px-6 mx-auto md:grid md:grid-cols-12 gap-24 prose dark:prose-invert">
               <div className="col-start-1 md:col-span-6 justify-center">
