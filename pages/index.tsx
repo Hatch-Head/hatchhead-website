@@ -20,7 +20,7 @@ export default function Home() {
         <title>Hatch Head</title>
         <meta
           name="description"
-          content="Brisbane digital product agency"
+          content="Brisbane design agency specialising in digital products & services"
           key="description"
         />
         <link rel="icon" href="/favicon.ico" />
@@ -28,12 +28,12 @@ export default function Home() {
 
       <HeroBanner
         sectionProps={{ offsetTop: false }}
-        headline="Hatch Head is a digital product design agency."
+        headline="Hatch Head is a design agency specialising in digital products and services."
         text="We're trusted by ambitious businesses and entrepreneurs to develop transformational ideas into tangible, valuable products."
         video={video}
         image={{ src: "/img/reel-poster.png" }}
         size="full"
-        //containerProps={{ size: "full" }}
+      //containerProps={{ size: "full" }}
       />
 
       <Clients />

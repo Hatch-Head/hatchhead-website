@@ -27,7 +27,7 @@ const WhatWeDo = () => (
       size="small"
       headline="What we do"
       //tagline="What we do"
-      text="We design experiences that enhance and increase user retention and growth. "
+      text="Partnering with businesses & brands to design great product experiences. "
     />
 
     <Section>
@@ -90,8 +90,9 @@ const WhatWeDo = () => (
           </div>
 
           <div className="lg:w-5/12 mb-24 prose dark:prose-invert">
+
             <h3 className="font-bold text-2xl text-neutral-900 dark:text-white mb-4">
-              Define
+              <p className="subtitle">Step 1</p>Define
             </h3>
             <div>
               <p>To begin the problem-solving process, we first need to understand what, exactly, the problem really is. </p>
@@ -100,11 +101,11 @@ const WhatWeDo = () => (
 
               <p>We then take all our hours of research and interviews and boil them down into finding patterns to draw our insights from. </p>
 
-              <p>By the end, we have a clearer picture of what the problem(s) really are. Armed, then, with the truth, we are in the best possible position to create the ideal solution.</p>
+              <p>By the end, we have a clearer picture of what the problem(s) really are. Armed, then, with the solid information, we are in the best possible position to create the ideal solution.</p>
 
 
               <h4 className="font-bold text-base">
-                What we do and produce
+                Some things we do and produce during this step:
               </h4>
               <div className=" flex">
                 <ul className="list-style-disc ">
@@ -125,36 +126,35 @@ const WhatWeDo = () => (
 
     <Section
       className="overflow-x-hidden overflow-y-hidden"
-      color="transparent"
-    >
+      color="transparent">
       <Container size="large">
         <Row>
           <div className="lg:w-1/2 mb-24 prose dark:prose-invert">
             <h3 className="font-bold text-2xl text-neutral-900 dark:text-white mb-4">
-              Ideate
+              <p className="subtitle">Step 2</p> Ideate
             </h3>
             <div className="prose dark:prose-invert">
               <p>
-                Ideate is the process of taking what we know from our Discover
-                stage and sorting it into a clear identity of our users and the
-                problems they have.
+                From our 'define' stage, we now have a much better shape of the problem. Now we can start looking at solving it with what we call 'ideation'.
               </p>
               <p>
-                Expect assumptions to be validated, new ideas inserted and old
-                ideas discarded. We should now be clear on what the problem is
-                and who the people impacted are likely to be.
+                There's never just a single way to solve a problem. That's why we dedicate time to getting all the ideas out in front of us and see what works and what doesn't. We want to bring in all our informatioin we know about the problem as it'll reflect what we want to solve. We'll do sketches, talk through ideas and come up with potential solutions that we can quickly try out.
               </p>
+              <p>The result is that we have a concept, with some rough shape, that solves our problem.</p>
               <h4 className="font-bold text-base">
-                Some thing we do at this stage
+                Some things we do and produce during this step:
               </h4>
-              <div className="flex">
-                <ul className="list-style-disc md:w-1/2">
-                  <li>Empathy Mapping</li>
-                  <li>Service Blueprints</li>
+              <div className=" flex">
+                <ul className="list-style-disc ">
+                  <li>Sketches</li>
+                  <li>Prototypes</li>
+                  <li>Brainstorming exercises</li>
+
                 </ul>
               </div>
             </div>
           </div>
+
 
           <div className="lg:w-1/2 mb-24 prose dark:prose-invert justify-center flex relative">
             <Parallax speed={30}>
@@ -167,6 +167,10 @@ const WhatWeDo = () => (
               />
             </Parallax>
           </div>
+
+
+
+
         </Row>
       </Container>
     </Section>
@@ -176,30 +180,23 @@ const WhatWeDo = () => (
         <Row reverse>
           <div className="lg:w-1/2 mb-24 prose dark:prose-invert">
             <h3 className="font-bold text-2xl text-neutral-900 dark:text-white mb-4">
-              Solution
+              <p className="subtitle">Step 3</p>Solution
             </h3>
             <div className="prose dark:prose-invert">
               <p>
-                The solution phase is like a big loop that goes something like
-                this:
+                Every project has a solution - an outcome that can be used. Typically, these come in the form of designs that get shared with engineers and developers.
               </p>
-              <div className="bg-neutral-100 p-4 rounded-sm mb-4 text-center text-neutral-900 dark:text-neutral-900">
-                Design &#8594; Test &#8594; Evaluate &#8594; Repeat
-              </div>
-              <p>
-                Each iteration, the 'solution' becomes clearer. The outcome more
-                defined. The bad ideas are discarded and the good ideas are
-                kept.
-              </p>
+              <p>Here we work very closely with in-house engineering teams, agencies or the greater team to produce the appropriate documentation and visual designs. </p>
+
               <h4 className="font-bold text-base">
-                Some thing we do at this stage
+                Some things we do at this stage
               </h4>
               <div>
-                <ul className="list-style-disc md:w-1/2">
-                  <li>Wire frames</li>
-                  <li>Usability Testing</li>
-                  <li>Prototyping</li>
-                  <li>Service Blueprints</li>
+                <ul className="list-style-disc">
+                  <li>Wire frames help in the beginning to give better shape and guideanec to layout and navigation.</li>
+                  <li>Usability test helps us understand if the user interface will run into any challenges when being used in the field</li>
+                  <li>UI designs that are commonly shown as visuals - describing the style, colour, and detail of the design.</li>
+
                 </ul>
               </div>
             </div>
@@ -216,6 +213,7 @@ const WhatWeDo = () => (
               />
             </Parallax>
           </div>
+
         </Row>
       </Container>
     </Section>
@@ -225,7 +223,7 @@ const WhatWeDo = () => (
         <Row>
           <div className="lg:w-1/2 mb-24 prose dark:prose-invert">
             <h3 className="font-bold text-2xl text-neutral-900 dark:text-white mb-4">
-              Deliver & Orbit
+              <p className="subtitle">Step 4</p>Deliver & Orbit
             </h3>
             <div className="prose dark:prose-invert">
               <p>
@@ -248,7 +246,7 @@ const WhatWeDo = () => (
                 <li>Documentation</li>
                 <li>Developer handover briefs</li>
                 <li>User Flows</li>
-                <li>Designs</li>
+
               </ul>
             </div>
           </div>
