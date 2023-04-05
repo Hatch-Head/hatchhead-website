@@ -189,7 +189,7 @@ const WhatWeDo = () => (
               <p>Here we work very closely with in-house engineering teams, agencies or the greater team to produce the appropriate documentation and visual designs. </p>
 
               <h4 className="font-bold text-base">
-                Some things we do at this stage
+                Some things we do and produce during this step:
               </h4>
               <div>
                 <ul className="list-style-disc">
@@ -240,7 +240,7 @@ const WhatWeDo = () => (
                 helping the team bring the designs into production.
               </p>
               <h4 className="font-bold text-base">
-                Some thing we do at this stage
+                Some things we do and produce during this step:
               </h4>
               <ul className="list-style-disc">
                 <li>Documentation</li>
