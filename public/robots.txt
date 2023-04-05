@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://hatchhead.co
+
+# Sitemaps
+Sitemap: https://hatchhead.co/sitemap.xml
