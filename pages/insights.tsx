@@ -16,7 +16,7 @@ export default function Home({ posts }: { posts: Post[] }) {
       <Head>
         <meta
           name="description"
-          content="Insights from Hatch Head Brisbane"
+          content="Insights from Hatch Head"
           key="description"
         />
       </Head>
@@ -28,7 +28,7 @@ export default function Home({ posts }: { posts: Post[] }) {
             <span className="animate-float inline-block">🤔</span>
           </h2>
           <p className="text-base dark:text-neutral-400">
-            Sharing things we've learned through research and experience{" "}
+            Designing Business{" "}
           </p>
         </div>
       </header>
