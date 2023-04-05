@@ -45,7 +45,7 @@ const BlogPost: NextPage<PageProps> = ({ post, _html, host }) => {
         <meta property="og:type" content="article" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
-        <meta property="og:image" content={`${host}/og/${post.slug}.png`} />
+        {/* <meta property="og:image" content={`${host}/og/${post.slug}.png`} /> */}
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content={host} />
@@ -55,7 +55,7 @@ const BlogPost: NextPage<PageProps> = ({ post, _html, host }) => {
         />
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.excerpt} />
-        <meta name="twitter:image" content={`${host}/og/${post.slug}.png`} />
+        {/* <meta name="twitter:image" content={`${host}/og/${post.slug}.png`} /> */}
       </Head>
 
       <header className="flex flex-col pt-40 py-10 justify-center container max-w-4xl">
@@ -125,7 +125,7 @@ export const getStaticProps: GetStaticProps<PageProps, Params> = async (
     return { notFound: true };
   }
 
-  await generateOgImage({ slug, title: post.title, image: post.banner });
+  // await generateOgImage({ slug, title: post.title, image: post.banner });
   //const _html = await remark().use(html).process(post.content);
   //const _html = await remark().use(html).process(post.content);
 
