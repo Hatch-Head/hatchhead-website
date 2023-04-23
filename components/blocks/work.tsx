@@ -43,7 +43,7 @@ const Work = () => (
         src: require("../../assets/img/work/crusoftware-backdrop.png"),
       }}
     >
-      Delivering out a Design System to help bring consistency at scale.
+      Delivering out a Design System to bring consistency at scale.
     </CaseStudyCard>
   </div>
 );

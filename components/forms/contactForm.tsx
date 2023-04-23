@@ -101,10 +101,9 @@ export default function ContactForm() {
           <header className="mb-12 md:w-2/3">
             <p className="text-lg mb-2">Have a project?</p>
             <p className="text-xl mb-4 font-bold max-w-xl">
-              Let's talk about the possibilities of creating, building, and
-              growing something great
+              Setup a time to talk confidentially with us about how we can help.
             </p>
-            <p>Please fill out the form below.</p>
+            <p>Reach out to us via the form</p>
           </header>
 
           {error && (
@@ -139,7 +138,7 @@ export default function ContactForm() {
             <TextArea
               {...register("message")}
               name="message"
-              placeholder="How an we help you?"
+              placeholder="What can we help you with?"
               error={errors.message?.message}
             />
 
