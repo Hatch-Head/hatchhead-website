@@ -61,7 +61,7 @@ export const Layout = ({ children }: Props) => {
 
         <meta
           name="description"
-          content="Brisbane digital product agency"
+          content="Brisbane design agency specialising in digital product and services"
           key="description"
         />
       </Head>

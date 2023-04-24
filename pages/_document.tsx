@@ -12,6 +12,7 @@ export default function Document() {
           rel="preload"
           as="font"
         />
+
       </Head>
       <body>
         <Main />

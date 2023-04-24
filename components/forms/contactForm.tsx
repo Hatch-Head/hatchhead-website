@@ -6,6 +6,7 @@ import TextareaAutosize from "react-textarea-autosize";
 import { Container } from "../../components/util/container";
 import { Section } from "../util/section";
 import useFormSubmit from "../../hooks/useFormSubmit";
+import NavLink from "../layout/NavLink";
 type FormData = {
   name: string;
   email: string;
@@ -92,18 +93,18 @@ export default function ContactForm() {
             <h1 className="text-xl mb-4 font-bold dark:text-white">
               Your message has been sent
             </h1>
-            <p>Someone from Hatch Head will get in contact with you soon</p>
+            <p>Someone from the team will get in contact.</p>
           </Container>
           <div className="bg-black bg-no-repeat bg-cover bg-center bg-[url('/img/black-abstract-bg.png')] bg text-white py-24  h-[400px]" />
         </>
       ) : (
         <Container>
           <header className="mb-12 md:w-2/3">
-            <p className="text-lg mb-2">Have a project?</p>
+            <h2 className="text-xl mb-2">Have a project?</h2>
             <p className="text-xl mb-4 font-bold max-w-xl">
               Setup a time to talk confidentially with us about how we can help.
             </p>
-            <p>Reach out to us via the form</p>
+            <p>Prefer email? <NavLink href="mailto:team@hatchhead.co?subject='New Project'">Reach out to us.</NavLink></p>
           </header>
 
           {error && (
