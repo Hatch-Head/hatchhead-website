@@ -1,3 +1,11 @@
+
+// Has issues running on an M1 mac
+// The following dependencies do not seem supported on Apple silicon
+/**
+ *  "canvas": "^2.11.2",
+    "canvas-multiline-text": "^1.0.3",
+ */
+
 import { createCanvas, loadImage, registerFont } from "canvas";
 import { writeFileSync, existsSync, mkdirSync } from "fs";
 import path from "path";

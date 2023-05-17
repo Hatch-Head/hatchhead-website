@@ -142,12 +142,6 @@ const AboutUs = () => (
             role="Director, Product strategy"
             src={Brent}
           />
-
-          <StaffCard
-            name="Natalia Chamon Kovalenko"
-            role="Product designer"
-            src={Natalia}
-          />
         </Row>
       </Container>
     </Section>
