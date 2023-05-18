@@ -28,8 +28,8 @@ export default function Home() {
 
       <HeroBanner
         sectionProps={{ offsetTop: false }}
-        headline="Hatch Head is a design agency specialising in making softare products and apps amazing user experiences."
-        text="We're trusted by ambitious businesses and entrepreneurs to develop transformational ideas into tangible, valuable products."
+        headline="Great software starts with great design."
+        text="Hatch Head is a design agency focusing on making software experiences amazing for your users."
         video={video}
         image={{ src: "/img/reel-poster.png" }}
         size="full"
