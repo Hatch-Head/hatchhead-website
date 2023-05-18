@@ -8,7 +8,7 @@ import Link from "next/link";
 import Tags from "../../components/Tags";
 import ReactMarkdown, { type Components } from "react-markdown";
 import Image from "next/image";
-import { generateOgImage } from "../../lib/generateOgImage";
+// import { generateOgImage } from "../../lib/generateOgImage";
 import Head from "next/head";
 interface PageProps {
   post: Post;
