@@ -57,8 +57,8 @@ export interface Theme {
 
 const settings: SiteSettings = {
   settings: {
-    siteTitle: "Hatch Head",
-    siteDescription: "Brisbane based UX Studio",
+    siteTitle: "Hatch Head - Software design agency - Strategy, UX & UI ",
+    siteDescription: "Great software starts with great design. ",
     social: {
       instagram: {
         name: "Instagram",
