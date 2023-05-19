@@ -6,7 +6,6 @@ import useScrollPosition from "../../hooks/useScrollPosition";
 import { useTheme } from "next-themes";
 import NavLink from "./NavLink";
 import SocialLinks from "../SocialLinks";
-import AnimButton from "../ButtonAnimated";
 import { useState } from "react";
 
 export const Header = () => {
@@ -36,7 +35,6 @@ export const Header = () => {
               aria-label="Go back to the homepage"
               className="flex items-center hover:text-primary dark:hover:text-gold transition-all"
             >
-              <AnimButton className="mr-8 bg-primary dark:bg-gold flex justify-center space-x-3 items-center  button text-white border-full px-4 py-2 rounded-full dark:hover:bg-gold-75 hover:bg-primary-75" href={"/contact-us"}>Contact us</AnimButton>
               <Logo className="mr-4 h-[24px] md:h-[38px]" />
               <div className="md:group-hover:opacity-100 group-hover:translate-x-0 -translate-x-6 opacity-0  md:w-[320px] transition-all">
                 Hatch Head
