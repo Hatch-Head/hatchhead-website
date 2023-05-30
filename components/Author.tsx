@@ -8,14 +8,14 @@ type Props = {
   className?: string;
 };
 
-const AuthorComponent = ({ author, time, date, className }: Props) => (
+const AuthorComponent = ({ author, date, className }: Props) => (
   <div className={className}>
     <div className="flex space-x-4 items-center">
       <Avatar src={author.avatar} name={author.name} />
       <div className="text-neutral-700 contrast-more:text-neutral-900 dark:text-neutral-300">
         <span>{author.name}</span>
         <div className="text-xs font-bold">
-          <span className="mr-8">{time}</span> Published{" "}
+          Published{" "}
           <DateFormatter dateString={date} />
         </div>
       </div>

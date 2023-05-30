@@ -69,6 +69,16 @@ export function getAllPosts() {
   return posts as Post[];
 }
 
+export function getMostRecentPost(): Post | null {
+  const slugs = getPostSlugs();
+  const posts = slugs
+    .map((slug) => getPostBySlug(slug))
+    .filter((post) => post.published !== false || isDev)
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+
+  return posts.length > 0 ? posts[0] as Post : null;
+}
+
 export async function markdownToHtml(markdown: string) {
   const result = await remark().use(html).process(markdown);
   return result.toString();

@@ -338,7 +338,7 @@ module.exports = {
             "--tw-prose-headings": theme("colors.gray[50]"),
             "--tw-prose-lead": theme("colors.gray[700]"),
             "--tw-prose-links": theme("colors.gray[900]"),
-            "--tw-prose-bold": theme("colors.gray[900]"),
+            "--tw-prose-bold": theme("colors.gray[500]"),
             "--tw-prose-counters": theme("colors.gray[600]"),
             "--tw-prose-bullets": theme("colors.gray[400]"),
             "--tw-prose-hr": theme("colors.gray[300]"),

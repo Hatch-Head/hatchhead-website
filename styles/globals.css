@@ -147,3 +147,27 @@ input:focus, textarea:focus {
 hr {
 @apply lg:my-12 my-0;
 }
+
+.prose p {
+  margin-bottom:35px;
+  line-height: 1.5;
+}
+.prose p:last-child {
+  margin-bottom:55px;
+}
+
+.prose blockquote {
+  background-color: #221e1e;
+  border-start-end-radius: 55px;
+}
+.prose blockquote p {
+  font-size: 16px;
+}
+.prose ul li p  {
+  line-height: 1.5;
+  margin:5px!important;
+  padding: 5px;
+}
+.prose ol {
+  font-size: 22px;
+}

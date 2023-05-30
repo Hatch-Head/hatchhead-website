@@ -172,7 +172,7 @@ const settings: SiteSettings = {
           },
           {
             href: "/",
-            label: "Terns & Conditions",
+            label: "Terms & Conditions",
           },
           {
             href: "/",

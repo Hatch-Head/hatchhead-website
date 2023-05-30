@@ -1,38 +1,41 @@
-import { getAllPosts, type Post } from "../lib/service";
+import { getAllPosts, getMostRecentPost, type Post } from "../lib/service";
 import Link from "next/link";
 import { Layout } from "../components/layout";
 import DateFormatter from "../components/Date";
 import { GetStaticProps } from "next";
 import AuthorComponent from "../components/Author";
+import FeaturedArticle from "../components/blocks/blog-feature";
 import Tags from "../components/Tags";
 import Head from "next/head";
 
-export default function Home({ posts }: { posts: Post[] }) {
+export default function Home({ posts, latestPost }: { posts: Post[], latestPost: Post }) {
   //const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
-  const recentPosts = posts.slice(0, 12);
+  const recentPosts = posts.slice(1, 12); // Start at 1 since feature post is the first post
+
 
   return (
     <Layout>
       <Head>
         <meta
           name="description"
-          content="Insights from Hatch Head"
+          content="Insights about designing software from Hatch Head."
           key="description"
         />
       </Head>
-      <header className="border-0 border-b-2 border-neutral-900">
-        <div className="container max-w-4xl py-40">
-          <h1 className="font-bold text-neutral-450">Insights</h1>
-          <h2 className=" text-2xl md:text-3xl lg:text-4xl mb-12 font-bold text-neutral-1000 dark:text-white">
-            Insights into product & design{" "}
-            <span className="animate-float inline-block">🤔</span>
-          </h2>
-          <p className="text-base dark:text-neutral-400">
-            Designing Business{" "}
-          </p>
+      <header className="border-0 border-neutral-900">
+        <div className="container py-40">
+
+          <h1 className="text-xl md:text-xl lg:text:3xl mb-8 font-bold text-neutral-1000 dark:text-white">
+            Insights about designing software from Hatch Head
+          </h1>
+
         </div>
       </header>
       <div className="">
+        <FeaturedArticle featurepost={latestPost}></FeaturedArticle>
+
+
+
         {recentPosts.map((post) => (
           <article className="border-0 border-b border-neutral-900 group py-20">
             <div className="container py-12 flex flex-col max-w-4xl">
@@ -66,6 +69,7 @@ export default function Home({ posts }: { posts: Post[] }) {
 export const getStaticProps: GetStaticProps = async (context) => {
   // This is where the error occurs
   const posts = getAllPosts();
-  const props = { posts: posts };
+  const latestPost = getMostRecentPost();
+  const props = { posts: posts, latestPost: latestPost };
   return { props };
 };

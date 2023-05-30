@@ -15,22 +15,22 @@ const WhatWeDo = ({ className }: Props) => (
       <Card
         title="Elevate how digital interfaces work, look and feel"
         src={BlackCups}
-        alt="Boop"
+        alt="Elevate how digital interfaces work, look and feel"
       ></Card>
       <Card
         title="Designing new and innovative platforms and applications"
         src={BlackDiamond}
-        alt="Boop"
+        alt="Designing new and innovative platforms and applications"
       ></Card>
       <Card
         title="Help hardware teams with their digital experiences"
         src={BlackBlocks}
-        alt="Boop"
+        alt="Help hardware teams with their digital experiences"
       ></Card>
       <Card
         title="Supporting founders & leaders with their product vision"
         src={BlackBowel}
-        alt="Boop"
+        alt="Supporting founders & leaders with their product vision"
       ></Card>
     </div>
   </div>

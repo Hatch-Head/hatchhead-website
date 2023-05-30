@@ -36,6 +36,9 @@ export const Footer = () => {
                   <li className="mb-4">
                     <Link href="/contact-us">Contact</Link>
                   </li>
+                  <li className="mb-4">
+                    <Link href="/insights">Insights</Link>
+                  </li>
                   <Link href="/terms-and-conditions">
                     Terms and conditions
                   </Link>
