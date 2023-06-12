@@ -1,19 +1,24 @@
 import Link from "next/link";
+import Image from 'next/image';
 import { type Post } from "../../lib/service";
 import AuthorComponent from "../Author";
 
 type Props = {
-    featurepost: Post
+    post: Post
 };
 
 
-export const FeaturedArticle = ({ featurepost }: Props) => (
+export const FeaturedArticle = ({ post }: Props) => (
     <div className="relative isolate overflow-hidden py-24 sm:py-32">
-        <img
-            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
-            alt=""
-            className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
-        />
+        { post.banner &&
+            <Image 
+                src={post.banner} 
+                alt={post.title} 
+                width={1200} 
+                height={800}             
+                className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center opacity-10"
+            />
+        }
         <div
             className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
             aria-hidden="true"
@@ -38,24 +43,24 @@ export const FeaturedArticle = ({ featurepost }: Props) => (
                 }}
             />
         </div>
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:mx-0">
 
-                <h2 className="text-4xl font-bold tracking-tight text-white sm:text-2xl">{featurepost.title}</h2>
+                <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white ">{post.title}</h2>
                 <p className="mt-6 text-sm leading-8 text-gray-300">
-                    {featurepost.excerpt}
+                    {post.excerpt}
                 </p>
 
                 <div className="grid md:grid-cols-3  gap-8 mt-12">
-                    <Link className="bg-primary dark:bg-gold flex justify-center space-x-3 items-center button text-white border-full px-4 py-2 rounded-full dark:hover:bg-gold-75 hover:bg-primary-75" key={featurepost.slug} href={`/insights/${featurepost.slug}`}>Continue Reading</Link>
+                    <Link className="bg-primary dark:bg-gold flex justify-center space-x-3 items-center button text-white border-full px-4 py-2 rounded-full dark:hover:bg-gold-75 hover:bg-primary-75" key={post.slug} href={`/insights/${post.slug}`}>Continue Reading</Link>
 
                 </div>
                 <div className="gap-8 mt-8 text-white text-md">
 
                     <AuthorComponent
                         time="short read"
-                        date={featurepost.date}
-                        author={featurepost.author}
+                        date={post.date}
+                        author={post.author}
                     />
                 </div>
 

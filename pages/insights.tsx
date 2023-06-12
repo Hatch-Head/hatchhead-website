@@ -32,7 +32,7 @@ export default function Home({ posts, latestPost }: { posts: Post[], latestPost:
         </div>
       </header>
       <div className="">
-        <FeaturedArticle featurepost={latestPost}></FeaturedArticle>
+        <FeaturedArticle post={latestPost}></FeaturedArticle>
 
 
 

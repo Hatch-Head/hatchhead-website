@@ -58,7 +58,8 @@ const BlogPost: NextPage<PageProps> = ({ post, _html, host }) => {
         {/* <meta name="twitter:image" content={`${host}/og/${post.slug}.png`} /> */}
       </Head>
 
-      <header className="flex flex-col pt-40 py-10 justify-center container max-w-4xl">
+      <header className={`flex w-full flex-col pt-40 py-10 justify-center bg-black ${post.banner} && ' pb-24 '`}>
+        <div className="container max-w-4xl">
         <Link href="/insights" className="font-bold text-neutral-450">
           Insights
         </Link>
@@ -77,17 +78,17 @@ const BlogPost: NextPage<PageProps> = ({ post, _html, host }) => {
         )}
 
         <Tags tags={post.tags} center={false} linkPrefix="/insights/tags" />
+        </div>
       </header>
       {post.banner && (
-        <div className="w-full mb-24 bg-[#2A2A2A] bg-contain bg-center bg-no-repeat p-0">
+
           <Image
             src={post.banner}
             width={1200}
             height={600}
             alt="Banner image for blog post"
-            className="mx-auto"
+            className="mx-auto -mt-12 mb-24"
           />
-        </div>
       )}
       <div className="prose container dark:prose-invert max-w-4xl pb-40 [&>*:first-child]:text-lg [&>*:first-child]:mb-12">
         <ReactMarkdown components={MarkdownComponents}>{_html}</ReactMarkdown>
