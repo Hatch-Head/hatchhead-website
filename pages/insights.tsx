@@ -8,6 +8,8 @@ import FeaturedArticle from "../components/blocks/blog-feature";
 import Tags from "../components/Tags";
 import Head from "next/head";
 
+const isDev = process.env.NODE_ENV === "development";
+
 export default function Home({ posts, latestPost }: { posts: Post[], latestPost: Post }) {
   //const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
   const recentPosts = posts.slice(1, 12); // Start at 1 since feature post is the first post
@@ -37,11 +39,11 @@ export default function Home({ posts, latestPost }: { posts: Post[], latestPost:
 
 
         {recentPosts.map((post) => (
-          <article className="border-0 border-b border-neutral-900 group py-20">
+          <article className="border-0 border-b border-neutral-900 group py-20" key={post.slug}>
             <div className="container py-12 flex flex-col max-w-4xl">
               <Link key={post.slug} href={`/insights/${post.slug}`}>
                 <h1 className="font-bold text-xl md:text-2xl text-neutral-1000 mb-4 dark:text-white group-hover:text-primary dark:group-hover:text-gold">
-                  {post.title}
+                  {post.title} {(isDev && post.published) === false && <span className="font-mono text-sm">(Draft)</span>}
                 </h1>
                 <AuthorComponent
                   time="5 min read"
