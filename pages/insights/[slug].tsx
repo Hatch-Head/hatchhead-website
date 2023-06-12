@@ -58,7 +58,7 @@ const BlogPost: NextPage<PageProps> = ({ post, _html, host }) => {
         {/* <meta name="twitter:image" content={`${host}/og/${post.slug}.png`} /> */}
       </Head>
 
-      <header className={`flex w-full flex-col pt-40 py-10 justify-center bg-black ${post.banner} && ' pb-24 '`}>
+      <header className={`flex w-full flex-col pt-40 py-10 justify-center dark:bg-black bg-white ${post.banner} && ' pb-24 '`}>
         <div className="container max-w-4xl">
         <Link href="/insights" className="font-bold text-neutral-450">
           Insights

@@ -46,8 +46,8 @@ export const FeaturedArticle = ({ post }: Props) => (
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:mx-0">
 
-                <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white ">{post.title}</h2>
-                <p className="mt-6 text-sm leading-8 text-gray-300">
+                <h2 className="text-2xl md:text-3xl font-bold tracking-tight dark:text-white ">{post.title}</h2>
+                <p className="mt-6 text-sm leading-8 dark:text-gray-300">
                     {post.excerpt}
                 </p>
 
