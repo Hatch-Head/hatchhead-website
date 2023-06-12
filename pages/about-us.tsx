@@ -86,9 +86,7 @@ const AboutUs = () => (
         <Row>
           <div className="md:w-1/2 justify-center prose dark:prose-invert  flex flex-col">
             <p className="text-md pb-5">
-              Hatch Head started as an idea. What if there was a product design
-              agency that was design-led but had three decades of engineering
-              experience behind it?
+              What if there was a software design agency that was design-led but had three decades of engineering experience behind it?
             </p>
 
             <p className="text-md pb-5">
@@ -97,10 +95,11 @@ const AboutUs = () => (
             </p>
 
             <p className="text-md pb-5">
-              We took a chance. And in 2021, this idea become a reality when
-              Hatch Head opened its doors. In just 18 months, Hatch Head was
-              recognized internationally and at home for our design work, for
-              brands both big and small, local & international.
+              In 2021, Hatch Head opened its doors. In just 18 months, Hatch Head were recognised internationally and at home for design work for big and small companies, both local and international.
+            </p>
+
+            <p className="text-md pb-5">
+              We believe software is the journey, not the destination. That how we experience the world, while it's changed, is still about people. It's more vital than ever that in our tech-rich world that the most important parts are still and will always be about being human.
             </p>
 
             <p className="text-md">
@@ -156,12 +155,12 @@ const AboutUs = () => (
         <div className="md:flex md:space-x-12 items-stretch">
           <ValueCard
             title="There are no heroes"
-            content={`We collaborate with each other and our clients. \nWe welcome healthy debate`}
+            content={`We collaborate with each other and our clients. \nWe welcome healthy debate and challenging ourselves to find the best outcome.`}
             alt="Abstract 3D render representing a group of people"
             src={NoHeros}
           />
           <ValueCard
-            title="Understand the WHY?"
+            title="Understand the why"
             content={`We are deliberate in what we do, we have conviction in\nour decisions while open to being persuaded. \nIf we don’t know the why, we find it.`}
             alt="Abstract 3D render representing understanding"
             src={Why}
