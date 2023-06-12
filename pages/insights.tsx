@@ -43,7 +43,7 @@ export default function Home({ posts, latestPost }: { posts: Post[], latestPost:
             <div className="container py-12 flex flex-col max-w-4xl">
               <Link key={post.slug} href={`/insights/${post.slug}`}>
                 <h1 className="font-bold text-xl md:text-2xl text-neutral-1000 mb-4 dark:text-white group-hover:text-primary dark:group-hover:text-gold">
-                  {post.title} {(isDev && post.published) === false && <span className="font-mono text-sm">(Draft)</span>}
+                  {post.title} {(isDev && post.published === false) && <span className="font-mono text-sm">(Draft)</span>}
                 </h1>
                 <AuthorComponent
                   time="5 min read"
