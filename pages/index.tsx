@@ -28,9 +28,9 @@ export default function Home() {
 
       <HeroBanner
         sectionProps={{ offsetTop: false }}
-        headline="Great software starts with great design."
+        headline="Great software happens by design. We can help."
         text="We partner with businesses to design innovative software products and services. 
-        We work with clients to design and engineer software for the web and mobile. "
+       We work alongside business leaders and founders to stratgise & deliver software that's impactful, commercially viable and effective."
         // TODO: We're for companies that have dev, but no design. Something like : We partner with in-house dev teams to deliver designs that work within your needs.
         video={video}
         image={{ src: "/img/reel-poster.png" }}
