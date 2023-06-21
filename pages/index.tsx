@@ -20,7 +20,7 @@ export default function Home() {
         <title>Hatch Head</title>
         <meta
           name="description"
-          content="Great software starts with great design."
+          content="Designers at heart. Engineers in the mind. Partners in your business."
           key="description"
         />
         <link rel="icon" href="/favicon.ico" />
@@ -29,7 +29,7 @@ export default function Home() {
       <HeroBanner
         sectionProps={{ offsetTop: false }}
         headline="Great software starts with great design."
-        text="Hatch Head is a UX design agency helping tech teams design better interfaces."
+        text="We help businesses define and craft great digital products and services."
         // TODO: We're for companies that have dev, but no design. Something like : We partner with in-house dev teams to deliver designs that work within your needs.
         video={video}
         image={{ src: "/img/reel-poster.png" }}
