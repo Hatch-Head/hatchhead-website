@@ -17,10 +17,10 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Hatch Head</title>
+        <title>Hatch Head - Software products and services</title>
         <meta
           name="description"
-          content="Designers at heart. Engineers in the mind. Partners in your business."
+          content="Market happens by design."
           key="description"
         />
         <link rel="icon" href="/favicon.ico" />
@@ -29,7 +29,8 @@ export default function Home() {
       <HeroBanner
         sectionProps={{ offsetTop: false }}
         headline="Great software starts with great design."
-        text="We help businesses define and craft great digital products and services."
+        text="We partner with businesses to design innovative software products and services. 
+        We work with clients to design and engineer software for the web and mobile. "
         // TODO: We're for companies that have dev, but no design. Something like : We partner with in-house dev teams to deliver designs that work within your needs.
         video={video}
         image={{ src: "/img/reel-poster.png" }}
