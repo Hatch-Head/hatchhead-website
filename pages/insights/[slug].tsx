@@ -34,11 +34,11 @@ const MarkdownComponents: Components = {
 const BlogPost: NextPage<PageProps> = ({ post, _html, host }) => {
   //const HOSTNAME =
   //  window?.location?.hostname || "https://www.alexanderdavidson.com";
-
+  const title = `Hatch Head Insights: ${post.title}`
   return (
     <Layout>
       <Head>
-        <title>Hatch Head Insights: {post.title}</title>
+        <title>{title}</title>
         <meta name="description" key="description" content={post.excerpt} />
 
         <meta property="og:url" content={`${host}/insights/${post.slug}`} />

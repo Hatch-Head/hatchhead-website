@@ -302,10 +302,14 @@ module.exports = {
               fontSize: theme("fontSize.base[0]"),
               lineHeight: theme("fontSize.base[1]"),
             },
+            strong: {
+              color: theme("colors.gray.900"),
+            }
           },
         },
         tint: {
           css: {
+        
             pre: {
               color: theme("colors.gray.800"),
               backgroundColor: theme("colors.gray.150"),
@@ -339,6 +343,7 @@ module.exports = {
             "--tw-prose-lead": theme("colors.gray[700]"),
             "--tw-prose-links": theme("colors.gray[900]"),
             "--tw-prose-bold": theme("colors.gray[500]"),
+            "--tw-prose-strong": theme("colors.gray[500]"),
             "--tw-prose-counters": theme("colors.gray[600]"),
             "--tw-prose-bullets": theme("colors.gray[400]"),
             "--tw-prose-hr": theme("colors.gray[300]"),
@@ -373,7 +378,6 @@ module.exports = {
             color: theme("colors.gray.200"),
             '[class~="lead"]': { color: theme("colors.gray.400") },
             a: { color: theme("colors.gold") },
-            strong: { color: theme("colors.gray.100") },
             "ul > li::before": { backgroundColor: theme("colors.gray.700") },
             hr: { borderColor: theme("colors.gray.800") },
             blockquote: {
@@ -382,8 +386,9 @@ module.exports = {
             },
             h1: { color: theme("colors.gray.100") },
             h2: { color: theme("colors.gray.100") },
-            h3: { color: theme("colors.gray.600") },
+            h3: { color: theme("colors.gray.100") },
             h4: { color: theme("colors.gray.100") },
+
             code: {
               color: theme("colors.gray.100"),
               backgroundColor: theme("colors.gray.1000"),
@@ -392,6 +397,9 @@ module.exports = {
             pre: {
               color: theme("colors.gray.200"),
               backgroundColor: theme("colors.gray.900"),
+            },
+            strong: {
+              color: theme("colors.gray.900"),
             },
             thead: {
               color: theme("colors.gray.100"),
@@ -405,7 +413,6 @@ module.exports = {
             color: theme("colors.gray.50"),
             '[class~="lead"]': { color: theme("colors.gray.400") },
             a: { color: theme("colors.gray.100") },
-            strong: { color: theme("colors.gray.100") },
             "ul > li::before": { backgroundColor: theme("colors.gray.700") },
             hr: { borderColor: theme("colors.gray.800") },
             blockquote: {
