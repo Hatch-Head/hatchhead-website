@@ -33,19 +33,18 @@ export const HeroBanner = ({
 }: Props) => {
   const heightClass = size === "large" ? "h-screen" : "";
   const poster = typeof image?.src == "string" ? image.src : undefined;
-  
 
   const videoSource = typeof video == "string" ? [video] : video;
   const hasVideo = videoSource !== undefined;
 
   type MediaKey = {
-    [key:string]: string
-  }
+    [key: string]: string;
+  };
 
   const mediaTypes: MediaKey = {
-    "mp4": "video/mp4",
-    "webm": "video/webm",
-  }
+    mp4: "video/mp4",
+    webm: "video/webm",
+  };
 
   return (
     <Section
@@ -64,14 +63,12 @@ export const HeroBanner = ({
           className="absolute animate-fadeIn z-0 w-full min-w-full min-h-full max-w-none l-0 t-0 opacity-30 object-center object-cover h-full"
         >
           {videoSource.map((src, i) => {
-            const extension = src.split(".").pop() as string || ''
+            const extension = (src.split(".").pop() as string) || "";
             if (extension && mediaTypes[extension]) {
-              return (
-                <source key={i} src={src} type={mediaTypes[extension]} />
-              )
+              return <source key={i} src={src} type={mediaTypes[extension]} />;
             }
           })}
-          </video>
+        </video>
       )}
 
       <Container
@@ -97,7 +94,7 @@ export const HeroBanner = ({
               )}
               {text && (
                 <div
-                  className={`prose text-base md:text-lg mx-auto lg:mx-0 mb-10 text-gray-700 dark:text-gray-50`}
+                  className={`prose text-base md:text-lg mx-auto lg:mx-0 mb-10 text-gray-500 dark:text-gray-50`}
                 >
                   {text}
                 </div>
