@@ -11,7 +11,7 @@ type Props = {
   size?: "large" | "medium" | "small" | "full";
   sectionProps?: Partial<SectionProps>;
   containerProps?: Partial<ContainerProps>;
-  video?: string;
+  video?: string | string[];
   image?: {
     src: string;
     alt?: string;
@@ -33,6 +33,19 @@ export const HeroBanner = ({
 }: Props) => {
   const heightClass = size === "large" ? "h-screen" : "";
   const poster = typeof image?.src == "string" ? image.src : undefined;
+  
+
+  const videoSource = typeof video == "string" ? [video] : video;
+  const hasVideo = videoSource !== undefined;
+
+  type MediaKey = {
+    [key:string]: string
+  }
+
+  const mediaTypes: MediaKey = {
+    "mp4": "video/mp4",
+    "webm": "video/webm",
+  }
 
   return (
     <Section
@@ -40,17 +53,25 @@ export const HeroBanner = ({
       style={{ clipPath: "inset(0)" }}
       {...sectionProps}
     >
-      {video && (
+      {hasVideo && (
         <video
           playsInline
           autoPlay
           muted
           loop
-          src={video}
           preload={"none"}
           poster={poster}
           className="absolute animate-fadeIn z-0 w-full min-w-full min-h-full max-w-none l-0 t-0 opacity-30 object-center object-cover h-full"
-        />
+        >
+          {videoSource.map((src, i) => {
+            const extension = src.split(".").pop() as string || ''
+            if (extension && mediaTypes[extension]) {
+              return (
+                <source key={i} src={src} type={mediaTypes[extension]} />
+              )
+            }
+          })}
+          </video>
       )}
 
       <Container
