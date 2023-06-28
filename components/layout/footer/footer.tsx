@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Container } from "../../util/container";
 import Logo from "../../../assets/img/hatch-head-logo-stacked.svg";
 import SocialLinks from "../../SocialLinks";
-import { LineSpace } from "iconoir-react";
+
 import NavLink from "../NavLink";
 export const Footer = () => {
   return (
@@ -39,30 +39,29 @@ export const Footer = () => {
                   <li className="mb-4">
                     <Link href="/insights">Insights</Link>
                   </li>
-                  <Link href="/terms-and-conditions">
-                    Terms and conditions
-                  </Link>
+                  <li>
+                    <Link href="/terms-and-conditions">
+                      Terms and conditions
+                    </Link>
+                  </li>
                 </ul>
               </nav>
             </div>
 
             <div className="sm:px-8 md:flex flex-2 text-left grow justify-end">
               <div className="flex-full flex flex-col gap-6 lg:text-left max-w-xl mx-auto  mb-8">
-                <nav className="font-mono text-gray-400">
-                  <ul>
+                <div className="font-mono text-gray-400">
+                  <h2 className="mb-4">Main Office</h2>
 
+                  <NavLink href="https://goo.gl/maps/Lm1QYKLREKNqQjut8">
+                    {" "}
+                    <p>Suite 26 / 53 Vernon Tce,</p>
+                    <p className="mb-4">Teneriffe, QLD 4005</p>
+                  </NavLink>
 
-
-                    <h2 className="mb-4">Main Office</h2>
-
-                    <NavLink href="https://goo.gl/maps/Lm1QYKLREKNqQjut8"> <p>Suite 26 / 53 Vernon Tce,</p>
-                      <p className="mb-4">Teneriffe, QLD 4005</p></NavLink>
-
-                    <p>Open Monday - Friday, 9am - 5pm</p>
-                    <NavLink href="tel:+61744287662">+61 (07) 4428 7662</NavLink>
-
-                  </ul>
-                </nav>
+                  <p>Open Monday - Friday, 9am - 5pm</p>
+                  <NavLink href="tel:+61744287662">+61 (07) 4428 7662</NavLink>
+                </div>
               </div>
             </div>
 
@@ -71,12 +70,11 @@ export const Footer = () => {
                 <h2>Social</h2>
               </nav>
               <SocialLinks />
-
             </div>
           </div>
         </div>
       </Container>
       <div className="bg-primary dark:bg-gold -skew-x-12 max-w-7xl mx-auto h-[86px] w-full" />
-    </footer >
+    </footer>
   );
 };
