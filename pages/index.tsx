@@ -3,7 +3,8 @@ import Image from "next/image";
 
 import { Layout } from "../components/layout";
 import { HeroBanner } from "../components/blocks/heroBanner";
-import video from "../assets/vid/reel-short.mp4";
+import videoMp4 from "../assets/vid/reel-short.mp4";
+import videoWebM from "../assets/vid/reel-short.webm";
 import { Clients } from "../components/blocks/clients";
 import Title from "../components/title";
 import { Section } from "../components/util/section";
@@ -33,7 +34,7 @@ export default function Home() {
         headline="Great software happens by design. We can help."
         text="We partner with businesses to help design & shape innovative digital products and services. "
         // TODO: We're for companies that have dev, but no design. Something like : We partner with in-house dev teams to deliver designs that work within your needs.
-        video={video}
+        video={[videoWebM, videoMp4]}
         image={{ src: "/img/reel-poster.png" }}
         size="full"
       //containerProps={{ size: "full" }}
