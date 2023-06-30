@@ -80,21 +80,21 @@ export const HeroBanner = ({
           <>
             <div className="row-start-2 w-full lg:w-4/5 lg:row-start-1 lg:col-start-1 lg:col-end-4  z-5">
               {tagline && (
-                <h2 className="relative inline-block mb-0 text-md font-bold tracking-wide title-font z-20 dark:text-gray-50">
+                <h2 className="relative inline-block mb-0 text-sm font-bold tracking-wide title-font z-20 dark:text-gray-300">
                   {tagline}
                 </h2>
               )}
 
               {headline && (
                 <AnimatedText
-                  className="w-full relative mb-8 md:md-2 text-[3rem] leading-[3rem] md:text-3xl 2xl:text-4xl text-neutral-1000 tracking-normal font-display dark:text-gold"
+                  className="w-full relative mb-8 md:md-2 text-[3rem] leading-[3rem] md:text-2xl 2xl:text-3xl text-neutral-1000 tracking-normal font-display dark:text-gold"
                   tag="h1"
                   text={headline}
                 />
               )}
               {text && (
                 <div
-                  className={`prose text-base md:text-lg mx-auto lg:mx-0 mb-10 text-gray-500 dark:text-gray-50`}
+                  className={`prose text-base md:text-xl mx-auto lg:mx-2 mb-10 mt-10 text-gray-900 dark:text-gray-100`}
                 >
                   {text}
                 </div>

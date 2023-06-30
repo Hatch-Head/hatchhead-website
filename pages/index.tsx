@@ -30,9 +30,10 @@ export default function Home() {
       </Head>
 
       <HeroBanner
+
         sectionProps={{ offsetTop: false }}
-        headline="Great software happens by design. We can help."
-        text="We partner with businesses to help design & shape innovative digital products and services. "
+        headline="We solve complex problems through digital product and service design."
+        text={'We craft interfaces and user experiences that inspire trust & delight'}
         // TODO: We're for companies that have dev, but no design. Something like : We partner with in-house dev teams to deliver designs that work within your needs.
         video={[videoWebM, videoMp4]}
         image={{ src: "/img/reel-poster.png" }}
