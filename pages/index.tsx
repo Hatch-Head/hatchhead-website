@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 
 import { Layout } from "../components/layout";
 import { HeroBanner } from "../components/blocks/heroBanner";
@@ -12,15 +11,12 @@ import { Container } from "../components/util/container";
 import Work from "../components/blocks/work";
 import WhatWeDoCards from "../components/blocks/whatWeDo";
 import ContactForm from "../components/forms/contactForm";
-import MissionImage from "../assets/img/black-abstract-bg.png";
 
 export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Hatch Head -
-
-          Software products and services</title>
+        <title>Hatch Head - Software products and services</title>
         <meta
           name="description"
           content="Great digital experiences happens by design."
@@ -30,15 +26,16 @@ export default function Home() {
       </Head>
 
       <HeroBanner
-
         sectionProps={{ offsetTop: false }}
         headline="We solve complex problems through digital product and service design."
-        text={'We craft interfaces and user experiences that inspire trust & delight'}
+        text={
+          "We craft interfaces and user experiences that inspire trust & delight"
+        }
         // TODO: We're for companies that have dev, but no design. Something like : We partner with in-house dev teams to deliver designs that work within your needs.
-        video={[videoWebM, videoMp4]}
+        video={[videoMp4, videoWebM]}
         image={{ src: "/img/reel-poster.png" }}
         size="full"
-      //containerProps={{ size: "full" }}
+        //containerProps={{ size: "full" }}
       />
 
       <Clients />
