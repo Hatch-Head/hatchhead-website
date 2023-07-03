@@ -56,7 +56,7 @@ export default function Home() {
         <h1 className="text-2xl md:text-3xl text-neutral dark:text-neutral-0 font-bold mb-4">
           Projects
         </h1>
-        <p className="text-base md:text-lg md:max-w-2xl">
+        <p className="text-base md:text-lg md:max-w-2xl dark:text-gray-400">
           Some of our key projects
         </p>
       </div>

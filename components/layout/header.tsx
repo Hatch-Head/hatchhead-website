@@ -33,7 +33,7 @@ export const Header = () => {
             <Link
               href="/"
               aria-label="Go back to the homepage"
-              className="flex items-center hover:text-primary dark:hover:text-gold transition-all"
+              className="flex items-center hover:text-primary dark:hover:text-gold transition-all "
             >
               <Logo className="mr-4 h-[24px] md:h-[38px]" />
               <div className="md:group-hover:opacity-100 group-hover:translate-x-0 -translate-x-6 opacity-0  md:w-[320px] transition-all">
@@ -45,7 +45,12 @@ export const Header = () => {
           <div
             className={`z-10 flex justify-center ${isOpen ? "text-white" : ""}`}
           >
-            <Link href="/contact-us" className="mr-8 bg-primary dark:bg-gold flex justify-center space-x-3 items-center  button text-white border-full px-4 py-2 rounded-full dark:hover:bg-gold-75 hover:bg-primary-75">Contact</Link>
+            <Link
+              href="/contact-us"
+              className="mr-8 bg-primary dark:bg-gold dark:contrast-more:text-black flex justify-center space-x-3 items-center  button text-white border-full px-4 py-2 rounded-full dark:hover:bg-gold-75 hover:bg-primary-75"
+            >
+              Contact
+            </Link>
 
             <button onClick={() => setIsOpen(!isOpen)} className="font-bold">
               {isOpen ? "Close" : "Menu"}
@@ -61,8 +66,9 @@ export const Header = () => {
           </div>
 
           <div
-            className={`absolute z-0 md:-right-8 top-0  w-screen overflow-visible flex items-end justify-end h-screen ${isOpen ? "pointer-events-auto" : "pointer-events-none"
-              }`}
+            className={`absolute z-0 md:-right-8 top-0  w-screen overflow-visible flex items-end justify-end h-screen ${
+              isOpen ? "pointer-events-auto" : "pointer-events-none"
+            }`}
             onClick={() => {
               if (isOpen) {
                 setIsOpen(false);
@@ -70,8 +76,9 @@ export const Header = () => {
             }}
           >
             <nav
-              className={`h-screen relative w-screen p-8 lg:p-24 max-w-2xl transition duration-300 overflow-visible  scrollbar-hide bg-black text-white dark:text-neutral-50 dark:bg-neutral-900 ${!isOpen ? "translate-x-[100vw]" : ""
-                }
+              className={`h-screen relative w-screen p-8 lg:p-24 max-w-2xl transition duration-300 overflow-visible  scrollbar-hide bg-black text-white dark:text-neutral-50 dark:bg-neutral-900 ${
+                !isOpen ? "translate-x-[100vw]" : ""
+              }
               `}
             >
               <ul
@@ -142,6 +149,6 @@ export const Header = () => {
           </div>
         </div>
       </div>
-    </div >
+    </div>
   );
 };

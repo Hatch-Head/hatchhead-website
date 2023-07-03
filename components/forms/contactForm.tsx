@@ -104,7 +104,12 @@ export default function ContactForm() {
             <p className="text-xl mb-4 font-bold max-w-xl">
               Setup a time to talk confidentially with us about how we can help.
             </p>
-            <p>Prefer email? <NavLink href="mailto:team@hatchhead.co?subject='New Project'">Reach out to us.</NavLink></p>
+            <p>
+              Prefer email?{" "}
+              <NavLink href="mailto:team@hatchhead.co?subject='New Project'">
+                Reach out to us.
+              </NavLink>
+            </p>
           </header>
 
           {error && (
@@ -149,7 +154,7 @@ export default function ContactForm() {
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-primary dark:bg-gold flex justify-center space-x-3 items-center  button text-white border-full px-4 py-2 rounded-full dark:hover:bg-gold-75 hover:bg-primary-75"
+                className="bg-primary dark:bg-gold flex justify-center space-x-3 dark:contrast-more:text-black items-center  button text-white border-full px-4 py-2 rounded-full dark:hover:bg-gold-75 hover:bg-primary-75"
               >
                 <span>Send Message</span>
                 {loading && (

@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Container, ContainerProps } from "../util/container";
 import { Section, SectionProps } from "../util/section";
-import Row from "../util/row";
 import ScrollIndicator from "../scrollIndicator";
 import AnimatedText from "../transitions/AnimatedText";
-import { StaticImageData } from "next/image";
-import Image from "next/image";
+import dynamic from "next/dynamic";
+
+const Video = dynamic(() => import("../VideoPreload"));
 
 type Props = {
   size?: "large" | "medium" | "small" | "full";
@@ -53,7 +53,7 @@ export const HeroBanner = ({
       {...sectionProps}
     >
       {hasVideo && (
-        <video
+        <Video
           playsInline
           autoPlay
           muted
@@ -68,7 +68,7 @@ export const HeroBanner = ({
               return <source key={i} src={src} type={mediaTypes[extension]} />;
             }
           })}
-        </video>
+        </Video>
       )}
 
       <Container
