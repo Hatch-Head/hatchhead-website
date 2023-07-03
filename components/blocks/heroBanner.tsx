@@ -42,8 +42,8 @@ export const HeroBanner = ({
   };
 
   const mediaTypes: MediaKey = {
-    mp4: "video/mp4",
-    webm: 'video/webm; codecs="hvc1"',
+    mp4: 'video/mp4; codecs="hvc1"',
+    webm: "video/webm",
   };
 
   return (
