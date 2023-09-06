@@ -5,7 +5,7 @@ import Tags from "../../components/Tags";
 import Image from "next/image";
 
 import GDA from "../../assets/img/good-design-awards-winner-2022.png";
-import Waveform from "../../assets/vid/audeara-website-banner.mov";
+import Waveform from "../../assets/vid/audeara-website-banner.mp4";
 import Phone from "../../components/blocks/phone";
 import videoMp4 from "../../assets/vid/reel-short.mp4";
 import WaveformWebM from "../../assets/vid/audeara-website-banner.webm";
@@ -17,7 +17,7 @@ import Audiogram from "../../assets/img/audeara-working-audiograms.png";
 
 const Audeara = () => (
   <AnimatePresence>
-    <Layout>
+    <Layout darkContent>
       <Head>
         <meta name="description" content="Audeara mobile app" />
       </Head>
@@ -38,7 +38,7 @@ const Audeara = () => (
               muted
               className="animate-fadeIn z-0 w-full min-w-full max-w-none  object-center object-contain"
             >
-              <source src={Waveform} type="video/quicktime; codecs=hevc" />
+              <source src={Waveform} type="video/mp4;codecs=hvc1" />
               <source src={WaveformWebM} type="video/webm;" />
             </video>
           </div>

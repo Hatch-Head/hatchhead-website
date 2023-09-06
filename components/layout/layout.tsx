@@ -9,9 +9,10 @@ import { ThemeProvider } from "next-themes";
 
 type Props = {
   children: React.ReactNode;
+  darkContent?: boolean;
 };
 
-export const Layout = ({ children }: Props) => {
+export const Layout = ({ children, darkContent = false }: Props) => {
   const { isDarkMode } = useDarkMode();
   const { asPath } = useRouter();
 
@@ -71,7 +72,7 @@ export const Layout = ({ children }: Props) => {
           <div
             className={`min-h-screen flex flex-col bg-gray-50 dark:bg-gray-1000 bg-noise text-gray-800 `}
           >
-            <Header />
+            <Header darkContent={darkContent} />
 
             <div className="flex-1 flex flex-col">
               {/* <AnimatePresence> */}
