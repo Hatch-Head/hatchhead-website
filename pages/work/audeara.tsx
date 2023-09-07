@@ -139,13 +139,8 @@ const Audeara = () => (
 
       <section className="bg-neutral-10 md:py-24">
         <div className="container max-w-5xl px-6 mx-auto prose dark:prose-dark">
-          <h1 className="text-xl font-bold">Opportunity stuff</h1>
-          <p>
-            Maecenas sed diam eget risus varius blandit sit amet non magna. Cum
-            sociis natoque penatibus et magnis dis parturient montes, nascetur
-            ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.
-            Nullam id dolor id nibh ultricies vehicula ut id elit.
-          </p>
+          <h1 className="text-xl font-bold">Opportunity</h1>
+          <p>Audeara's technology is backed by</p>
 
           <p>
             Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet,
@@ -184,7 +179,7 @@ const Audeara = () => (
         <div className="container px-6 mx-auto md:flex space-x-4  space-y-20 max-w-4xl">
           <div className="flex md:basis-1/2">
             <div className="justify-center">
-              <div className="sticky top-24">
+              <div className="sticky top-36">
                 <FadeUp>
                   <Phone className="max-w-[366px]">
                     <video
@@ -206,7 +201,7 @@ const Audeara = () => (
                 src={CardVideo1}
                 width={390}
                 height={467}
-                className="w-fill rounded-xl shadow-lg "
+                className="w-fill rounded-xl shadow-lg border border-gray-50 dark:border-0"
                 autoPlay
                 muted
                 playsInline
@@ -219,7 +214,7 @@ const Audeara = () => (
                 src={CardVideo2}
                 width={390}
                 height={467}
-                className="w-fill rounded-xl shadow-lg"
+                className="w-fill rounded-xl shadow-lg border border-gray-50 dark:border-0"
                 autoPlay
                 muted
                 playsInline
@@ -231,7 +226,7 @@ const Audeara = () => (
                 src={CardVideo1}
                 width={390}
                 height={467}
-                className="w-fill rounded-xl shadow-lg "
+                className="w-fill rounded-xl shadow-lg border border-gray-50 dark:border-0"
                 autoPlay
                 muted
                 playsInline
