@@ -60,12 +60,12 @@ type Props = {
   title?: string;
 };
 
-export const Clients = ({ title = "Clients we’ve partnered with" }: Props) => {
+export const Clients = ({ title = "Clients" }: Props) => {
   return (
     <Section>
       <Container className={`flex`} size="medium">
         <div className="flex flex-col justify-center">
-          <Title title={title} />
+          <h1 className="text-md md:text-xl text-neutral dark:text-neutral-0 font-bold mb-4">Clients</h1>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 gap-8 dark:text-white">
@@ -84,6 +84,6 @@ export const Clients = ({ title = "Clients we’ve partnered with" }: Props) => 
           ))}
         </div>
       </Container>
-    </Section>
+    </Section >
   );
 };

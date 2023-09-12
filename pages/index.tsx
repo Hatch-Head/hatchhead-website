@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 import { Layout } from "../components/layout";
 import { HeroBanner } from "../components/blocks/heroBanner";
 import videoMp4 from "../assets/vid/reel-short.mp4";
@@ -16,10 +15,10 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Hatch Head - Software products and services</title>
+        <title>Hatch Head - designing apps & platforms that are delightfully awesome.</title>
         <meta
           name="description"
-          content="Great digital experiences happens by design."
+          content="Great digital experiences happen by design."
           key="description"
         />
         <link rel="icon" href="/favicon.ico" />
@@ -27,15 +26,14 @@ export default function Home() {
 
       <HeroBanner
         sectionProps={{ offsetTop: false }}
-        headline="We solve complex problems through digital product and service design."
-        text={
-          "We craft interfaces and user experiences that inspire trust & delight"
-        }
+        headline="Designing apps & services to be delightfully awesome."
+        text={""}
+
         // TODO: We're for companies that have dev, but no design. Something like : We partner with in-house dev teams to deliver designs that work within your needs.
         video={[videoMp4, videoWebM]}
         image={{ src: "/img/reel-poster.png" }}
         size="full"
-        //containerProps={{ size: "full" }}
+      //containerProps={{ size: "full" }}
       />
 
       <Clients />
@@ -56,8 +54,8 @@ export default function Home() {
         <h1 className="text-2xl md:text-3xl text-neutral dark:text-neutral-0 font-bold mb-4">
           Projects
         </h1>
-        <p className="text-base md:text-lg md:max-w-2xl dark:text-gray-400">
-          Some of our key projects
+        <p className="text-base md:text-lg md:max-w-2xl dark:text-purple-400">
+
         </p>
       </div>
 
