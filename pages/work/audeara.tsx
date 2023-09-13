@@ -7,16 +7,17 @@ import Image from "next/image";
 import GDA from "../../assets/img/good-design-awards-winner-2022.png";
 import Waveform from "../../assets/vid/audeara-website-banner.mp4";
 import Phone from "../../components/blocks/phone";
-import videoMp4 from "../../assets/vid/reel-short.mp4";
 import WaveformWebM from "../../assets/vid/audeara-website-banner.webm";
 import Testimonial from "../../components/blocks/testimonial";
 import Alex from "../../assets/img/alex-afflix.png";
-import HeroPhone from "../../assets/img/audeara-banner-hero.png";
 import ScreensWithHeadphones from "../../assets/img/audeara-screens-with-headphones.png";
 import Audiogram from "../../assets/img/audeara-working-audiograms.png";
 import CardVideo1 from "../../assets/vid/audeara-card-audio-source.mp4";
 import CardVideo2 from "../../assets/vid/audeara-card-power-cable.mp4";
+import HearingCheckVid from "../../assets/vid/audeara-hearing-check.mp4";
+import ScreenPersonalisationVid from "../../assets/vid/audeara-screen-personalisation.mp4";
 import FadeUp from "../../components/transitions/FadeUp";
+import OGTags from "../../components/blocks/ogTags";
 
 const Audeara = () => (
   <AnimatePresence>
@@ -24,16 +25,25 @@ const Audeara = () => (
       <Head>
         <meta name="description" content="Audeara mobile app" />
       </Head>
+      <OGTags
+        title="Audeara mobile app"
+        description="Hatch head did nice work"
+        image="/img/audeara-social.png"
+      />
       <header className="bg-black py-32 relative">
         <FadeUp>
           <div className="flex items-center justify-center mb-24 relative">
-            <Image
-              src={HeroPhone}
-              width={366}
-              height={738}
-              className="z-10"
-              alt="Screenshot of the Audeara app inside a phone"
-            />
+            <Phone className="max-w-[366px] z-10">
+              <video
+                className="bg-primary"
+                autoPlay
+                muted
+                playsInline
+                loop
+                src={ScreenPersonalisationVid}
+              ></video>
+            </Phone>
+
             <div className="flex absolute top-0 items-center justify-center grow h-full">
               <video
                 autoPlay
@@ -188,7 +198,7 @@ const Audeara = () => (
                       muted
                       playsInline
                       loop
-                      src={videoMp4}
+                      src={HearingCheckVid}
                     ></video>
                   </Phone>
                 </FadeUp>
