@@ -1,0 +1,77 @@
+---
+title: A guide to better errors
+date: '2021-06-22'
+published: false
+banner: /img/blog/build-and-users-dont-come-banner.png
+author: andrew-morton
+tags: ["Dev", "UX"]
+excerpt:  
+seo:
+  title: "Build it, and they won't (probably) come. "
+  description: Boop
+---
+
+Well you've done it. You written the bug free piece of software. It's got 100% unit coverage, it's elegant, maintainable and never crashes. And then your user tries their email to set their pets name 🤦‍♂️.
+
+Throwing errors should be recognized as a fundamental aspect of ensuring your software caters to users' needs and bridges the gap between technical functionality and user experience.
+
+As a developer, it is crucial to plan for thorough and consistent error handling. Fortunatly there are a few simple steps you as a developer can take to ensure your errors can serve both the user AND the technical team.
+
+## Server side
+
+While validation hapens on both the front and backend, it is partically important server side. Not only is the server is the gatekeeper to your data and buisiness logic, but the api needs to be designed to serve both the end user AND the front end clients.
+
+**The message**
+
+The message is intended for the end user, offering information on resolving the issue. It's essential to assume that non-technical users will be reading it.
+
+Tips
+
+- Don't include technical information or status codes for example "403 Unprocessable entity".
+- Don't try to be cute with text look "Oops"
+- Remember that if your app supports localization, so should your error messages
+- If coming from an API, text should not reference the UI of the front end "Press the button at the top left"
+
+**The error code**
+
+This is for the technical team and helps for looking up how an error occurred. It can also be used by front end teams to override the base message to a specific solution.
+
+**The HTTP status code**
+
+This is for other pieces of software and is a core piece of error handling. For error handling they are generally broken into the following
+
+- `400 - 499` Client errors responses
+- `500 - 599` Server error responses
+
+When throwing your own errors, you'll generally stick to the 400 range, typically 401 Unauthorized, 403 Forbidden, 404 Not found and 422 Unprocessable Content.
+
+Read more about http status codes in the [mdm web docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
+**The stack**
+
+This is for developers
+
+### Structuring content in your codebase
+
+Since errors bridge the gap between backend, front end, design and UX, it's important to define them in a centralized location in your codebase. That way you product / ux team members can audit all the error copy for you.
+
+```javascript
+
+// Ok, but not ideal as you'll have to search the
+// codebase for strings to replace
+
+if (notValidEmail) {
+    throw new Error("Your email is not valid")
+}
+
+// Better, all your errors are defined together and you can then
+// call them from multiple places within the codebase
+
+import { InvalidEmailError } from "./errors"
+if (notValidEmail) {
+    throw new InvalidEmailError()
+}
+
+Assume that people outside the development team will want to 
+
+```

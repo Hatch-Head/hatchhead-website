@@ -4,8 +4,9 @@ import { useRef } from "react";
 type Props = {
   children?: JSX.Element;
   className?: string;
+  stagger?: number;
 };
-const FadeUp = ({ children, className = "" }: Props) => {
+const FadeUp = ({ children, className = "", stagger = 0 }: Props) => {
   return (
     <div className={`overflow-visible ${className}`}>
       <motion.div
@@ -16,7 +17,7 @@ const FadeUp = ({ children, className = "" }: Props) => {
           hidden: { opacity: 0, transform: "translateY(100px)" },
         }}
         viewport={{ once: false, amount: "some" }}
-        transition={{ ease: "easeOut", duration: 0.9 }}
+        transition={{ ease: "easeOut", duration: 0.9, delay: stagger * 0.2 }}
       >
         {children}
       </motion.div>

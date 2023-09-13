@@ -8,7 +8,7 @@ import Link from "next/link";
 import Tags from "../../components/Tags";
 import ReactMarkdown, { type Components } from "react-markdown";
 import Image from "next/image";
-// import { generateOgImage } from "../../lib/generateOgImage";
+import { generateOgImage } from "../../lib/generateOgImage";
 import Head from "next/head";
 interface PageProps {
   post: Post;
@@ -34,7 +34,7 @@ const MarkdownComponents: Components = {
 const BlogPost: NextPage<PageProps> = ({ post, _html, host }) => {
   //const HOSTNAME =
   //  window?.location?.hostname || "https://www.alexanderdavidson.com";
-  const title = `Hatch Head Insights: ${post.title}`
+  const title = `Hatch Head Insights: ${post.title}`;
   return (
     <Layout>
       <Head>
@@ -58,37 +58,38 @@ const BlogPost: NextPage<PageProps> = ({ post, _html, host }) => {
         {/* <meta name="twitter:image" content={`${host}/og/${post.slug}.png`} /> */}
       </Head>
 
-      <header className={`flex w-full flex-col pt-40 py-10 justify-center dark:bg-black bg-white ${post.banner} && ' pb-24 '`}>
+      <header
+        className={`flex w-full flex-col pt-40 py-10 justify-center dark:bg-black bg-white ${post.banner} && ' pb-24 '`}
+      >
         <div className="container max-w-4xl">
-        <Link href="/insights" className="font-bold text-neutral-450">
-          Insights
-        </Link>
-        <h1 className="font-bold text-xl md:text-3xl text-neutral-900 dark:text-white mb-4">
-          {post.title}
-        </h1>
-        <p className="text-lg text-neutral-450 mb-12">{post.excerpt}</p>
+          <Link href="/insights" className="font-bold text-neutral-450">
+            Insights
+          </Link>
+          <h1 className="font-bold text-xl md:text-3xl text-neutral-900 dark:text-white mb-4">
+            {post.title}
+          </h1>
+          <p className="text-lg text-neutral-450 mb-12">{post.excerpt}</p>
 
-        {post.author && (
-          <AuthorComponent
-            author={post.author}
-            time="5 min read"
-            date={post.date}
-            className="mb-12"
-          />
-        )}
+          {post.author && (
+            <AuthorComponent
+              author={post.author}
+              time="5 min read"
+              date={post.date}
+              className="mb-12"
+            />
+          )}
 
-        <Tags tags={post.tags} center={false} linkPrefix="/insights/tags" />
+          <Tags tags={post.tags} center={false} linkPrefix="/insights/tags" />
         </div>
       </header>
       {post.banner && (
-
-          <Image
-            src={post.banner}
-            width={1200}
-            height={600}
-            alt="Banner image for blog post"
-            className="mx-auto -mt-12 mb-24"
-          />
+        <Image
+          src={post.banner}
+          width={1200}
+          height={600}
+          alt="Banner image for blog post"
+          className="mx-auto -mt-12 mb-24"
+        />
       )}
       <div className="prose container dark:prose-invert max-w-4xl pb-40 [&>*:first-child]:text-lg [&>*:first-child]:mb-12">
         <ReactMarkdown components={MarkdownComponents}>{_html}</ReactMarkdown>
@@ -126,7 +127,7 @@ export const getStaticProps: GetStaticProps<PageProps, Params> = async (
     return { notFound: true };
   }
 
-  // await generateOgImage({ slug, title: post.title, image: post.banner });
+  await generateOgImage({ slug, title: post.title, image: post.banner });
   //const _html = await remark().use(html).process(post.content);
   //const _html = await remark().use(html).process(post.content);
 

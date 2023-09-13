@@ -1,23 +1,23 @@
 
-// Has issues running on an M1 mac
-// The following dependencies do not seem supported on Apple silicon
-/**
- *  "canvas": "^2.11.2",
-    "canvas-multiline-text": "^1.0.3",
- */
-
-import { createCanvas, loadImage, registerFont } from "canvas";
-import { writeFileSync, existsSync, mkdirSync } from "fs";
+import { existsSync, mkdirSync } from "fs";
+import drawMultilineText from "canvas-multiline-text";
 import path from "path";
+import * as PImage from "pureimage"
+import fs from 'fs';
 
 type Props = {
   title: string;
   image?: string;
 };
 
-registerFont("public/fonts/Inter-Bold.ttf", {
+const Inter = PImage.registerFont("public/fonts/Inter-Bold.ttf", {
   family: "Inter",
 });
+
+const loadImage = (filepath: string) => {
+  console.log("Loading image: ", filepath);
+  return PImage.decodePNGFromStream(fs.createReadStream(filepath))
+}
 
 // our function will receive, in this case, the title of the blog post
 // as a parameter
@@ -26,8 +26,11 @@ export const createImage = async ({ title, image }: Props) => {
   const width = 1200;
   const height = 630;
 
+  await Inter.load();
+
+  var canvas = PImage.make(width, height);
+
   // create an empty canvas
-  const canvas = createCanvas(width, height);
   const context = canvas.getContext("2d");
 
   // fill our frame with a white background
@@ -36,6 +39,7 @@ export const createImage = async ({ title, image }: Props) => {
 
   // load and draw our background image
   if (image) {
+    context.alpha = 0.5;
     const dir = path.resolve("public");
     const filepath = path.resolve(dir, `./${image}`);
     const pixels = await loadImage(filepath);
@@ -57,6 +61,7 @@ export const createImage = async ({ title, image }: Props) => {
       pixels.width * ratio,
       pixels.height * ratio
     );
+    context.alpha = 1;
   }
 
   // draw our title
@@ -65,25 +70,25 @@ export const createImage = async ({ title, image }: Props) => {
   context.textAlign = "center";
 
   // Render post title
-  //context.textAlign = "center";
-  // drawMultilineText(context, title, {
-  //   rect: {
-  //     x: canvas.width / 2,
-  //     y: 380,
-  //     width: canvas.width - 20,
-  //     height: canvas.height - 170,
-  //   },
-  //   verbose: false,
-  //   lineHeight: 1.4,
-  //   minFontSize: 15,
-  //   maxFontSize: 56,
-  // });
+  context.textAlign = "left";
+  drawMultilineText(context, title, {
+    rect: {
+      x: 56,
+      y: 120,
+      width: canvas.width / 2,
+      height: canvas.height - 170,
+    },
+    verbose: false,
+    lineHeight: 1.4,
+    minFontSize: 56,
+    maxFontSize: 56,
+  });
 
   // add our hostname at the bottom of the image
   context.font = "22px Inter";
   context.fillText("hatchhead.co", canvas.width / 2, 580, canvas.width - 20);
 
-  return canvas.toBuffer("image/png");
+  return canvas;
 };
 
 export const generateOgImage = async ({
@@ -112,7 +117,11 @@ export const generateOgImage = async ({
     console.log("Generating blog og:image: ", filepath);
     try {
       const imgBuffer = await createImage({ title, image });
-      writeFileSync(filepath, imgBuffer);
+      PImage.encodePNGToStream(imgBuffer, fs.createWriteStream(filepath)).then(() => {
+        console.log("wrote out the png file to out.png");
+      }).catch((e: Error) => {
+        console.log("there was an error writing");
+      });
     } catch (e) {
       console.log(e);
     }
