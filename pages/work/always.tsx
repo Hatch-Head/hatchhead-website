@@ -68,7 +68,16 @@ const Audeara = () => (
               <h5 className="text-xs font-bold uppercase text-neutral-300">
                 Services
               </h5>
-              <Tags center={false} tags={["UI Design", "UX Design"]} />
+              <Tags
+                center={false}
+                tags={[
+                  "Product Strategy",
+                  "Service Design",
+                  "UI Design",
+                  "Delivery",
+                  "UX",
+                ]}
+              />
             </div>
 
             <div className="block mb-6">
