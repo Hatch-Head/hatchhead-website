@@ -42,7 +42,7 @@ const CaseStudyCard = ({
   return (
     <motion.div
       layoutId={name}
-      className={`lg:flex w-full m-0 overflow-hidden lg:aspect-[3/1]  mb-12 md:mb-48 group ${className} ${
+      className={`lg:flex w-full m-0 overflow-hidden mb-12 md:mb-48 group ${className} ${
         !reverse ? "" : "lg:flex-row-reverse"
       }`}
     >
@@ -83,7 +83,7 @@ const CaseStudyCard = ({
               alt={`${name} project thumbnail`}
             />
           )}
-          <div className="z-10 grow h-full relative transform-gpu group-hover:scale-105  xl:group-hover:scale-105 transition duration-300 ease-in-out pointer-events-none flex items-center justify-center">
+          <div className="z-10 grow h-full aspect-square relative transform-gpu group-hover:scale-105  xl:group-hover:scale-105 transition duration-300 ease-in-out pointer-events-none flex items-center justify-center">
             <Image
               src={image.src}
               width={900}
