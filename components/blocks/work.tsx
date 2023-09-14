@@ -6,11 +6,11 @@ const Work = () => (
       to="/work/always"
       name="Always"
       tags={[
+        "UX",
+        "UI Design",
         "Product Strategy",
         "Service Design",
-        "UI Design",
         "Delivery",
-        "UX",
       ]}
       image={{
         src: require("../../assets/img/always-thumbnail.png"),

@@ -94,11 +94,11 @@ const CaseStudyCard = ({
           </div>
 
           <div className="w-full h-full flex absolute top-0 left-0 p-6 md:opacity-0 group-hover:opacity-100 transition duration-300 delay-100 overflow-hidden z-10">
-            <div className="absolute bottom-6 right-6 flex space-x-2">
+            <div className="absolute bottom-6 right-6 flex space-x-2 flex-wrap justify-end max-w-[60%] md:max-w-none">
               {tags.map((tag, i) => (
                 <span
                   key={`${name}-tag-${i}`}
-                  className={`text-white bg-black rounded-full px-3 py-2 font-mono text-xs min-width-[60px] md:translate-y-12 group-hover:translate-y-0 transition duration-300 delay-${
+                  className={`text-white bg-black rounded-full px-3 py-2 font-mono text-xs min-width-[60px] md:translate-y-12 group-hover:translate-y-0 transition duration-300 mb-2 delay-${
                     i * 300 + 300
                   }`}
                 >
