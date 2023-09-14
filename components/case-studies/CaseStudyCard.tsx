@@ -50,8 +50,8 @@ const CaseStudyCard = ({
         className={`flex w-full items-center justify-end border-0  border-neutral-1000  dark:border-neutral-700`}
       >
         <div
-          className={`lg:p-x4 py-12 md:py-24 lg:p-12  w-full xl:max-w-[738px] lg:max-w-[500px]   ${
-            reverse ? "2xl:pr-0" : "2xl:pl-0"
+          className={`py-12 md:py-24 lg:p-12  w-full xl:max-w-[738px] lg:max-w-[500px]   ${
+            reverse ? "2xl:pr-0 lg:pl-32 " : "2xl:pl-0"
           }`}
         >
           <Title title={name} offsetDot className="mb-8" />
