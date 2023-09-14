@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+// cspell:disable
 const withSvgr = require("next-svgr");
 const withOptimizedImages = require("next-optimized-images");
 
