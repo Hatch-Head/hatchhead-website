@@ -5,7 +5,13 @@ const Work = () => (
     <CaseStudyCard
       to="/work/always"
       name="Always"
-      tags={["UI Design", "UX"]}
+      tags={[
+        "Product Strategy",
+        "Service Design",
+        "UI Design",
+        "Delivery",
+        "UX",
+      ]}
       image={{
         src: require("../../assets/img/always-thumbnail.png"),
       }}

@@ -9,7 +9,7 @@ import Waveform from "../../assets/vid/audeara-website-banner.mp4";
 import Phone from "../../components/blocks/phone";
 import WaveformWebM from "../../assets/vid/audeara-website-banner.webm";
 import Testimonial from "../../components/blocks/testimonial";
-import Alex from "../../assets/img/alex-afflix.png";
+import Alex from "../../assets/img/alex-afflik.png";
 import ScreensWithHeadphones from "../../assets/img/audeara-screens-with-headphones.png";
 import Audiogram from "../../assets/img/audeara-working-audiograms.png";
 import CardVideo1 from "../../assets/vid/audeara-card-audio-source.mp4";
@@ -305,7 +305,7 @@ const Audeara = () => (
           role="CTO"
           quote="Hatch Head complement our team's capability with their knowledge of
         digital design and user experience. It's a pleasure to have access to
-        them, where they that can jump in and work to deliver great outcomes."
+        them, where they can jump in and work to deliver great outcomes."
         />
       </FadeUp>
     </Layout>

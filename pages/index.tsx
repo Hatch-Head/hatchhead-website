@@ -11,6 +11,7 @@ import { Container } from "../components/util/container";
 import Work from "../components/blocks/work";
 import WhatWeDoCards from "../components/blocks/whatWeDo";
 import ContactForm from "../components/forms/contactForm";
+import Testimonials from "../components/blocks/testimonials";
 
 export default function Home() {
   return (
@@ -40,18 +41,6 @@ export default function Home() {
 
       <Clients />
 
-      <hr />
-
-      <Section>
-        <Container>
-          <Title title="What we do" className="mb-12" element="h2" />
-
-          <WhatWeDoCards className="mb-24" />
-        </Container>
-      </Section>
-
-      <hr />
-
       <div className="container relative py-12 w-full">
         <h1 className="text-2xl md:text-3xl text-neutral dark:text-neutral-0 font-bold mb-4">
           Projects
@@ -62,6 +51,17 @@ export default function Home() {
       </div>
 
       <Work />
+
+      <hr />
+
+      <Section>
+        <Container>
+          <Title title="What we do" className="mb-12" element="h2" />
+          <WhatWeDoCards className="mb-24" />
+        </Container>
+      </Section>
+
+      <hr />
 
       {/* 
       <div className="bg-black bg-no-repeat bg-center bg-[url('/img/black-abstract-bg.png')] bg-cover text-white py-24 mb-48">
@@ -75,7 +75,7 @@ export default function Home() {
           </p>
         </Container>
       </div> */}
-
+      <Testimonials />
       <Section>
         <ContactForm />
       </Section>

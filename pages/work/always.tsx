@@ -167,30 +167,13 @@ const Audeara = () => (
       <Testimonial
         className="py-24 bg-white dark:bg-neutral-1000"
         name="Lok Tsang"
-        role="CEO"
-        quote={
-          <>
-            <p className="mb-4">It all started with a problem to solve.</p>
-
-            <p className="mb-4">
-              It has been exceptional working with Brent and Andrew from Hatch
-              Head. They bring a wealth of experience and creativity to the
-              table. They were able to bring creative solutions to problems by
-              keeping open minds and unique perspectives throughout the process.
-              Their professionalism throughout the journey allowed prompt
-              delivery of product.
-            </p>
-
-            <p className="mb-4">
-              I feel very fortunate to have been able to work with Hatch Head
-              and our time together has culminated in winning two Good Design
-              Awards, gold and best in class 2023. This is a testament to their
-              hard work and talent.
-            </p>
-
-            <p>I look forward to working with the team again!</p>
-          </>
-        }
+        role="Founder"
+        quote="It has been exceptional working with Brent and Andrew from Hatch
+        Head. They bring a wealth of experience and creativity to the
+        table. They were able to bring creative solutions to problems by
+        keeping open minds and unique perspectives throughout the process.
+        Their professionalism throughout the journey allowed prompt
+        delivery of product."
         image={LokTsang}
       />
       <section className="bg-white dark:bg-neutral-1000 py-32">

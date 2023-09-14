@@ -73,7 +73,7 @@ const CaseStudyCard = ({
         <Link
           aria-label={`Read more about the ${name} project`}
           href={to}
-          className="overflow-visible"
+          className="overflow-visible group"
         >
           {backdrop && (
             <Image
@@ -93,7 +93,7 @@ const CaseStudyCard = ({
             />
           </div>
 
-          <div className="w-full h-full flex absolute top-0 left-0 p-6 md:opacity-0 group-hover:opacity-100 transition duration-300 delay-100 overflow-hidden">
+          <div className="w-full h-full flex absolute top-0 left-0 p-6 md:opacity-0 group-hover:opacity-100 transition duration-300 delay-100 overflow-hidden z-10">
             <div className="absolute bottom-6 right-6 flex space-x-2">
               {tags.map((tag, i) => (
                 <span
