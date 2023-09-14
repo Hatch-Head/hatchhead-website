@@ -80,7 +80,7 @@ const Audeara = () => (
                   href="https://good-design.org/projects/always-a-disruptor-to-dental-ordering/"
                   target="_blank"
                   rel="no-follow"
-                  className="] dark:bg-black cursor-pointer"
+                  className="cursor-pointer"
                 >
                   <GDA
                     alt="Good Design Awards Winner 2022"
@@ -109,14 +109,14 @@ const Audeara = () => (
           </div>
         </div>
       </section>
-      <section className="bg-white">
-        <div className="container md:flex max-w-7xl md:space-x-12 md:space-y-0 space-y-6 py-12 bg-white items-center justify-center">
+      <section className="bg-white dark:bg-neutral-1000">
+        <div className="container md:flex max-w-7xl md:space-x-12 md:space-y-0 space-y-6 py-12  items-center justify-center">
           <FadeUp>
             <AlwaysLogoSquare height={495} width={495} className="grow " />
           </FadeUp>
         </div>
       </section>
-      <section className="bg-white pt-24 pb-12 text-base">
+      <section className="bg-white dark:bg-neutral-1000 pt-24 pb-12 text-base dark:text-white">
         <div className="container max-w-5xl">
           <h1 className="text-xl font-bold ">The Challenge</h1>
           <h2 className="text-2xl font-bold max-w-3xl mb-8">
@@ -137,7 +137,7 @@ const Audeara = () => (
         </div>
       </section>
 
-      <div className="bg-white">
+      <div className="bg-white dark:bg-neutral-1000">
         <div className="container max-w-5xl">
           <Rive
             src={Process}
@@ -165,7 +165,7 @@ const Audeara = () => (
         </div>
       </section>
       <Testimonial
-        className="py-24 bg-white dark:bg-black"
+        className="py-24 bg-white dark:bg-neutral-1000"
         name="Lok Tsang"
         role="CEO"
         quote={
@@ -193,7 +193,7 @@ const Audeara = () => (
         }
         image={LokTsang}
       />
-      <section className="bg-white py-32">
+      <section className="bg-white dark:bg-neutral-1000 py-32">
         <div className="container md:grid md:grid-cols-2 space-x-24 items-center max-w-5xl">
           <div>
             <FadeUp>
@@ -217,7 +217,7 @@ const Audeara = () => (
           </div>
         </div>
       </section>
-      <section className="bg-white py-24">
+      <section className="bg-white dark:bg-neutral-1000 py-24">
         <div className="container max-w-5xl md:grid grid-cols-2 gap-32">
           <div>
             <div className="sticky top-32 justify-center items-center flex">
@@ -258,7 +258,7 @@ const Audeara = () => (
           </div>
         </div>
       </section>
-      <div className="bg-white">
+      <div className="bg-white dark:bg-neutral-1000">
         <div className="container max-w-7xl">
           <FadeUp>
             <Image
