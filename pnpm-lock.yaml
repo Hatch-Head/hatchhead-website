@@ -36,7 +36,7 @@ dependencies:
     specifier: ^8.11.5
     version: 8.11.5(react-dom@18.2.0)(react-native@0.72.3)(react@18.2.0)(three@0.150.1)
   '@rive-app/react-canvas':
-    specifier: ^3.0.45
+    specifier: ^3.0.57
     version: 3.0.57(react@18.2.0)
   '@types/node':
     specifier: 18.11.9

@@ -112,6 +112,20 @@ const nextConfig = {
       ],
     });
 
+    config.module.rules.push({
+      test: /\.riv$/,
+      use: [
+        {
+          loader: "file-loader",
+          options: {
+            publicPath: `${prefix}/_next/static/media/`,
+            outputPath: `${isServer ? "../" : ""}static/media/`,
+            name: "[name].[hash].[ext]",
+          },
+        },
+      ],
+    });
+
     return config;
   },
 };

@@ -10,6 +10,10 @@ declare module "*.mov" {
   export default string;
 }
 
+declare module "*.riv" {
+  export default string;
+}
+
 declare interface FooterSocial {
   facebook: string;
   twitter: string;

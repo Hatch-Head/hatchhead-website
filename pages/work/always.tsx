@@ -4,19 +4,27 @@ import Head from "next/head";
 import Tags from "../../components/Tags";
 import Image from "next/image";
 
-import GDA from "../../assets/img/good-design-awards-winner-2022.png";
+import GDA from "../../assets/img/good-design-awards-best-in-class-2024.svg";
 import Testimonial from "../../components/blocks/testimonial";
-import Alex from "../../assets/img/alex-afflix.png";
+import LokTsang from "../../assets/img/always/lok-tsang.jpeg";
 import FadeUp from "../../components/transitions/FadeUp";
 import AlwaysLogoSquare from "../../assets/img/always-logo-square.svg";
-import AlwaysShort from "../../assets/img/always-tshirt.png";
+import AlwaysShirt from "../../assets/img/always-tshirt.png";
 import AlwaysCheckout from "../../assets/img/always-checkout.png";
 import AlwaysCups from "../../assets/img/always-cups.png";
+import AlwaysHighEjectors from "../../assets/img/always/high-volume-evacuator.png";
 import AlwaysEjectors from "../../assets/img/always-ejectors.png";
 import AlwaysIpad from "../../assets/img/always-ipad.png";
 import AlwaysMockup from "../../assets/img/always-mockup.png";
 import AlwaysBox from "../../assets/img/always-box.png";
-
+import AlwaysDualIPadMockup from "../../assets/img/always/always-dual-ipad-mockup.png";
+import AlwaysItems from "../../assets/img/always/always-items.png";
+import Rive, {
+  Layout as RiveLayout,
+  Fit,
+  Alignment,
+} from "@rive-app/react-canvas";
+import Process from "../../assets/animations/always-process.riv";
 import OGTags from "../../components/blocks/ogTags";
 const Audeara = () => (
   <AnimatePresence>
@@ -25,11 +33,10 @@ const Audeara = () => (
         <meta name="description" content="Audeara mobile app" />
       </Head>
       <OGTags
-        description="Looking into"
+        description="Always is a subscription service that delivers an Always box which contains everything you need to keep your clinic on-track. Hatch Head were asked to help create the app to desktop and mobile devices to cater for new and growing features, environments and clinician needs."
         title="Hatch Heads Always case study"
-        image="/img/og-always.png"
+        image="/img/always-social.png"
       />
-
       <header className="bg-[#3143A1] py-32 min-h-[820px] justify-center flex">
         <div className="container px-6 mx-auto z-30 max-w-6xl justify-center flex flex-col">
           <h1 className="text-3xl text-white font-bold mb-8">Always</h1>
@@ -38,7 +45,6 @@ const Audeara = () => (
           </h1>
         </div>
       </header>
-
       <section className="w-full relative pt-40 bg-white dark:bg-neutral-1000">
         <div className="container max-w-6xl px-6 md:space-x-8 mx-auto lg:flex align-center flex-row prose dark:prose-dark">
           <div className="md:basis-1/3 mb-24">
@@ -71,24 +77,17 @@ const Audeara = () => (
               </h5>
               <div className="flex space-x-4 wrap">
                 <a
-                  href="https://good-design.org/projects/realiti-control-ui-redesign/"
+                  href="https://good-design.org/projects/always-a-disruptor-to-dental-ordering/"
                   target="_blank"
                   rel="no-follow"
-                  className="w-1/2"
+                  className="] dark:bg-black cursor-pointer"
                 >
-                  <Image
-                    src={GDA}
+                  <GDA
                     alt="Good Design Awards Winner 2022"
                     width={200}
-                    height={200}
+                    className="dark:fill-white cursor-pointer"
                   />
                 </a>
-                <a
-                  href="https://www.ux-design-awards.com/winners/realiti-360-control-benutzeroberflaeche"
-                  className="w-1/2 text-neutral-900 dark:text-white"
-                  target="_blank"
-                  rel="no-follow"
-                ></a>
               </div>
             </div>
           </div>
@@ -110,21 +109,14 @@ const Audeara = () => (
           </div>
         </div>
       </section>
-
       <section className="bg-white">
-        <div className="container md:grid grid-cols-12 gap-24 items-center max-w-5xl">
-          <Image
-            src="https://placehold.co/640x640"
-            width={640}
-            height={640}
-            alt=""
-            className="md:col-span-5 w-full"
-          />
-          <AlwaysLogoSquare className="md:col-span-6  w-full block" />
+        <div className="container md:flex max-w-7xl md:space-x-12 md:space-y-0 space-y-6 py-12 bg-white items-center justify-center">
+          <FadeUp>
+            <AlwaysLogoSquare height={495} width={495} className="grow " />
+          </FadeUp>
         </div>
       </section>
-
-      <section className="bg-white py-24 text-base">
+      <section className="bg-white pt-24 pb-12 text-base">
         <div className="container max-w-5xl">
           <h1 className="text-xl font-bold ">The Challenge</h1>
           <h2 className="text-2xl font-bold max-w-3xl mb-8">
@@ -145,24 +137,86 @@ const Audeara = () => (
         </div>
       </section>
 
-      <section className="bg-white">
-        <div className="container flex space-x-24 items-center max-w-5xl">
-          <FadeUp>
-            <AlwaysLogoSquare />
-          </FadeUp>
-
-          <FadeUp>
-            <Image
-              src={AlwaysShort}
-              width={740}
-              height={640}
-              alt=""
-              className="w-full grow"
-            />
-          </FadeUp>
+      <div className="bg-white">
+        <div className="container max-w-5xl">
+          <Rive
+            src={Process}
+            className="w-full block  aspect-video"
+            layout={
+              new RiveLayout({
+                fit: Fit.Contain,
+                alignment: Alignment.TopCenter,
+              })
+            }
+            width={500}
+            height={300}
+          />
+        </div>
+      </div>
+      <section className="flex py-64 items-center justify-center bg-[#FFBCBC]">
+        <div className="container max-w-8xl">
+          <Image
+            src={AlwaysItems}
+            width={1201}
+            height={387}
+            alt="Selection of always products"
+            className="w-full"
+          />
         </div>
       </section>
+      <Testimonial
+        className="py-24 bg-white dark:bg-black"
+        name="Lok Tsang"
+        role="CEO"
+        quote={
+          <>
+            <p className="mb-4">It all started with a problem to solve.</p>
 
+            <p className="mb-4">
+              It has been exceptional working with Brent and Andrew from Hatch
+              Head. They bring a wealth of experience and creativity to the
+              table. They were able to bring creative solutions to problems by
+              keeping open minds and unique perspectives throughout the process.
+              Their professionalism throughout the journey allowed prompt
+              delivery of product.
+            </p>
+
+            <p className="mb-4">
+              I feel very fortunate to have been able to work with Hatch Head
+              and our time together has culminated in winning two Good Design
+              Awards, gold and best in class 2023. This is a testament to their
+              hard work and talent.
+            </p>
+
+            <p>I look forward to working with the team again!</p>
+          </>
+        }
+        image={LokTsang}
+      />
+      <section className="bg-white py-32">
+        <div className="container md:grid md:grid-cols-2 space-x-24 items-center max-w-5xl">
+          <div>
+            <FadeUp>
+              <AlwaysLogoSquare
+                height={380}
+                width={380}
+                className="block w-full "
+              />
+            </FadeUp>
+          </div>
+          <div>
+            <FadeUp>
+              <Image
+                src={AlwaysShirt}
+                width={495}
+                height={495}
+                alt=""
+                className="w-full  block"
+              />
+            </FadeUp>
+          </div>
+        </div>
+      </section>
       <section className="bg-white py-24">
         <div className="container max-w-5xl md:grid grid-cols-2 gap-32">
           <div>
@@ -176,6 +230,15 @@ const Audeara = () => (
           <div className="space-y-24">
             <FadeUp>
               <Image
+                src={AlwaysEjectors}
+                width={640}
+                height={640}
+                alt=""
+                className="w-full"
+              />
+            </FadeUp>
+            <FadeUp>
+              <Image
                 src={AlwaysCups}
                 width={640}
                 height={640}
@@ -185,16 +248,7 @@ const Audeara = () => (
             </FadeUp>
             <FadeUp>
               <Image
-                src={AlwaysEjectors}
-                width={640}
-                height={640}
-                alt=""
-                className="w-full"
-              />
-            </FadeUp>{" "}
-            <FadeUp>
-              <Image
-                src={AlwaysCups}
+                src={AlwaysHighEjectors}
                 width={640}
                 height={640}
                 alt=""
@@ -204,12 +258,11 @@ const Audeara = () => (
           </div>
         </div>
       </section>
-
       <div className="bg-white">
         <div className="container max-w-7xl">
           <FadeUp>
             <Image
-              src={AlwaysMockup}
+              src={AlwaysDualIPadMockup}
               width={1215}
               height={734}
               alt="Always website within 2 iPads"
@@ -238,36 +291,6 @@ const Audeara = () => (
           </FadeUp>
         </div>
       </div>
-
-      <Testimonial
-        className="py-24 bg-white dark:bg-black"
-        name="Lok Tsang"
-        role="CEO"
-        quote={
-          <>
-            <p className="mb-4">It all started with a problem to solve.</p>
-
-            <p className="mb-4">
-              It has been exceptional working with Brent and Andrew from Hatch
-              Head. They bring a wealth of experience and creativity to the
-              table. They were able to bring creative solutions to problems by
-              keeping open minds and unique perspectives throughout the process.
-              Their professionalism throughout the journey allowed prompt
-              delivery of product.
-            </p>
-
-            <p className="mb-4">
-              I feel very fortunate to have been able to work with Hatch Head
-              and our time together has culminated in winning two Good Design
-              Awards, gold and best in class 2023. This is a testament to their
-              hard work and talent.
-            </p>
-
-            <p>I look forward to working with the team again!</p>
-          </>
-        }
-        image={Alex}
-      />
     </Layout>
   </AnimatePresence>
 );
