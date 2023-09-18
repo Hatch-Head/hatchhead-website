@@ -61,24 +61,26 @@ const Audeara = () => (
         </FadeUp>
 
         <div className="relative container px-6 mx-auto z-30 max-w-6xl">
-          <h1 className="text-3xl text-white font-bold mb-8">Now Hear This.</h1>
-          <h1 className="text-2xl text-white mb-12 ">
+          <div className="text-2xl only:md:text-3xl text-white font-bold mb-8">
+            Now Hear This.
+          </div>
+          <h1 className="text-base md:text-xl text-white mb-12 ">
             Delivering perfect sound with Audeara's mobile app.
           </h1>
 
-          <p className="text-xl text-white mb-12">
+          <p className="text-base md:text-xl text-white mb-12">
             Audeara, a leader in hearing-health technology, create products that
             calibrate thier audio devices to your hearing so you experience
             clearer, brighter sounds and offset damaged or poor hearing.
           </p>
 
-          <p className="text-xl text-white mb-12">
+          <p className="text-base md:text-xl text-white mb-12">
             Audeara pivoted away from the mainstream consumer-audio market and
             focused on hearing wellness. Those that were hard of hearing - a
             typical byproduct of getting older - we're now the ideal customers
             for Audeara's audio products.
           </p>
-          <p className="text-xl text-white">
+          <p className="text-base md:text-xl text-white">
             {" "}
             This new direction also meant a new visual identity. This sparked an
             overhaul of their flagship mobile app. For Hatch Head, our goal was
@@ -88,9 +90,9 @@ const Audeara = () => (
         </div>
       </header>
 
-      <section className="w-full relative pt-40 bg-white dark:bg-neutral-1000">
+      <section className="w-full relative pt-12 md:pt-40 bg-white dark:bg-neutral-1000">
         <div className="container max-w-6xl px-6 md:space-x-8 mx-auto lg:flex align-center flex-row prose dark:prose-dark">
-          <div className="md:basis-1/3 mb-24">
+          <div className="md:basis-1/3md:mb-24">
             <div className="block mb-4">
               <h5 className="text-xs font-bold uppercase text-neutral-300">
                 Client
@@ -238,9 +240,9 @@ const Audeara = () => (
       <section className="pb-24 bg-white dark:bg-neutral-1000">
         <div className="container px-6 mx-auto prose"></div>
         <div className="container px-6 mx-auto md:flex space-x-4  space-y-20 max-w-4xl">
-          <div className="flex md:basis-1/2">
+          <div className="flex md:basis-1/2 items-center justify-center">
             <div className="justify-center">
-              <div className="sticky top-36">
+              <div className="sticky top-3">
                 <FadeUp>
                   <Phone className="max-w-[366px]">
                     <video
