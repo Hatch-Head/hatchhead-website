@@ -22,7 +22,7 @@ const Work = () => (
       Award winning interface made to cater for new and growing features,
       environments and clinician needs.
     </CaseStudyCard>{" "}
-    <CaseStudyCard
+    {/* <CaseStudyCard
       reverse
       to="/work/audeara"
       name="Audeara"
@@ -36,8 +36,9 @@ const Work = () => (
     >
       Award winning interface made to cater for new and growing features,
       environments and clinician needs.
-    </CaseStudyCard>{" "}
+    </CaseStudyCard> */}
     <CaseStudyCard
+      reverse
       to="/work/realiti"
       name="REALITi"
       tags={["UI Design", "UX"]}
@@ -52,7 +53,6 @@ const Work = () => (
       environments and clinician needs.
     </CaseStudyCard>
     <CaseStudyCard
-      reverse
       to="/work/cru-software"
       name="Cru Software"
       tags={["Design System", "UI Design"]}
