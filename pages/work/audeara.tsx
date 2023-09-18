@@ -28,7 +28,7 @@ const Audeara = () => (
       </Head>
       <OGTags
         title="Audeara mobile app"
-        description="How Hatch Head helped deliver perfect sound with Audeara's mobile app"
+        description="How Hatch Head helped Audeara deliver perfect sound with their mobile app"
         image="/img/audeara-social.png"
       />
       <header className="bg-black py-32 relative">
