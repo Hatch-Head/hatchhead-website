@@ -70,7 +70,7 @@ const Audeara = () => (
 
           <p className="text-base md:text-xl text-white mb-12">
             Audeara, a leader in hearing-health technology, create products that
-            calibrate thier audio devices to your hearing so you experience
+            calibrate their audio devices to your hearing so you experience
             clearer, brighter sounds and offset damaged or poor hearing.
           </p>
 
