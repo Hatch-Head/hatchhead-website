@@ -42,7 +42,7 @@ const CaseStudyCard = ({
   return (
     <motion.div
       layoutId={name}
-      className={`lg:flex w-full m-0 overflow-hidden lg:aspect-[3/1]  mb-12 md:mb-48 group ${className} ${
+      className={`lg:flex w-full m-0 overflow-hidden mb-12 md:mb-48 group ${className} ${
         !reverse ? "" : "lg:flex-row-reverse"
       }`}
     >
@@ -50,8 +50,8 @@ const CaseStudyCard = ({
         className={`flex w-full items-center justify-end border-0  border-neutral-1000  dark:border-neutral-700`}
       >
         <div
-          className={`lg:p-x4 py-12 md:py-24 lg:p-12  w-full xl:max-w-[738px] lg:max-w-[500px]   ${
-            reverse ? "2xl:pr-0" : "2xl:pl-0"
+          className={`py-12 md:py-24 lg:p-12  w-full xl:max-w-[738px] lg:max-w-[500px]   ${
+            reverse ? "2xl:pr-0 lg:pl-32 " : "2xl:pl-0"
           }`}
         >
           <Title title={name} offsetDot className="mb-8" />
@@ -73,7 +73,7 @@ const CaseStudyCard = ({
         <Link
           aria-label={`Read more about the ${name} project`}
           href={to}
-          className="overflow-visible"
+          className="overflow-visible group"
         >
           {backdrop && (
             <Image
@@ -83,7 +83,7 @@ const CaseStudyCard = ({
               alt={`${name} project thumbnail`}
             />
           )}
-          <div className="z-10 grow h-full relative transform-gpu group-hover:scale-105  xl:group-hover:scale-105 transition duration-300 ease-in-out pointer-events-none flex items-center justify-center">
+          <div className="z-10 grow h-full aspect-square relative transform-gpu group-hover:scale-105  xl:group-hover:scale-105 transition duration-300 ease-in-out pointer-events-none flex items-center justify-center">
             <Image
               src={image.src}
               width={900}
@@ -93,12 +93,12 @@ const CaseStudyCard = ({
             />
           </div>
 
-          <div className="w-full h-full flex absolute top-0 left-0 p-6 md:opacity-0 group-hover:opacity-100 transition duration-300 delay-100 overflow-hidden">
-            <div className="absolute bottom-6 right-6 flex space-x-2">
+          <div className="w-full h-full flex absolute top-0 left-0 p-6 md:opacity-0 group-hover:opacity-100 transition duration-300 delay-100 overflow-hidden z-10">
+            <div className="absolute bottom-6 right-6 flex space-x-2 flex-wrap justify-end max-w-[60%] md:max-w-none">
               {tags.map((tag, i) => (
                 <span
                   key={`${name}-tag-${i}`}
-                  className={`text-white bg-black rounded-full px-3 py-2 font-mono text-xs min-width-[60px] md:translate-y-12 group-hover:translate-y-0 transition duration-300 delay-${
+                  className={`text-white bg-black rounded-full px-3 py-2 font-mono text-xs min-width-[60px] md:translate-y-12 group-hover:translate-y-0 transition duration-300 mb-2 delay-${
                     i * 300 + 300
                   }`}
                 >

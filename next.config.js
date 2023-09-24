@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+// cspell:disable
 const withSvgr = require("next-svgr");
 const withOptimizedImages = require("next-optimized-images");
 
@@ -48,6 +49,13 @@ const nextConfig = {
 
   images: {
     unoptimized: process.env.NODE_ENV === "development",
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "https://placehold.co",
+        port: "",
+      },
+    ],
   },
 
   async headers() {
@@ -62,7 +70,7 @@ const nextConfig = {
 
   webpack(config, { isServer }) {
     const prefix = config.assetPrefix ?? config.basePath ?? "";
-    
+
     config.module.rules.push({
       test: /\.webm$/,
       use: [
@@ -76,9 +84,37 @@ const nextConfig = {
         },
       ],
     });
-    
+
     config.module.rules.push({
       test: /\.mp4$/,
+      use: [
+        {
+          loader: "file-loader",
+          options: {
+            publicPath: `${prefix}/_next/static/media/`,
+            outputPath: `${isServer ? "../" : ""}static/media/`,
+            name: "[name].[hash].[ext]",
+          },
+        },
+      ],
+    });
+
+    config.module.rules.push({
+      test: /\.mov$/,
+      use: [
+        {
+          loader: "file-loader",
+          options: {
+            publicPath: `${prefix}/_next/static/media/`,
+            outputPath: `${isServer ? "../" : ""}static/media/`,
+            name: "[name].[hash].[ext]",
+          },
+        },
+      ],
+    });
+
+    config.module.rules.push({
+      test: /\.riv$/,
       use: [
         {
           loader: "file-loader",

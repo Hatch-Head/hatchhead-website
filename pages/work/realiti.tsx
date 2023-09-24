@@ -11,7 +11,7 @@ import Mockup from "../../assets/img/realiti-ipad-mockups.png";
 import WidgetLayout from "../../assets/img/work/realiti-widget-layout.svg";
 import GDA from "../../assets/img/good-design-awards-winner-2022.png";
 import UXAwards from "../../assets/img/ux-design-award-nominated-2022.svg";
-
+import OGTags from "../../components/blocks/ogTags";
 export default function HomePage() {
   const { scrollY } = useScroll();
 
@@ -22,6 +22,12 @@ export default function HomePage() {
           <Head>
             <meta name="description" content="iSimulate REALITi design" />
           </Head>
+          <OGTags
+            title="Realiti UX case study"
+            description="Clinical education made easy on any screen"
+            image="/img/realiti-social.png"
+          />
+
           <motion.div layoutId="Realiti">
             <CaseStudiesHeader
               heading="REALITi"

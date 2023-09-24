@@ -8,7 +8,11 @@ import NavLink from "./NavLink";
 import SocialLinks from "../SocialLinks";
 import { useState } from "react";
 
-export const Header = () => {
+type Props = {
+  darkContent?: boolean;
+};
+
+export const Header = ({ darkContent = false }: Props) => {
   const scroll = useScrollPosition();
 
   const { theme, setTheme } = useTheme();
@@ -21,7 +25,7 @@ export const Header = () => {
   const headerClass =
     scroll > 100
       ? "dark:bg-gray-1000 bg-gray-50 dark:text-white text-gray-1000"
-      : " dark:text-white text-gray-1000";
+      : `dark:text-white ${!darkContent ? "text-gray-1000" : "text-white"}`;
 
   return (
     <div
