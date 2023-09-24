@@ -86,7 +86,7 @@ const AboutUs = () => (
         <Row>
           <div className="md:w-1/2 justify-center prose dark:prose-invert  flex flex-col">
             <p className="text-md pb-5">
-              What if there was a software design agency that was design-led but had three decades of engineering experience behind it?
+              What if there was a software design agency that was design-led with three decades of engineering experience behind it?
             </p>
 
             <p className="text-md pb-5">
@@ -95,7 +95,7 @@ const AboutUs = () => (
             </p>
 
             <p className="text-md pb-5">
-              In 2021, Hatch Head opened its doors. In just 18 months, Hatch Head were recognised internationally and at home for design work for big and small companies, both local and international.
+              It was this thinking that inspired Hatch Head to start a new design agency focusing on digital products.  In just 18 months, Hatch Head were recognised internationally and at home for design work for big and small companies, both local and international.
             </p>
 
             <p className="text-md pb-5">

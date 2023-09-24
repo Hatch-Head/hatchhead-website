@@ -41,7 +41,7 @@ const Audeara = () => (
         <div className="container px-6 mx-auto z-30 max-w-6xl justify-center flex flex-col">
           <h1 className="text-3xl text-white font-bold mb-8">Always</h1>
           <h1 className="text-2xl text-white mb-12">
-            A dental’s essentials delivered to your door
+            The essential dental clinic needs bundled and delivered monthly.
           </h1>
         </div>
       </header>

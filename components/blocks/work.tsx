@@ -7,7 +7,7 @@ const Work = () => (
       name="Always"
       tags={[
         "UX",
-        "UI Design",
+        "UI",
         "Product Strategy",
         "Service Design",
         "Delivery",
@@ -19,14 +19,13 @@ const Work = () => (
         src: require("../../assets/img/work/irealiti-backdrop.png"),
       }}
     >
-      Award winning interface made to cater for new and growing features,
-      environments and clinician needs.
+      Designing a dental startup delivering a clinic's essentials to their door.
     </CaseStudyCard>
     <CaseStudyCard
       reverse
       to="/work/audeara"
       name="Audeara"
-      tags={["UI Design", "UX"]}
+      tags={["UI", "UX"]}
       image={{
         src: require("../../assets/img/audeara-thumbnail.png"),
       }}
@@ -34,13 +33,12 @@ const Work = () => (
         src: require("../../assets/img/work/irealiti-backdrop.png"),
       }}
     >
-      Award winning interface made to cater for new and growing features,
-      environments and clinician needs.
+      Revamping the mobile experience for a hearing audio company's flagship product.
     </CaseStudyCard>
     <CaseStudyCard
       to="/work/realiti"
       name="REALITi"
-      tags={["UI Design", "UX"]}
+      tags={["UI", "UX"]}
       image={{
         src: require("../../assets/img/work/irealiti-hero.png"),
       }}
@@ -55,7 +53,7 @@ const Work = () => (
       reverse
       to="/work/cru-software"
       name="Cru Software"
-      tags={["Design System", "UI Design"]}
+      tags={["Design System", "UI"]}
       image={{
         src: require("../../assets/img/work/crusoftware-hero.png"),
       }}
@@ -63,7 +61,7 @@ const Work = () => (
         src: require("../../assets/img/work/crusoftware-backdrop.png"),
       }}
     >
-      Delivering out a Design System to bring consistency at scale.
+      Delivering Design System to bring consistency to a remote team across a platform of products.
     </CaseStudyCard>
   </div>
 );
