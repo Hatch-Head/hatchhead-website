@@ -127,9 +127,7 @@ export const getStaticProps: GetStaticProps<PageProps, Params> = async (
     return { notFound: true };
   }
 
-  await generateOgImage({ slug, title: post.title, image: post.banner });
-  //const _html = await remark().use(html).process(post.content);
-  //const _html = await remark().use(html).process(post.content);
+  //await generateOgImage({ slug, title: post.title, image: post.banner });
 
   return {
     props: {
