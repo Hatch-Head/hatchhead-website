@@ -13,7 +13,6 @@ import Logo from "../assets/img/logo.svg";
 
 import Andrew from "../assets/img/profile-andrew-morton.png";
 import Brent from "../assets/img/profile-brent-wallace.png";
-import Natalia from "../assets/img/profile-natalia-chamon-kovalenko.png";
 
 import NoHeros from "../assets/img/black-3d-84.png";
 import Why from "../assets/img/black-3d-61.png";

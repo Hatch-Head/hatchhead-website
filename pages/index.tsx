@@ -17,10 +17,10 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Hatch Head - Software products and services</title>
+        <title>Hatch Head - Digital Product Design Agency</title>
         <meta
           name="description"
-          content="Great digital experiences happens by design."
+          content="We believe great digital experiences happen by design."
           key="description"
         />
         <link rel="icon" href="/favicon.ico" />
@@ -28,38 +28,27 @@ export default function Home() {
 
       <HeroBanner
         sectionProps={{ offsetTop: false }}
-        headline="We solve complex problems through digital product and service design."
+        headline="Hatch Head is an award-winning digital product design agency."
         text={
-          "We craft interfaces and user experiences that inspire trust & delight"
+          "We craft interfaces and user experiences that inspire trust & delight for clients big and small, across all industries. "
         }
         // TODO: We're for companies that have dev, but no design. Something like : We partner with in-house dev teams to deliver designs that work within your needs.
         video={[videoMp4, videoWebM]}
         image={{ src: "/img/reel-poster.png" }}
         size="full"
-        //containerProps={{ size: "full" }}
+      //containerProps={{ size: "full" }}
       />
 
       <Clients />
 
       <div className="container relative py-12 w-full">
-        <h1 className="text-2xl md:text-3xl text-neutral dark:text-neutral-0 font-bold mb-4">
-          Projects
-        </h1>
-        <p className="text-base md:text-lg md:max-w-2xl dark:text-gray-400">
-          Some of our key projects
-        </p>
+        <div className="flex flex-col justify-center">
+          <Title title="Work" />
+        </div>
+
       </div>
 
       <Work />
-
-      <hr />
-
-      <Section>
-        <Container>
-          <Title title="What we do" className="mb-12" element="h2" />
-          <WhatWeDoCards className="mb-24" />
-        </Container>
-      </Section>
 
       <hr />
 
@@ -76,7 +65,9 @@ export default function Home() {
         </Container>
       </div> */}
       <Testimonials />
+
       <Section>
+        <hr />
         <ContactForm />
       </Section>
     </Layout>

@@ -33,7 +33,7 @@ const Work = () => (
         src: require("../../assets/img/work/irealiti-backdrop.png"),
       }}
     >
-      Revamping the mobile experience for a hearing audio company's flagship product.
+      Revamping the mobile experience for an audio wellness company's flagship product.
     </CaseStudyCard>
     <CaseStudyCard
       to="/work/realiti"
@@ -46,14 +46,14 @@ const Work = () => (
         src: require("../../assets/img/work/irealiti-backdrop.png"),
       }}
     >
-      Award winning interface made to cater for new and growing features,
+      Redesigning an interface made to cater for new and growing features,
       environments and clinician needs.
     </CaseStudyCard>
     <CaseStudyCard
       reverse
       to="/work/cru-software"
       name="Cru Software"
-      tags={["Design System", "UI"]}
+      tags={["Design System", "UI Design"]}
       image={{
         src: require("../../assets/img/work/crusoftware-hero.png"),
       }}
@@ -61,7 +61,7 @@ const Work = () => (
         src: require("../../assets/img/work/crusoftware-backdrop.png"),
       }}
     >
-      Delivering Design System to bring consistency to a remote team across a platform of products.
+      Delivering a design system to bring consistency to a remote team across a series of products.
     </CaseStudyCard>
   </div>
 );

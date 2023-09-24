@@ -22,7 +22,7 @@ type Props = {
 };
 
 export const HeroBanner = ({
-  size = "large",
+  size = "full",
   headline,
   tagline,
   text,

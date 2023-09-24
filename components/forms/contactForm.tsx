@@ -15,7 +15,7 @@ type FormData = {
 
 const schema = z.object({
   name: z.string().min(1, { message: "We'll need to know your name" }),
-  email: z.string().email({ message: "That's not a valid email address" }),
+  email: z.string().email({ message: "We don't think that's a valid email address" }),
   message: z.string().min(1, { message: "Please give us more information" }),
 });
 
@@ -100,14 +100,14 @@ export default function ContactForm() {
       ) : (
         <Container>
           <header className="mb-12 md:w-2/3">
-            <h2 className="text-xl mb-2">Have a project?</h2>
+            <h2 className="text-xl mb-2">Contact us</h2>
             <p className="text-xl mb-4 font-bold max-w-xl">
-              Setup a time to talk confidentially with us about how we can help.
+              Speak to us about how we can help you.
             </p>
-            <p>
+            <p >
               Prefer email?{" "}
-              <NavLink href="mailto:team@hatchhead.co?subject='New Project'">
-                Reach out to us.
+              <NavLink href="mailto:team@hatchhead.co?subject='Enquiry'">
+                Reach out to us here.
               </NavLink>
             </p>
           </header>

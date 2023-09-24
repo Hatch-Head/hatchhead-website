@@ -60,7 +60,7 @@ type Props = {
   title?: string;
 };
 
-export const Clients = ({ title = "Clients we’ve partnered with" }: Props) => {
+export const Clients = ({ title = "Our clients" }: Props) => {
   return (
     <Section>
       <Container className={`flex`} size="medium">

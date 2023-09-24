@@ -19,7 +19,7 @@ const data: Quote[] = [
     image: Alex,
     quote:
       "Hatch Head complement our team's capability with their knowledge of digital design and user experience. It's a pleasure to have access to them, where they that can jump in and work to deliver great outcomes.",
-    name: "Alex Afflik",
+    name: "Alex Afflick",
     title: "CTO",
     link: "/work/audeara",
     role: "CTO",
@@ -27,8 +27,8 @@ const data: Quote[] = [
   {
     image: Lok,
     quote:
-      "It has been exceptional working with Brent and Andrew from Hatch Head. They bring a wealth of experience and creativity to the table. They were able to bring creative solutions to problems by keeping open minds and unique perspectives throughout the process. Their professionalism throughout the journey allowed prompt delivery of product.",
-    name: "Tok Tsang",
+      "It has been exceptional working with Hatch Head. They bring a wealth of experience and creativity to the table. They were able to bring creative solutions to problems by keeping open minds and unique perspectives throughout the process. ",
+    name: "Lok Tsang",
     title: "Founder",
     link: "/work/always",
     role: "Founder",
