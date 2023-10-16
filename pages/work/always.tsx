@@ -4,7 +4,7 @@ import Head from "next/head";
 import Tags from "../../components/Tags";
 import Image from "next/image";
 
-import GDA from "../../assets/img/good-design-awards-best-in-class-2024.svg";
+import GDA from "../../assets/img/good-design-awards-best-in-class-2023.svg";
 import Testimonial from "../../components/blocks/testimonial";
 import LokTsang from "../../assets/img/always/lok-tsang.jpeg";
 import FadeUp from "../../components/transitions/FadeUp";
@@ -15,7 +15,6 @@ import AlwaysCups from "../../assets/img/always-cups.png";
 import AlwaysHighEjectors from "../../assets/img/always/high-volume-evacuator.png";
 import AlwaysEjectors from "../../assets/img/always-ejectors.png";
 import AlwaysIpad from "../../assets/img/always-ipad.png";
-import AlwaysMockup from "../../assets/img/always-mockup.png";
 import AlwaysBox from "../../assets/img/always-box.png";
 import AlwaysDualIPadMockup from "../../assets/img/always/always-dual-ipad-mockup.png";
 import AlwaysItems from "../../assets/img/always/always-items.png";
@@ -26,11 +25,11 @@ import Rive, {
 } from "@rive-app/react-canvas";
 import Process from "../../assets/animations/always-process.riv";
 import OGTags from "../../components/blocks/ogTags";
-const Audeara = () => (
+const Always = () => (
   <AnimatePresence>
     <Layout darkContent>
       <Head>
-        <meta name="description" content="Audeara mobile app" />
+        <meta name="description" content="Always - Dental Disruptor" />
       </Head>
       <OGTags
         description="Always is a subscription service that delivers an Always box which contains everything you need to keep your clinic on-track. Hatch Head were asked to help create the app to desktop and mobile devices to cater for new and growing features, environments and clinician needs."
@@ -92,7 +91,7 @@ const Audeara = () => (
                   className="cursor-pointer"
                 >
                   <GDA
-                    alt="Good Design Awards Winner 2022"
+                    alt="Good Design Awards Winner 2023"
                     width={200}
                     className="dark:fill-white cursor-pointer"
                   />
@@ -287,4 +286,4 @@ const Audeara = () => (
   </AnimatePresence>
 );
 
-export default Audeara;
+export default Always;

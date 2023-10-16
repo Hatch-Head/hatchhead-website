@@ -4,7 +4,7 @@ import Head from "next/head";
 import Tags from "../../components/Tags";
 import Image from "next/image";
 
-import GDA from "../../assets/img/good-design-awards-winner-2022.png";
+import GDA from "../../assets/img/Good-Design-Award_Winner_RGB_BLK_Logo.png";
 import Waveform from "../../assets/vid/audeara-website-banner.mp4";
 import Phone from "../../components/blocks/phone";
 import WaveformWebM from "../../assets/vid/audeara-website-banner.webm";
@@ -84,8 +84,7 @@ const Audeara = () => (
             {" "}
             This new direction also meant a new visual identity. This sparked an
             overhaul of their flagship mobile app. For Hatch Head, our goal was
-            to redesign the mobile app experience for those not familiar with
-            cutting edge technology, to deliver the ability to plug-in
+            to redesign the mobile app experience to make it as easy as possible to plug-in, get personalised and start hearing.
           </p>
         </div>
       </header>
@@ -106,7 +105,7 @@ const Audeara = () => (
               <h5 className="text-xs font-bold uppercase text-neutral-300">
                 Year
               </h5>
-              2022
+              2023
             </div>
 
             <div className="block mb-6">
@@ -122,24 +121,19 @@ const Audeara = () => (
               </h5>
               <div className="flex space-x-4 wrap">
                 <a
-                  href="https://good-design.org/projects/realiti-control-ui-redesign/"
+                  href="https://good-design.org/projects/audeara-mobile-companion/"
                   target="_blank"
                   rel="no-follow"
                   className="w-1/2"
                 >
                   <Image
                     src={GDA}
-                    alt="Good Design Awards Winner 2022"
-                    width={200}
-                    height={200}
+                    alt="Good Design Awards Winner 2023"
+                    width={495}
+                    className="dark:fill-white cursor-pointer"
                   />
                 </a>
-                <a
-                  href="https://www.ux-design-awards.com/winners/realiti-360-control-benutzeroberflaeche"
-                  className="w-1/2 text-neutral-900 dark:text-white"
-                  target="_blank"
-                  rel="no-follow"
-                ></a>
+
               </div>
             </div>
           </div>
@@ -168,9 +162,9 @@ const Audeara = () => (
       </section>
 
       <section className="bg-neutral-10 md:py-24">
-        <div className="container max-w-5xl px-6 mx-auto prose dark:prose-dark">
+        <div className="container max-w-4xl px-6 mx-auto prose dark:prose-dark">
           <h1 className="text-xl font-bold">Opportunity</h1>
-          <p>Audeara's technology is backed by</p>
+          <p>Clinical diagnosis is a difficult path to walk when it comes to audio devices. While the technology within Audeara is akin to a hearing-test, there's legal implications assoicated with saying 'this is your hearing'. We wanted to educate the user on their health. And while it wasn't the primary goal, we felt it was a great opportunity to let get an idea of their overall hearing health.</p>
 
           <p>
             Onboarding – the process of guiding users to that 'a-ha' moment –
