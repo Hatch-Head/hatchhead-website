@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Hatch Head - Digital Product Design Agency</title>
+        <title>Hatch Head - We design software. </title>
         <meta
           name="description"
           content="We believe great digital experiences happen by design."
@@ -28,9 +28,9 @@ export default function Home() {
 
       <HeroBanner
         sectionProps={{ offsetTop: false }}
-        headline="Hatch Head is an award-winning digital product design agency."
+        headline="Hatch Head is an award-winning UX design agency."
         text={
-          "We craft interfaces and user experiences that inspire trust & delight for clients big and small, across all industries. "
+          "We make interfaces and user experiences for new and existing software products & services. "
         }
         // TODO: We're for companies that have dev, but no design. Something like : We partner with in-house dev teams to deliver designs that work within your needs.
         video={[videoMp4, videoWebM]}

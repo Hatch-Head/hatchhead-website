@@ -105,7 +105,7 @@ const Carousel = () => {
 
   return (
     <div className="carousel">
-      <div className="carousel-images container max-w-5xl flex relative">
+      <div className="carousel-images container max-w-5xl text-sm flex relative">
         <AnimatePresence initial={false} mode="wait">
           <motion.div
             key={currentIndex}

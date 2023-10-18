@@ -12,9 +12,9 @@ type Props = {
 const Testimonial = ({ quote, name, role, image, className = "" }: Props) => {
   return (
     <section className={`${className}`}>
-      <div className="container max-w-4xl text-lg mb-12 dark:text-white">
+      <div className="container max-w-4xl text-sm mb-12 dark:text-white">
         <blockquote className="relative">
-          <div className=" md:block md:absolute left-[-80px] top-[-20px] leading-none text-4xl font-bold opacity-30">
+          <div className=" md:block md:absolute left-[-80px] top-[-20px] leading-none text-2xl font-bold opacity-30">
             {String.fromCharCode(8220)}
           </div>
           {quote}
