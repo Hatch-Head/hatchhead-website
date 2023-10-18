@@ -64,7 +64,7 @@ export default function Home() {
           </p>
         </Container>
       </div> */}
-      <Testimonials />
+      {/* <Testimonials />*/}
 
       <Section>
         <hr />
