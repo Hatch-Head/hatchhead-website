@@ -22,9 +22,8 @@ export default function App({ Component, pageProps }: AppProps) {
 
       <Script
         strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=AW-380718532`}
+        src={`https://www.googletagmanager.com/gtag/js?id=GTM-KPJMLH7K`}
       />
-
 
 
       <Script strategy="lazyOnload">
